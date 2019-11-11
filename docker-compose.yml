@@ -28,11 +28,25 @@ services:
     ports:
      - "5432:5432"
     environment:
-     - POSTGRES_PASSWORD=password
-     - POSTGRES_USER=postgres
-     - POSTGRES_DB=userdb
-     - POSTGRES_DB=postdb
-     - POSTGRES_DB=commentdb
+     - POSTGRES_PASSWORD=jmkc2002
+     - POSTGRES_USER=jai
+     - POSTGRES_DB=pguser
+  postgresdev2:
+    image: postgres
+    ports:
+     - "5433:5432"
+    environment:
+     - POSTGRES_PASSWORD=jmkc2002
+     - POSTGRES_USER=jai
+     - POSTGRES_DB=pgpost
+  postgresdev3:
+    image: postgres
+    ports:
+     - "5434:5432"
+    environment:
+     - POSTGRES_PASSWORD=jmkc2002
+     - POSTGRES_USER=jai
+     - POSTGRES_DB=pgcomment
   users-api:
     image: maven:3.6.1-jdk-8
     ports:
