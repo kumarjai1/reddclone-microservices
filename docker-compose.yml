@@ -23,10 +23,10 @@ services:
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
-  postgresdev:
+  postgresdev1:
     image: postgres
     ports:
-     - "5432:5432"
+     - "5435:5432"
     environment:
      - POSTGRES_PASSWORD=jmkc2002
      - POSTGRES_USER=jai

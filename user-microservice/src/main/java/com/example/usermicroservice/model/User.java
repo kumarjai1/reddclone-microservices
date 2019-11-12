@@ -1,4 +1,4 @@
-package com.ga.usermicroservice.model;
+package com.example.usermicroservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,21 +8,23 @@ import javax.persistence.*;
 @Entity
 @Table(name="users")
 public class User {
-    @JsonIgnore
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String username;
 
-    @Column(unique = true, nullable = false)
+//    @Column(unique = true, nullable = false)
     private String email;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @Column(name = "password", nullable = false)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @Column(name = "password", nullable = false)
     private String password;
+
+    public User() { }
 
     public Long getId() {
         return id;
@@ -56,3 +58,4 @@ public class User {
         this.password = password;
     }
 }
+
