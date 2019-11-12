@@ -13,4 +13,6 @@ public interface UserService extends UserDetailsService {
     String login(User user);
 
     User getUser(String username);
+
+    Object createUser(User user);
 }
