@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="users")
@@ -26,6 +27,13 @@ public class User {
 
     public User() { }
 
+    @ManyToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+    @JoinColumn(name="user_role_id", nullable= false)
+    //private List<UserRole> userRoles;
+    private UserRole userRole;
+
+
+
     public Long getId() {
         return id;
     }
@@ -33,6 +41,21 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public UserRole getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(UserRole userRole) {
+        this.userRole = userRole;
+    }
+    //    public List<UserRole> getUserRoles() {
+//        return userRoles;
+//    }
+//
+//    public void setUserRoles(List<UserRole> userRoles) {
+//        this.userRoles = userRoles;
+//    }
 
     public String getUsername() {
         return username;
@@ -57,5 +80,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
 

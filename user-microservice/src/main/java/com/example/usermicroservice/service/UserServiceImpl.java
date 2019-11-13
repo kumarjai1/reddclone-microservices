@@ -1,6 +1,7 @@
 package com.example.usermicroservice.service;
 
 import com.example.usermicroservice.model.User;
+import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRepository;
 import com.example.usermicroservice.util.JwtResponse;
 import com.example.usermicroservice.config.JwtUtil;
@@ -34,6 +35,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     JwtUtil jwtUtil;
 
+    @Autowired
+    UserRoleService userRoleService;
+
     @Override
     public Iterable<User> listUsers() {
         return userRepository.findAll();
@@ -41,6 +45,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public JwtResponse signup(User user) {
+
+        UserRole userRole = userRoleService.getRole(user.getUserRole().getName());
+        user.setUserRole(userRole);
+
         user.setPassword(encoder().encode(user.getPassword()));
         User savedUser = userRepository.save(user);
 

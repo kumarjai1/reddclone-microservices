@@ -21,11 +21,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/user/signup/**", "/user/login/**").permitAll()
+                .antMatchers("/user/signup/**", "/user/login/**", "/user/role").permitAll()
                 .and()
                 .httpBasic()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
     }
 
 

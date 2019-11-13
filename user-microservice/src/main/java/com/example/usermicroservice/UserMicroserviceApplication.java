@@ -1,6 +1,8 @@
 package com.example.usermicroservice;
 
 import com.example.usermicroservice.model.User;
+//import com.example.usermicroservice.model.UserRole;
+//import com.example.usermicroservice.service.UserRoleService;
 import com.example.usermicroservice.service.UserService;
 import com.example.usermicroservice.util.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class UserMicroserviceApplication {
 	@Autowired
 	UserService userService;
 
+//	@Autowired
+//	UserRoleService userRoleService;
+
 	@GetMapping("/hello")
 	public String hello () {
 		return "Hello suckers";
@@ -41,5 +46,7 @@ public class UserMicroserviceApplication {
 	public ResponseEntity login(@RequestBody User user) {
 		return ResponseEntity.ok(new JwtResponse(userService.login(user), user.getUsername()));
 	}
+//	@PostMapping("/role")
+//	public UserRole createRole(@RequestBody UserRole userRole) { return userRoleService.createRole(userRole);}
 
 }
