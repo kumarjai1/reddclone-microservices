@@ -3,6 +3,8 @@ package com.example.usermicroservice.config;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -18,9 +20,9 @@ public class JwtUtil implements Serializable {
   @Value("${jwt.secret}")
   private String secret;
 
-  public String generateToken(String username) {
+  public String generateToken(UserDetails userDetails) {
     Map<String, Object> claims = new HashMap<>();
-    return doGenerateToken(claims, username);
+    return doGenerateToken(claims, userDetails.getUsername());
   }
 
   private String doGenerateToken(Map<String, Object> claims, String subject) {
