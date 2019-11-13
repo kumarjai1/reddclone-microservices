@@ -1,4 +1,4 @@
-package com.ga.apigateway.config;
+package com.example.apigateway.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

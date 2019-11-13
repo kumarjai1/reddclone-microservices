@@ -1,4 +1,4 @@
-package com.ga.apigateway.service;
+package com.example.apigateway.service;
 
 import com.example.apigateway.bean.UserBean;
 import com.example.apigateway.repository.UserRepository;

@@ -47,6 +47,14 @@ services:
      - POSTGRES_PASSWORD=jmkc2002
      - POSTGRES_USER=jai
      - POSTGRES_DB=pgcomment
+  postgresdev4:
+    image: postgres
+    ports:
+     - "5436:5432"
+    environment:
+     - POSTGRES_PASSWORD=jmkc2002
+     - POSTGRES_USER=jai
+     - POSTGRES_DB=pggate
   users-api:
     image: maven:3.6.1-jdk-8
     ports:

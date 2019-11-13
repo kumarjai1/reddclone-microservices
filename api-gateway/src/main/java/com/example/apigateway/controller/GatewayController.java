@@ -1,4 +1,4 @@
-package com.ga.apigateway.controller;
+package com.example.apigateway.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

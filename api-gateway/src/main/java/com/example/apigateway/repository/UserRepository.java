@@ -1,4 +1,4 @@
-package com.ga.apigateway.repository;
+package com.example.apigateway.repository;
 
 import com.example.apigateway.bean.UserBean;
 import org.springframework.beans.factory.annotation.Autowired;

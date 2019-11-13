@@ -1,4 +1,4 @@
-package com.ga.apigateway.config;
+package com.example.apigateway.config;
 
 import com.example.apigateway.service.CustomUserService;
 import io.jsonwebtoken.ExpiredJwtException;

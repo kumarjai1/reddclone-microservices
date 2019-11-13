@@ -1,6 +1,6 @@
-package com.ga.apigateway.config;
+package com.example.apigateway.config;
 
-import com.ga.apigateway.service.CustomUserService;
+import com.example.apigateway.service.CustomUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
