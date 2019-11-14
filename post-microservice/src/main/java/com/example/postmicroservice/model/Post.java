@@ -1,11 +1,12 @@
 package com.example.postmicroservice.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "posts")
 public class Post {
-
+    @Column
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,6 +16,23 @@ public class Post {
 
     @Column
     private String description;
+
+
+    @Column
+    private Long user_id;
+
+//    @ManyToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+//    @JoinColumn(name="post_user_id", nullable= false)
+//    private User user;
+
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
+    }
 
     public Post() { }
 
