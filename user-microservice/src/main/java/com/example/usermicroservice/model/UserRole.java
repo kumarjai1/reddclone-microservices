@@ -15,7 +15,7 @@ public class UserRole {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "userRole", cascade = {CascadeType.ALL})
+    @ManyToMany(mappedBy = "userRoles", cascade = {CascadeType.ALL})
     private List<User> users;
 
     public UserRole() {

@@ -46,8 +46,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public JwtResponse signup(User user) {
 
-        UserRole userRole = userRoleService.getRole(user.getUserRole().getName());
-        user.setUserRole(userRole);
+//        UserRole userRole = userRoleService.getRole(user.getUserRole().getName());
+//        user.setUserRole(userRole);
+//        List<UserRole> userRoles = userRoleService.userRoles(user.getUse)
 
         user.setPassword(encoder().encode(user.getPassword()));
         User savedUser = userRepository.save(user);

@@ -6,6 +6,8 @@ import com.example.usermicroservice.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserRoleServiceImpl implements UserRoleService {
 
@@ -20,4 +22,10 @@ public class UserRoleServiceImpl implements UserRoleService {
     public UserRole getRole(String roleName) {
         return userRoleRepository.findByName(roleName);
     }
+
+    @Override
+    public Iterable<UserRole> userRoles(Long userId) {
+        return userRoleRepository.findUserRoleByUsers(userId);
+    }
+
 }

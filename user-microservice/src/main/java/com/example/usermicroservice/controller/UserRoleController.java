@@ -27,5 +27,7 @@ public class UserRoleController {
         return userRoleService.getRole(rolename);
     }
 
+    @GetMapping("/roles/{userId}")
+    public Iterable<UserRole> getUserRoles(@PathVariable Long userId) { return userRoleService.userRoles(userId);}
 
 }

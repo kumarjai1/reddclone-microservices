@@ -27,10 +27,10 @@ public class User {
 
     public User() { }
 
-    @ManyToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinColumn(name="user_role_id", nullable= false)
-    //private List<UserRole> userRoles;
-    private UserRole userRole;
+    @ManyToMany(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+//    @JoinColumn(name="user_role_id", nullable= false)
+    private List<UserRole> userRoles;
+//    private UserRole userRole;
 
 
 
@@ -41,21 +41,21 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
-    public UserRole getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
-    }
-    //    public List<UserRole> getUserRoles() {
-//        return userRoles;
+//
+//    public UserRole getUserRole() {
+//        return userRole;
 //    }
 //
-//    public void setUserRoles(List<UserRole> userRoles) {
-//        this.userRoles = userRoles;
+//    public void setUserRole(UserRole userRole) {
+//        this.userRole = userRole;
 //    }
+        public List<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(List<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
 
     public String getUsername() {
         return username;
