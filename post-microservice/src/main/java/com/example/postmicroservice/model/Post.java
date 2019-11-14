@@ -21,10 +21,6 @@ public class Post {
     @Column
     private Long user_id;
 
-//    @ManyToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
-//    @JoinColumn(name="post_user_id", nullable= false)
-//    private User user;
-
 
     public Long getUser_id() {
         return user_id;

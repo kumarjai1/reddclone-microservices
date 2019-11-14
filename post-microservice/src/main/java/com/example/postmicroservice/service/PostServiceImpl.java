@@ -1,9 +1,7 @@
 package com.example.postmicroservice.service;
 
 import com.example.postmicroservice.model.Post;
-import com.example.postmicroservice.model.User;
 import com.example.postmicroservice.repository.PostRepository;
-import com.example.postmicroservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +15,6 @@ import java.util.List;
         @Autowired
         PostRepository postRepository;
 
-        @Autowired
-        UserRepository userRepository;
-
         @Override
         public Iterable<Post> listPosts() {
             Iterable foundPosts = postRepository.findAll();
@@ -28,7 +23,7 @@ import java.util.List;
 
         @Override
         public Post createPost(String userId, Post post) {
-            Long user_id = Long.parseLong(userId,10);
+            Long user_id = Long.parseLong(userId);
 
             post.setUser_id(user_id);
             return postRepository.save(post);
