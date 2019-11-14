@@ -29,20 +29,28 @@ public class AuthenticationFilter extends ZuulFilter {
 //    String username = SecurityContextHolder.getContext().getAuthentication().getName();
 //    if(username != "anonUser") return true;
 //    else return false;
-    return true;
+//    return false;
+
+    String username = SecurityContextHolder.getContext().getAuthentication().getName();
+    System.out.println(username);
+    if (username !="anonymousUser") {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   @Override
   public Object run() {
-//    RequestContext ctx = RequestContext.getCurrentContext();
-//    String username = SecurityContextHolder.getContext().getAuthentication().getName();
-//    UserBean user = null;
-//
-//    if (userRepository.getUserByUsername(username) !=null) {
-//      user = userRepository.getUserByUsername(username);
-//      String userId = String.valueOf(user.getId());
-//      ctx.addZuulRequestHeader("userId", userId);
-//    }
+    RequestContext ctx = RequestContext.getCurrentContext();
+    String username = SecurityContextHolder.getContext().getAuthentication().getName();
+    UserBean user = null;
+
+    if (userRepository.getUserByUsername(username) !=null) {
+      user = userRepository.getUserByUsername(username);
+      String userId = String.valueOf(user.getId());
+      ctx.addZuulRequestHeader("userId", userId);
+    }
 
     return null;
   }
