@@ -11,6 +11,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long postId;
+
     @Column(nullable = false)
     private String text;
 
@@ -41,5 +43,13 @@ public class Comment {
 
     public void setUser_id(Long user_id) {
         this.user_id = user_id;
+    }
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public void setPostId(Long postId) {
+        this.postId = postId;
     }
 }

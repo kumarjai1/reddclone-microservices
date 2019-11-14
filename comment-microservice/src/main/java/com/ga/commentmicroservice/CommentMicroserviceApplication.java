@@ -19,22 +19,6 @@ public class CommentMicroserviceApplication {
         SpringApplication.run(CommentMicroserviceApplication.class, args);
     }
 
-    @Autowired
-    CommentService commentService;
 
-    @GetMapping("/hello")
-    public String hello () {
-        return "Hello world!!";
-    }
-
-    @GetMapping("/list")
-    public Iterable<Comment> listComments () {
-        return commentService.listComments();
-    }
-
-    @PostMapping
-    public Comment createComment(@RequestHeader("userId") String userId, @RequestBody Comment comment) {
-        return commentService.createComment(userId, comment);
-    }
 
 }

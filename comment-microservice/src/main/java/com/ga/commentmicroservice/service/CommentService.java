@@ -4,6 +4,8 @@ import com.ga.commentmicroservice.model.Comment;
 
 public interface CommentService {
 
-    Comment createComment(String userId, Comment comment);
+    Comment createComment ( Long userId, Long postId, Comment comment);
+
     Iterable<Comment> listComments();
+
 }

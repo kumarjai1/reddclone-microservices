@@ -12,11 +12,12 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Override
-    public Comment createComment(String userId, Comment comment) {
+    public Comment createComment(Long userId, Long postId, Comment comment) {
 
-        Long user_id = Long.parseLong(userId);
+//        Long user_id = Long.parseLong(userId);
 
-        comment.setUser_id(user_id);
+        comment.setUser_id(userId);
+        comment.setPostId(postId);
 
         return commentRepository.save(comment);
     }
