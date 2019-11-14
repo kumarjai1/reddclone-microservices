@@ -11,11 +11,13 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String text;
 
-    public Comment() { }
+    @Column(nullable = false)
+    private Long user_id;
 
+    public Comment() { }
 
     public Long getId() {
         return id;
@@ -31,5 +33,13 @@ public class Comment {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 }
