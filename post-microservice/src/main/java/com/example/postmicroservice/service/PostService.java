@@ -8,10 +8,12 @@ import java.util.List;
 public interface PostService {
     public Iterable<Post> listPosts();
 
+    Iterable<Post> listPostsByUser(String userId);
+
     public Post createPost(String userId, Post post);
 
     public Post deletePost(String userId, Post post);
 
-    public List<Comment> allComments(Long postId);
+//    public List<Comment> allComments(Long postId);
 }
 

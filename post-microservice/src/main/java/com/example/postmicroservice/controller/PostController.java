@@ -24,6 +24,10 @@ public class PostController {
         return postService.createPost(userId, post);
     }
 
+    @GetMapping("/{userId}")
+    public Iterable<Post> listPostByUser(@PathVariable String userId) {
+        return postService.listPostsByUser(userId);
+    }
 
 
 //    @DeleteMapping("/{postId}")
@@ -32,10 +36,10 @@ public class PostController {
 //        return postService.deletePost(userId, post);
 //    }
 
-    @GetMapping("/{postId}/comment")
-    public List<Comment> allComments(@PathVariable Long postId) {
-        return postService.allComments(postId);
-    }
+//    @GetMapping("/{postId}/comment")
+//    public List<Comment> allComments(@PathVariable Long postId) {
+//        return postService.allComments(postId);
+//    }
 
 
 
