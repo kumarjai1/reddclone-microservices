@@ -19,32 +19,30 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Iterable<Post> listPosts() {
-        Iterable foundPosts = postRepository.findAll();
-        return foundPosts;
+        return postRepository.findAll();
     }
 
     @Override
     public Iterable<Post> listPostsByUser(String userId) {
 
-        //get user id, with user id, iterate through the post list,c and only get all posts that has matching userid to current user
-
         Long user_id = Long.parseLong(userId);
 
         List<Post> userPosts = new ArrayList<>();
+        for (Post post: postRepository.findAll()) {
+            if (post.getUser_id() == user_id) {
+                userPosts.add(post);
+            }
+        }
+        return userPosts;
+//        return postRepository.findPostsByUser_id(user_id);
 //        ((ArrayList<Long>) userIds).add(user_id);
 //
 //        Iterable<Post> allPosts = postRepository.findAll();
 //
 //
 //        Iterable<Post> userPosts = postRepository.findAllById(userIds);
+//
 
-        for (Post post: postRepository.findAll()) {
-            if (post.getUser_id() == user_id) {
-                userPosts.add(post);
-            }
-        }
-
-        return userPosts;
     }
 
     @Override
@@ -58,9 +56,14 @@ public class PostServiceImpl implements PostService {
 
 
     @Override
-    public Post deletePost(String userId, Post post) {
-            return null;
+    public Long deletePost(String userId, Long postId) {
+        Post post = postRepository.findById(postId).orElse(null);
+        Long user_id = Long.parseLong(userId);
+        if (post.getUser_id() == user_id ) {
+            postRepository.delete(post);
         }
+        return post.getId();
+    }
 
 
 }

@@ -12,7 +12,7 @@ public interface PostService {
 
     public Post createPost(String userId, Post post);
 
-    public Post deletePost(String userId, Post post);
+    Long deletePost(String userId, Long postId);
 
 //    public List<Comment> allComments(Long postId);
 }

@@ -5,9 +5,6 @@ import com.example.postmicroservice.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.stream.events.Comment;
-import java.util.List;
-
 @RestController
 public class PostController {
 
@@ -30,11 +27,10 @@ public class PostController {
     }
 
 
-//    @DeleteMapping("/{postId}")
-//    public Post deletePost(@PathVariable Long postId, @RequestHeader("Authorization") String tokerHeader) {
-//
-//        return postService.deletePost(userId, post);
-//    }
+    @DeleteMapping("/{userId}/{postId}")
+    public Long deletePost(@PathVariable String userId, @PathVariable Long postId) {
+        return postService.deletePost(userId, postId);
+    }
 
 //    @GetMapping("/{postId}/comment")
 //    public List<Comment> allComments(@PathVariable Long postId) {
