@@ -38,11 +38,15 @@ public class CommentServiceImpl implements CommentService {
         return commentRepository.findCommentByPostId(postId);
     }
 
+    @Override
+    public Long deleteCommentByUser(Long userId, Long commentId) {
+        Comment comment = commentRepository.findById(commentId).orElse(null);
 
-//
-//    @Override
-//    public Iterable<Comment> findAllByPostId(long postId) {
-////        Long post_id = Long.parseLong(postId);
-//        return commentRepository.findCommentsByPostId(postId);
-//    }
+        if (comment.getUserId() == userId ) {
+            commentRepository.delete(comment);
+        }
+        return comment.getId();
+    }
+
+
 }
