@@ -32,14 +32,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
   protected void configure(HttpSecurity http) throws Exception {
 
     http.csrf().disable()
-        .authorizeRequests()
-        .antMatchers("/user/signup/**", "/user/login/**", "/comments/list", "/user/role").permitAll()
-        .antMatchers("/user/**", "/comments/**").authenticated()
+            .authorizeRequests()
+            .antMatchers("/user/signup/**", "/user/login/**").permitAll()
+//            .antMatchers("/user/**").authenticated()
 //        .antMatchers("/role/**").hasRole("DBA")
-        .and()
-        .httpBasic()
-        .and()
-        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .and()
+            .httpBasic()
+            .and()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
     http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
   }

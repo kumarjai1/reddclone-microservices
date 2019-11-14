@@ -26,22 +26,23 @@ public class AuthenticationFilter extends ZuulFilter {
 
   @Override
   public boolean shouldFilter() {
-    String username = SecurityContextHolder.getContext().getAuthentication().getName();
-    if(username != "anonUser") return true;
-    else return false;
+//    String username = SecurityContextHolder.getContext().getAuthentication().getName();
+//    if(username != "anonUser") return true;
+//    else return false;
+    return true;
   }
 
   @Override
   public Object run() {
-    RequestContext ctx = RequestContext.getCurrentContext();
-    String username = SecurityContextHolder.getContext().getAuthentication().getName();
-    UserBean user = null;
-
-    if (userRepository.getUserByUsername(username) !=null) {
-      user = userRepository.getUserByUsername(username);
-      String userId = String.valueOf(user.getId());
-      ctx.addZuulRequestHeader("userId", userId);
-    }
+//    RequestContext ctx = RequestContext.getCurrentContext();
+//    String username = SecurityContextHolder.getContext().getAuthentication().getName();
+//    UserBean user = null;
+//
+//    if (userRepository.getUserByUsername(username) !=null) {
+//      user = userRepository.getUserByUsername(username);
+//      String userId = String.valueOf(user.getId());
+//      ctx.addZuulRequestHeader("userId", userId);
+//    }
 
     return null;
   }

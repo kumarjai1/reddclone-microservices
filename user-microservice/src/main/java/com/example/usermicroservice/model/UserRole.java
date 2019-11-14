@@ -12,7 +12,7 @@ public class UserRole {
     @Column
     private int id;
 
-    @Column
+    @Column(nullable = false, unique = true)
     private String name;
 
     @OneToMany(mappedBy = "userRole", cascade = {CascadeType.ALL})
