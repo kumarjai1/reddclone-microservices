@@ -12,12 +12,13 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Override
-    public Comment createComment(Long userId, Long postId, Comment comment) {
+    public Comment createComment(Long userId, String postId, Comment comment) {
 
 //        Long user_id = Long.parseLong(userId);
-
-        comment.setUser_id(userId);
-        comment.setPostId(postId);
+        Long foundPostId = Long.parseLong(postId);
+        System.out.println(foundPostId);
+        comment.setUserId(userId);
+        comment.setPostId(foundPostId);
 
         return commentRepository.save(comment);
     }
@@ -26,4 +27,22 @@ public class CommentServiceImpl implements CommentService {
     public Iterable<Comment> listComments() {
         return commentRepository.findAll();
     }
+
+    @Override
+    public Iterable<Comment> getCommentsByUserId(Long userId) {
+        return commentRepository.findCommentByUserId(userId);
+    }
+
+    @Override
+    public Iterable<Comment> getCommentsByPostId(Long postId) {
+        return commentRepository.findCommentByPostId(postId);
+    }
+
+
+//
+//    @Override
+//    public Iterable<Comment> findAllByPostId(long postId) {
+////        Long post_id = Long.parseLong(postId);
+//        return commentRepository.findCommentsByPostId(postId);
+//    }
 }

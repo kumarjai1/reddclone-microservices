@@ -17,7 +17,10 @@ public class Comment {
     private String text;
 
     @Column(nullable = false)
-    private Long user_id;
+    private Long userId;
+
+    @Transient
+    UserBean user;
 
     public Comment() { }
 
@@ -37,19 +40,27 @@ public class Comment {
         this.text = text;
     }
 
-    public Long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
-
     public Long getPostId() {
         return postId;
     }
 
     public void setPostId(Long postId) {
         this.postId = postId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public UserBean getUser() {
+        return user;
+    }
+
+    public void setUser(UserBean user) {
+        this.user = user;
     }
 }

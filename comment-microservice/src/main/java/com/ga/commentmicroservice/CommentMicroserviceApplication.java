@@ -12,13 +12,10 @@ import java.util.ArrayList;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
 public class CommentMicroserviceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CommentMicroserviceApplication.class, args);
     }
-
-
 
 }
