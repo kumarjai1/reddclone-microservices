@@ -1,5 +1,7 @@
 package com.example.usermicroservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class UserRole {
     @Column(nullable = false, unique = true)
     private String name;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "userRoles", cascade = {CascadeType.ALL})
     private List<User> users;
 

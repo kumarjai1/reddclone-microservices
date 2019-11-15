@@ -118,6 +118,7 @@ public class UserServiceImpl implements UserService {
         if (user != null) {
             if (userRole != null) {
                 user.getUserRoles().add(userRole);
+                userRepository.save(user);
             } else {
                 throw new EntityNotFoundException();
             }
