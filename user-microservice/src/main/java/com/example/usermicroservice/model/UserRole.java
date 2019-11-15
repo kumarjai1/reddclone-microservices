@@ -18,8 +18,7 @@ public class UserRole {
     @ManyToMany(mappedBy = "userRoles", cascade = {CascadeType.ALL})
     private List<User> users;
 
-    public UserRole() {
-    }
+    public UserRole() {}
 
     public int getId() {
         return id;

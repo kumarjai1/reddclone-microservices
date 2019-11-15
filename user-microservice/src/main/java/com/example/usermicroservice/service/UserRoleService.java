@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface UserRoleService {
 
-    public UserRole createRole(UserRole newRole);
+    UserRole createRole(UserRole newRole);
 
-    public UserRole getRole(String roleName);
+    UserRole getRole(String roleName);
+    UserRole getRoleById (Long roleId);
 
-    public Iterable<UserRole> userRoles(Long userId);
+    Iterable<UserRole> listRoles();
+
 }

@@ -3,6 +3,7 @@ package com.example.usermicroservice;
 import com.example.usermicroservice.model.User;
 //import com.example.usermicroservice.model.UserRole;
 //import com.example.usermicroservice.service.UserRoleService;
+import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserService;
 import com.example.usermicroservice.util.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,16 +11,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @SpringBootApplication
-@RestController
 @EnableEurekaClient
+@RestController
 public class UserMicroserviceApplication {
 
 	public static void main(String[] args) {
@@ -29,8 +27,13 @@ public class UserMicroserviceApplication {
 	@Autowired
 	UserService userService;
 
-//	@Autowired
-//	UserRoleService userRoleService;
+
+	//  @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    @GetMapping("/list")
+//    public Iterable<User> listUsers(@RequestHeader("username") String username) {
+//        System.out.println(username);
+//        return userService.listUsers();
+//    }
 
 	@GetMapping("/hello")
 	public String hello () {
@@ -46,7 +49,14 @@ public class UserMicroserviceApplication {
 	public ResponseEntity login(@RequestBody User user) {
 		return ResponseEntity.ok(new JwtResponse(userService.login(user), user.getUsername()));
 	}
-//	@PostMapping("/role")
-//	public UserRole createRole(@RequestBody UserRole userRole) { return userRoleService.createRole(userRole);}
 
+	@GetMapping("/{userId}/roles")
+	public Iterable<UserRole> listUserRoles(@PathVariable Long userId) {
+		return userService.getUserRoles(userId);
+	}
+
+	@PostMapping("{userId}/{roleId}")
+	public Iterable<UserRole> addRole (@PathVariable Long userId, @PathVariable Long roleId) {
+		return userService.addRole(userId, roleId);
+	}
 }

@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/role")
+@RequestMapping
 public class UserRoleController {
 
     @Autowired
     UserRoleService userRoleService;
 
-    @PostMapping
+    @PostMapping("/role")
     public UserRole createRole(@RequestBody UserRole userRole) {
         return userRoleService.createRole(userRole);
     }
@@ -27,7 +27,12 @@ public class UserRoleController {
         return userRoleService.getRole(rolename);
     }
 
-    @GetMapping("/roles/{userId}")
-    public Iterable<UserRole> getUserRoles(@PathVariable Long userId) { return userRoleService.userRoles(userId);}
+//    @GetMapping("/roles/{userId}")
+//    public Iterable<UserRole> getUserRoles(@PathVariable Long userId) { return userRoleService.userRoles(userId);}
+
+    @GetMapping("/roles")
+    public Iterable<UserRole> listRoles () {
+        return userRoleService.listRoles();
+    }
 
 }

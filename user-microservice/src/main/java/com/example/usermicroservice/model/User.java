@@ -28,7 +28,9 @@ public class User {
     public User() { }
 
     @ManyToMany(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
-//    @JoinColumn(name="user_role_id", nullable= false)
+    @JoinTable(name="user_role_id",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<UserRole> userRoles;
 //    private UserRole userRole;
 
@@ -41,7 +43,7 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-//
+
 //    public UserRole getUserRole() {
 //        return userRole;
 //    }
@@ -49,7 +51,8 @@ public class User {
 //    public void setUserRole(UserRole userRole) {
 //        this.userRole = userRole;
 //    }
-        public List<UserRole> getUserRoles() {
+
+    public List<UserRole> getUserRoles() {
         return userRoles;
     }
 
