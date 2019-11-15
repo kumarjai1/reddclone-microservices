@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {
 
-    public Iterable<User> listUsers();
+    Iterable<User> listUsers();
 
     JwtResponse signup(User user);
 
@@ -17,4 +17,5 @@ public interface UserService extends UserDetailsService {
 
     Iterable<UserRole> getUserRoles(Long userId);
     Iterable<UserRole> addRole (Long userId, Long roleId);
+    User updateUser(User user);
 }

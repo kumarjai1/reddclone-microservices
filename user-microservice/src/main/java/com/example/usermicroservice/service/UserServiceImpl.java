@@ -46,16 +46,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public JwtResponse signup(User user) {
 
-//        UserRole userRole = userRoleService.getRole(user.getUserRole().getName());
-//        user.setUserRole(userRole);
-//        List<UserRole> userRoles = userRoleService.userRoles(user.getUse)
         List<UserRole> userRoles = new ArrayList<>();
         UserRole userRole = userRoleService.getRole("ROLE_USER");
 
         if (userRole == null) {
             userRole = new UserRole();
             userRole.setName("ROLE_USER");
-            userRole.setId(1);
             userRoleService.createRole(userRole);
 
         }
@@ -74,6 +70,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(User user) {
+        //TODO: test user respository login method with the custom query
         User foundUser = userRepository.findByUsername(user.getUsername());
 
         if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
@@ -113,17 +110,23 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Iterable<UserRole> addRole(Long userId, Long roleId) {
+        //TODO: check if userid belongs to the user
         User user = userRepository.findById(userId).orElse(null);
         UserRole userRole = userRoleService.getRoleById(roleId);
         if (user != null) {
             if (userRole != null) {
                 user.getUserRoles().add(userRole);
-                userRepository.save(user);
+                userRepository.save(user); //TODO: change to method, updateUser
             } else {
                 throw new EntityNotFoundException();
             }
         }
         return user.getUserRoles();
+    }
+
+    @Override
+    public User updateUser(User user) {
+        return userRepository.save(user);
     }
 
 

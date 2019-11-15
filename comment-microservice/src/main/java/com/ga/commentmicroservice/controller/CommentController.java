@@ -39,16 +39,4 @@ public class CommentController {
     public Long deleteCommentByUser(@RequestHeader("userId") Long userId, @PathVariable Long commentId) {
         return commentService.deleteCommentByUser(userId, commentId);
     }
-
-//    @GetMapping("/user/{userId}")
-//    public Iterable<Comment> getCommentByUserId(@PathVariable Long userId)
-//    {
-//        return commentService.findCommentByUser_id(userId);
-//    }
-
-//
-//    @GetMapping ("/{postId}")
-//    public Iterable<Comment> findAllByPostId(@PathVariable long postId) {
-//        return commentService.findAllByPostId(postId);
-//    }
 }

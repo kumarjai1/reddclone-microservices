@@ -33,9 +33,11 @@ public class User {
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<UserRole> userRoles;
-//    private UserRole userRole;
 
-
+//    @JsonIgnore
+    @OneToOne (cascade = {CascadeType.ALL})
+    @JoinColumn(name = "user_profile_id")
+    private UserProfile userProfile;
 
     public Long getId() {
         return id;
@@ -44,14 +46,6 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
-//    public UserRole getUserRole() {
-//        return userRole;
-//    }
-//
-//    public void setUserRole(UserRole userRole) {
-//        this.userRole = userRole;
-//    }
 
     public List<UserRole> getUserRoles() {
         return userRoles;
@@ -85,5 +79,12 @@ public class User {
         this.password = password;
     }
 
+    public UserProfile getUserProfile() {
+        return userProfile;
+    }
+
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
+    }
 }
 

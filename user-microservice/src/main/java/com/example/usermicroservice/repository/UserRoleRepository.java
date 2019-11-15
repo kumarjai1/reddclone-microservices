@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface UserRoleRepository extends CrudRepository<UserRole, Integer> {
 
-    public UserRole findByName(String name);
+    UserRole findByName(String name);
 //
 //    Iterable<UserRole> findUserRoleByUsers(ArrayList<Long> userIds);
 //    Iterable<UserRole> findUserRoleByUsers(String userId);

@@ -50,6 +50,7 @@ public class AuthenticationFilter extends ZuulFilter {
       user = userRepository.getUserByUsername(username);
       String userId = String.valueOf(user.getId());
       ctx.addZuulRequestHeader("userId", userId);
+      ctx.addZuulRequestHeader("username", username);
     }
 
     return null;

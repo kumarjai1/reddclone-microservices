@@ -34,6 +34,7 @@ public class UserRoleServiceImpl implements UserRoleService {
         return userRoleRepository.findAll();
     }
 
+    //TODO: get users associated with a specific role
 //    @Override
 //    public Iterable<UserRole> userRoles(Long userId) {
 //        ArrayList<Long> userIds = new ArrayList<>();
