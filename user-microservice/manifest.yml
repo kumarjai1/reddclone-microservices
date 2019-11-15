@@ -1,0 +1,8 @@
+applications:
+- name: redd-docker-userservice
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf,global
+  docker:
+    image: hristinalapanova/users-api
