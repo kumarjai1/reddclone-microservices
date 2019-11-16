@@ -9,6 +9,7 @@ public interface CommentRepository extends CrudRepository<Comment, Long> {
 
     public Iterable<Comment> findCommentByPostId(Long postId);
     public Iterable<Comment> findCommentByUserId(Long userId);
+    Long deleteByPostId(Long postId);
 
 //    @Transactional
 //    public Iterable<Comment> deleteCommentsByPostId(Long postId);

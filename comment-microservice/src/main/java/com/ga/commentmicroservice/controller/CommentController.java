@@ -39,4 +39,9 @@ public class CommentController {
     public Long deleteCommentByUser(@RequestHeader("userId") Long userId, @PathVariable Long commentId) {
         return commentService.deleteCommentByUser(userId, commentId);
     }
+
+    @DeleteMapping("/post/{postId}")
+    public Long deleteCommentsByPostId (@PathVariable Long postId) {
+        return commentService.deleteCommentsByPostId(postId);
+    }
 }
