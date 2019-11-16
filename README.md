@@ -34,4 +34,9 @@ We started with writing all user stories applicable to the 3 microservices. We d
 ## Microservices Architecture
 
 ## Challenge - API-gateway exits with code 137 on Hristina's computer
+deployment and any configurations with it 
+creating different databases for each microservice 
+making a design decision to make different databases 
+Security thu api gateway 
+
 <img src="">
