@@ -14,6 +14,6 @@ public interface PostService {
 
     Long deletePost(String userId, Long postId);
 
-//    public List<Comment> allComments(Long postId);
+//    public Post getPostById(Long postId);
 }
 
