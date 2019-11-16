@@ -2,7 +2,7 @@
 FROM openjdk:8-jdk-alpine
 
 # Add Maintainer info:
-MAINTAINER hristinalapanova <hristina_lapanova@hotmail.com>
+MAINTAINER jaik92 <jaiessarani@hotmail.com>
 
 # Make port 8082 available to the world outside this container:
 EXPOSE 8082
@@ -11,10 +11,10 @@ EXPOSE 8082
 VOLUME /tmp
 
 # The application's JAR file:
-ARG JAR_FILE=target/auth-service-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/user-microservice-0.0.1-SNAPSHOT.jar
 
 # Add the application's JAR to the container:
-ADD ${JAR_FILE} auth-service.jar
+ADD ${JAR_FILE} user-microservice.jar
 
 COPY ./src/main/resources/*.properties /config/
 
@@ -25,4 +25,4 @@ ENV SPRING_PROFILES_ACTIVE dev
 # RUN ls /config/migration
 
 # Run the jar file:
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/auth-service.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/user-microservice.jar"]

@@ -1,8 +1,8 @@
 applications:
-- name: reddclone-docker-userservice
+- name: docker-api-gateway
   memory: 512M
   instances: 1
   env:
     SPRING_PROFILES_ACTIVE: pcf
   docker:
-    image: jaik92/users-api
+    image: jaik92/api-gateway
