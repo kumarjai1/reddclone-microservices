@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -63,14 +64,15 @@ public class PostServiceImpl implements PostService {
         }
 
 
-
+    @Transactional
     @Override
     public Long deletePost(String userId, Long postId) {
         Post post = postRepository.findById(postId).orElse(null);
         Long user_id = Long.parseLong(userId);
         if (post.getUser_id() == user_id ) {
-            postRepository.delete(post);
             deleteCommentsOfPost(postId);
+            postRepository.delete(post);
+
         }
         return post.getId();
     }
@@ -86,13 +88,12 @@ public class PostServiceImpl implements PostService {
 //        savedPost.(Arrays.asList(comments));
 //        return savedPost;
 //    }
-
     private Long deleteCommentsOfPost(Long postId){
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<String>(headers);
-        Long res =  restTemplate.exchange("http://comments-api:2123/"+postId+"/comments", HttpMethod.DELETE, entity, Long.class).getBody();
+        Long res =  restTemplate.exchange("http://comments-api:2123/post/"+postId, HttpMethod.DELETE, entity, Long.class).getBody();
         return res;
     }
 

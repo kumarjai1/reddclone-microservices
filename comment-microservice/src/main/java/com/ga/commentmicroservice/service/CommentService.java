@@ -10,6 +10,7 @@ public interface CommentService {
 
     Iterable<Comment> getCommentsByUserId(Long userId);
     Iterable<Comment> getCommentsByPostId(Long postId);
+    Long deleteCommentsByPostId(Long postId);
 
     Long deleteCommentByUser (Long userId, Long commentId);
 

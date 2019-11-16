@@ -14,6 +14,7 @@ public interface PostService {
 
     Long deletePost(String userId, Long postId);
 
+
 //    public Post getPostById(Long postId);
 }
 
