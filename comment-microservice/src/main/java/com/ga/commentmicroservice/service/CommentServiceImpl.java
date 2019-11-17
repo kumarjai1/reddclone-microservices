@@ -5,6 +5,8 @@ import com.ga.commentmicroservice.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CommentServiceImpl implements CommentService {
 
@@ -30,17 +32,19 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public Iterable<Comment> getCommentsByUserId(Long userId) {
-        return commentRepository.findCommentByUserId(userId);
+        return commentRepository.findCommentsByUserId(userId);
     }
 
     @Override
     public Iterable<Comment> getCommentsByPostId(Long postId) {
-        return commentRepository.findCommentByPostId(postId);
+        return commentRepository.findCommentsByPostId(postId);
     }
 
     @Override
     public Long deleteCommentsByPostId(Long postId) {
-        return commentRepository.deleteByPostId(postId);
+        List<Comment> comments = (List<Comment>) commentRepository.findCommentsByPostId(postId);
+        commentRepository.deleteAll(comments);
+        return postId;
     }
 
     @Override

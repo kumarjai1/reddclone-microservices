@@ -2,7 +2,7 @@ package com.ga.commentmicroservice.service;
 
 import com.ga.commentmicroservice.model.Comment;
 
-public interface CommentService {
+public interface CommentService{
 
     Comment createComment ( Long userId, String postId, Comment comment);
 
