@@ -57,7 +57,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
         public Post createPost(String username, Post post) {
-            Long user_id = Long.parseLong(username);
+            //Long user_id = Long.parseLong(username);
 
             post.setUsername(username);
             return postRepository.save(post);
