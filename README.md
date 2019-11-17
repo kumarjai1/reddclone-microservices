@@ -25,7 +25,6 @@
 * Eureka
 * Docker
 * Hystrix
-
 * RestTemplate
 * Draw.io for Microservices Architecture diagram
 * Pivotal Cloud Foundry (hosting)
