@@ -10,7 +10,7 @@ public interface PostService {
 
     Iterable<Post> listPostsByUser(String userId);
 
-    public Post createPost(String userId, Post post);
+    public Post createPost(String username, Post post);
 
     Long deletePost(String userId, Long postId);
 
