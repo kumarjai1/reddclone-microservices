@@ -71,9 +71,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public String login(User user) {
         //TODO: test user respository login method with the custom query
-        User foundUser = userRepository.findByUsername(user.getUsername());
-
+        User foundUser = userRepository.findUserByEmail(user.getEmail());
+        System.out.println(foundUser.getUsername() + " " + foundUser.getEmail());
         if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
+            System.out.println(foundUser.getUsername());
+
+            //TODO: userdetails is grabbing a null username for some reason
             UserDetails userDetails = loadUserByUsername(foundUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
@@ -82,7 +85,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.getUserByUserName(username);
+        User user = userRepository.findUserByUsername(username);
 
         return new org.springframework.security.core.userdetails
                 .User(user.getUsername(),

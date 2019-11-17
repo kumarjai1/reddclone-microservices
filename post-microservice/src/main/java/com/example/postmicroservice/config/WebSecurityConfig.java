@@ -1,4 +1,4 @@
-package com.ga.commentmicroservice.config;
+package com.example.postmicroservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -16,9 +15,19 @@ import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan("com.ga")
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@ComponentScan("com.example")
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .cors().and()
+                .csrf().disable()
+                .httpBasic()
+        ;
+    }
+
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
@@ -29,18 +38,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/comments/list").permitAll()
-                .antMatchers("/comments/**").permitAll()
-                .and()
-                .httpBasic()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    }
-
-
 }

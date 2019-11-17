@@ -18,4 +18,9 @@ public class UserProfileController {
         return userProfileService.createProfile(userProfile, username);
     }
 
+    @GetMapping
+    public UserProfile getUserProfile(@RequestHeader ("username") String username){
+        return userProfileService.getUserProfile(username);
+    }
+
 }

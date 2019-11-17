@@ -3,6 +3,7 @@ package com.example.apigateway.config;
 import com.example.apigateway.service.CustomUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,6 +21,7 @@ import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
+@ComponentScan("com.example")
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
   @Autowired
@@ -35,24 +37,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 
   //TODO: cors issue for integration resolved by below
-//  @Bean
-//  CorsConfigurationSource corsConfigurationSource() {
-//    CorsConfiguration configuration = new CorsConfiguration();
-//    configuration.setAllowedOrigins(Arrays.asList("*"));
-//    configuration
-//            .setAllowedMethods(Arrays.asList("GET", "POST", "DELETE", "PUT"));
-//    configuration.setAllowedHeaders(
-//            Arrays.asList("X-Requested-With", "Origin", "Content-Type", "Accept", "Authorization", "cache-control"));
-//    configuration.setAllowCredentials(true);
-//    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//    source.registerCorsConfiguration("/**", configuration);
-//    return source;
-//  }
+  @Bean
+  CorsConfigurationSource corsConfigurationSource() {
+    CorsConfiguration configuration = new CorsConfiguration();
+    configuration.setAllowedOrigins(Arrays.asList("*"));
+    configuration.setAllowedMethods(Arrays.asList("*"));
+    configuration.setAllowedHeaders(Arrays.asList("*"));
+    configuration.setAllowCredentials(true);
+    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    source.registerCorsConfiguration("/**", configuration);
+    return source;
+  }
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
-    http.csrf().disable()
+    http.cors().and().csrf().disable()
             .authorizeRequests()
             .antMatchers("/users/signup/**", "/users/login/**", "/posts/list", "/comments/list", "/comments/{\\d}",
                     "/users/hello", "/comments/hello", "/posts/hello").permitAll()

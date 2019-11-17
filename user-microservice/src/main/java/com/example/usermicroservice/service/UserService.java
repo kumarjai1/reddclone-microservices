@@ -16,6 +16,8 @@ public interface UserService extends UserDetailsService {
     User getUser(String username);
 
     Iterable<UserRole> getUserRoles(Long userId);
+
     Iterable<UserRole> addRole (Long userId, Long roleId);
+
     User updateUser(User user);
 }
