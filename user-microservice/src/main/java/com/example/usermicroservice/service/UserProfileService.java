@@ -6,5 +6,5 @@ public interface UserProfileService {
 
     UserProfile createProfile (UserProfile userProfile, String username);
     UserProfile getUserProfile(String username);
-    UserProfile updateUserProfile(String username, UserProfile updateProfile);
+//    UserProfile updateUserProfile(String username, UserProfile updateProfile);
 }

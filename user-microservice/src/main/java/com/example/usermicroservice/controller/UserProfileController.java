@@ -18,10 +18,10 @@ public class UserProfileController {
         return userProfileService.createProfile(userProfile, username);
     }
 
-    @PutMapping("/{username}")
-    public UserProfile updateProfile(@RequestBody UserProfile profile, @RequestHeader("username") String username) {
-        return userProfileService.updateUserProfile(username, profile);
-    }
+//    @PutMapping("/{username}")
+//    public UserProfile updateProfile(@RequestBody UserProfile profile, @RequestHeader("username") String username) {
+//        return userProfileService.updateUserProfile(username, profile);
+//    }
 
     @GetMapping
     public UserProfile getUserProfile(@RequestHeader ("username") String username){

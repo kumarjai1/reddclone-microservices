@@ -72,13 +72,9 @@ public class UserServiceImpl implements UserService {
         if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
             System.out.println(foundUser.getUsername());
 
-//            //TODO: userdetails is grabbing a null username for some reason
-//            UserDetails userDetails = loadUserByUsername(foundUser.getUsername());
             return new JwtResponse(jwtUtil.generateToken(foundUser.getUsername()), foundUser.getUsername());
-        } else {
-            throw new EntityNotFoundException();
         }
-//        return null; //TODO: throw an exception
+        return null; //TODO: throw an exception
     }
 
     @Override
