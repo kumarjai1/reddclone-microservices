@@ -46,11 +46,13 @@ We built and connected all Apis needed for post and comment CRUD. We used RestTe
 
 * Making design decisions.
 
-* Creating different databases for each microservice.
+* Creating different databases for each micro-service.
 
-* Security throught Api-gateway.
+* Security through Api-gateway.
 
 * Intercommunication between services.
+
+* Dealing with Cors errors.
 
 * Deployment and any configurations with it.
 
@@ -58,9 +60,9 @@ We built and connected all Apis needed for post and comment CRUD. We used RestTe
 
 * Pair programming.
 
-* Making early design desicions and making them work.
+* Making early design decisions and making them work.
 
-* Figuring out microservices intercommunication.
+* Figuring out micro-services intercommunication.
  
 
 
