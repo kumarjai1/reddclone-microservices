@@ -47,7 +47,7 @@ public class UserMicroserviceApplication {
 
 	@PostMapping("/login")
 	public ResponseEntity login(@RequestBody User user) {
-		return ResponseEntity.ok(new JwtResponse(userService.login(user), user.getUsername()));
+		return ResponseEntity.ok(userService.login(user));
 	}
 
 	@GetMapping("/{userId}/roles")
