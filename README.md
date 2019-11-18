@@ -40,7 +40,9 @@ We constructed the skeleton of the project- one main directory with all 5 micros
 We built and connected all Apis needed for post and comment CRUD. We used RestTemplate in Post Microservice for it to be able to communicate with Comment Microservice for the two methods where it was needed: Cascade delete all comments that belong to a post,when that post is deleted; Show all comments that belong to a post. Tested all Apis and connected to the front end. 
 
 ## Microservices Architecture
-![Architecture](./img/architecture.png)
+
+https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-11-18_at_9.31.30_AM.png
+
 
 ## Challenges
 
