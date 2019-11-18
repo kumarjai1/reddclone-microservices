@@ -100,3 +100,13 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
     * Sunday(Nov 17, 2019) - Connected to the front-end.
     
             *-*-*-*-*-*-*
+            
+## Backlog
+
+* Delete everything when user is deleted
+* Finish up deployment 
+* Utilize RabbitMQ for interservice communication, rather than RestTemplate 
+* Refactor code
+* Comment on code
+* Test code 
+
