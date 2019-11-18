@@ -8,8 +8,10 @@ import org.springframework.stereotype.Repository;
 //@Repository
 public interface PostRepository extends CrudRepository<Post, Long> {
 
-//    Iterable<Post> findPostsByUser_id(Long userId);
-//@Query("FROM Post p where p.userId=?1")
-//Post getPostByUserId(Long userId);
+
+
+//    Post findPostByUsername(String username);
+    Iterable<Post> findPostsByUsername(String username);
+
 
 }

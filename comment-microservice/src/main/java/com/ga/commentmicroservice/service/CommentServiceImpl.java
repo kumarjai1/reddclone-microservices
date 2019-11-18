@@ -14,13 +14,14 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Override
-    public Comment createComment(Long userId, String postId, Comment comment) {
+    public Comment createComment(String username, String postId, Comment comment) {
 
 //        Long user_id = Long.parseLong(userId);
         Long foundPostId = Long.parseLong(postId);
         System.out.println(foundPostId);
-        comment.setUserId(userId);
+//        comment.setUserId(userId);
         comment.setPostId(foundPostId);
+        comment.setUsername(username);
 
         return commentRepository.save(comment);
     }
@@ -31,9 +32,14 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Iterable<Comment> getCommentsByUserId(Long userId) {
-        return commentRepository.findCommentsByUserId(userId);
+    public Iterable<Comment> getCommentsByUser(String username) {
+        return commentRepository.findCommentsByUsername(username);
     }
+
+//    @Override
+//    public Iterable<Comment> getCommentsByUserId(Long userId) {
+//        return commentRepository.findCommentsByUserId(userId);
+//    }
 
     @Override
     public Iterable<Comment> getCommentsByPostId(Long postId) {
@@ -48,11 +54,13 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Long deleteCommentByUser(Long userId, Long commentId) {
+    public Long deleteCommentByUser(String username, Long commentId) {
         Comment comment = commentRepository.findById(commentId).orElse(null);
-
-        if (comment.getUserId() == userId ) {
-            commentRepository.delete(comment);
+        System.out.println(username + " commentId: " + commentId);
+        if (comment.getUsername().equals(username)) {
+            commentRepository.deleteById(commentId);
+        } else {
+            return 0L;
         }
         return comment.getId();
     }

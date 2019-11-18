@@ -17,19 +17,19 @@ public class PostController {
     }
 
     @PostMapping("/")
-    public Post createPost(@RequestHeader("userId") String userId, @RequestBody Post post) {
-        return postService.createPost(userId, post);
+    public Post createPost(@RequestHeader("username") String username, @RequestBody Post post) {
+        return postService.createPost(username, post);
     }
 
-    @GetMapping("/{userId}")
-    public Iterable<Post> listPostByUser(@PathVariable String userId) {
-        return postService.listPostsByUser(userId);
+    @GetMapping
+    public Iterable<Post> listPostByUser(@RequestHeader String username) {
+        return postService.listPostsByUser(username);
     }
 
 
-    @DeleteMapping("/{userId}/{postId}")
-    public Long deletePost(@PathVariable String userId, @PathVariable Long postId) {
-        return postService.deletePost(userId, postId);
+    @DeleteMapping("/{postId}")
+    public Long deletePost(@RequestHeader("username") String username, @PathVariable Long postId) {
+        return postService.deletePost(username, postId);
     }
 
 //    @GetMapping("/{postId}/comment")

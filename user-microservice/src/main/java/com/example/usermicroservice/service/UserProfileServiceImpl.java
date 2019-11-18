@@ -4,6 +4,7 @@ import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserProfile;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserProfileRepository;
+import com.example.usermicroservice.repository.UserRepository;
 import com.example.usermicroservice.util.AuthenticationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -23,48 +24,60 @@ public class UserProfileServiceImpl implements UserProfileService {
     @Autowired
     UserService userService;
 
+    @Autowired
+    UserRepository userRepository;
+
     @Override
     public UserProfile createProfile(UserProfile userProfile, String username) {
 //        Authentication authentication = authenticationUtil.getAuthentication();
 //        System.out.println("1. auth: "+ authentication.getName() + " | username passsed: " + username);
-
+//
         User user = userService.getUser(username);
-        System.out.println("1. username: " + username);
-        if (user != null) {
-            System.out.println("2. username: " + username);
-            if (user.getUserProfile() != null) {
-                System.out.println("3. username: " + username);
-                userProfile.setId(user.getUserProfile().getId());
-            }
-            user.setUserProfile(userProfile);
-            userProfile.setUser(user);
-            userProfileRepository.save(userProfile);
-            return userService.updateUser(user).getUserProfile();
+        UserProfile foundProfile = user.getUserProfile();
+        System.out.println("1. username: " + username + " usernameUser:" + user.getUsername());
 
+
+        if (user.getUsername() != null) {
+            System.out.println("2. usernamePassed: " + username);
+
+            if (foundProfile != null) {
+                System.out.println("3. username: " + username);
+                userProfile.setId(foundProfile.getId());
+            }
+            foundProfile = userProfileRepository.save(userProfile);
+            user.setUserProfile(foundProfile);
+            foundProfile.setUser(user);
+            userService.updateUser(user);
+            return userProfileRepository.save(foundProfile);
         }
 
         return userProfileRepository.save(userProfile);
+
     }
-//
-//    public Iterable<UserRole> addRole(Long userId, Long roleId) {
-//        //TODO: check if userid belongs to the user
-//        User user = userRepository.findById(userId).orElse(null);
-//        UserRole userRole = userRoleService.getRoleById(roleId);
-//        if (user != null) {
-//            if (userRole != null) {
-//                user.getUserRoles().add(userRole);
-//                userRepository.save(user); //TODO: change to method, updateUser
-//            } else {
-//                throw new EntityNotFoundException();
-//            }
-//        }
-//        return user.getUserRoles();
-//    }
 
 
 
     @Override
     public UserProfile getUserProfile(String username) {
-        return userProfileRepository.findProfileByUsername(username);
+        User user = userService.getUser(username);
+        System.out.println(user.getUsername() + " passed username:" + username);
+
+        if (user == null) {
+            return null;
+        }
+
+        UserProfile savedProfile = userProfileRepository.findUserProfileByUsername(username);
+        if (savedProfile == null) {
+            System.out.println(2 + user.getUsername() + " passed username:" + username);
+            savedProfile = new UserProfile();
+            userProfileRepository.save(savedProfile);
+            savedProfile.setUser(user);
+            user.setUserProfile(savedProfile);
+            userService.updateUser(user);
+            return userProfileRepository.save(savedProfile);
+        }
+        return savedProfile;
+
     }
+
 }

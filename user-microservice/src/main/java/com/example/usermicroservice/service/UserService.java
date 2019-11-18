@@ -11,7 +11,7 @@ public interface UserService extends UserDetailsService {
 
     JwtResponse signup(User user);
 
-    String login(User user);
+    JwtResponse login(User user);
 
     User getUser(String username);
 

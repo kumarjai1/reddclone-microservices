@@ -10,9 +10,8 @@ public interface CommentRepository extends CrudRepository<Comment, Long> {
 
     @Query("FROM Comment c where c.postId=?1")
     public Iterable<Comment> findCommentsByPostId(Long postId);
-    @Query("FROM Comment c where c.userId=?1")
-    public Iterable<Comment> findCommentsByUserId(Long userId);
 
+    Iterable<Comment> findCommentsByUsername(String username);
 
 
 

@@ -5,12 +5,9 @@ import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRepository;
 import com.example.usermicroservice.util.JwtResponse;
 import com.example.usermicroservice.config.JwtUtil;
-import io.jsonwebtoken.Jwt;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -62,23 +58,21 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.save(user);
 
         if(savedUser != null) {
-            UserDetails userDetails = loadUserByUsername(user.getUsername());
-            return new JwtResponse( jwtUtil.generateToken(userDetails),user.getUsername());
+//            UserDetails userDetails = loadUserByUsername(user.getUsername());
+            return new JwtResponse(jwtUtil.generateToken(savedUser.getUsername()), savedUser.getUsername());
         }
         return null;
     }
 
     @Override
-    public String login(User user) {
+    public JwtResponse login(User user) {
         //TODO: test user respository login method with the custom query
         User foundUser = userRepository.findUserByEmail(user.getEmail());
         System.out.println(foundUser.getUsername() + " " + foundUser.getEmail());
         if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
             System.out.println(foundUser.getUsername());
 
-            //TODO: userdetails is grabbing a null username for some reason
-            UserDetails userDetails = loadUserByUsername(foundUser.getUsername());
-            return jwtUtil.generateToken(userDetails);
+            return new JwtResponse(jwtUtil.generateToken(foundUser.getUsername()), foundUser.getUsername());
         }
         return null; //TODO: throw an exception
     }
@@ -102,7 +96,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUser(String username) {
-        return userRepository.findByUsername(username);
+        return userRepository.findUserByUsername(username);
     }
 
     @Override

@@ -4,17 +4,17 @@ import com.ga.commentmicroservice.model.Comment;
 
 public interface CommentService{
 
-    Comment createComment ( Long userId, String postId, Comment comment);
+    Comment createComment(String username, String postId, Comment comment);
 
     Iterable<Comment> listComments();
 
-    Iterable<Comment> getCommentsByUserId(Long userId);
+    Iterable<Comment> getCommentsByUser(String username);
 
     Iterable<Comment> getCommentsByPostId(Long postId);
 
     Long deleteCommentsByPostId(Long postId);
 
-    Long deleteCommentByUser (Long userId, Long commentId);
+    Long deleteCommentByUser (String username, Long commentId);
 
 
 }

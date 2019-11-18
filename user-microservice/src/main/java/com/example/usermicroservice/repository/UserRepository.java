@@ -10,14 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<User, Long> {
 
 
-//    User login(String userName);
-
-    @Query("from User u where u.username = ?1")
-    User getUserByUserName(String userName);
-
-    User findByUsername(String username);
-
-//    User getUserByEmail(String email);
     User findUserByEmail(String email);
     User findUserByUsername(String username);
 
