@@ -17,17 +17,26 @@ public class Post {
     @Column
     private String description;
 
-
     @Column
-    private Long user_id;
+    private Long userId;
 
-
-    public Long getUser_id() {
-        return user_id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    @Column
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Post() { }

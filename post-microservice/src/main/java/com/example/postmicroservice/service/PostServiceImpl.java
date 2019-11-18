@@ -33,17 +33,17 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Iterable<Post> listPostsByUser(String userId) {
+    public Iterable<Post> listPostsByUser(String username) {
 
-        Long user_id = Long.parseLong(userId);
+        //Long user_id = Long.parseLong(username);
 
-        List<Post> userPosts = new ArrayList<>();
-        for (Post post: postRepository.findAll()) {
-            if (post.getUser_id() == user_id) {
-                userPosts.add(post);
-            }
-        }
-        return userPosts;
+//        List<Post> userPosts = new ArrayList<>();
+//        for (Post post: postRepository.findAll()) {
+//            if (post.getUsername() == username) {
+//                userPosts.add(post);
+//            }
+//        }
+        return (Iterable<Post>) postRepository.findPostByUsername(username);
 //        return postRepository.findPostsByUser_id(user_id);
 //        ((ArrayList<Long>) userIds).add(user_id);
 //
@@ -56,20 +56,20 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-        public Post createPost(String userId, Post post) {
-            Long user_id = Long.parseLong(userId);
+        public Post createPost(String username, Post post) {
+            //Long user_id = Long.parseLong(username);
 
-            post.setUser_id(user_id);
+            post.setUsername(username);
             return postRepository.save(post);
         }
 
 
     @Transactional
     @Override
-    public Long deletePost(String userId, Long postId) {
+    public Long deletePost(String username, Long postId) {
         Post post = postRepository.findById(postId).orElse(null);
-        Long user_id = Long.parseLong(userId);
-        if (post.getUser_id() == user_id ) {
+        //Long user_id = Long.parseLong(username);
+        if (post.getUsername() == username ) {
             deleteCommentsOfPost(postId);
             postRepository.delete(post);
 
