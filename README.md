@@ -58,6 +58,8 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
 
 * Deployment and any configurations with it.
 
+* Integration with front-end
+
 ## Wins
 
 * Pair programming.
