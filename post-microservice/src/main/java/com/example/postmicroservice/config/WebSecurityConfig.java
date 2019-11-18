@@ -19,15 +19,6 @@ import java.util.Arrays;
 @ComponentScan("com.example")
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .cors().and()
-                .csrf().disable()
-                .httpBasic()
-        ;
-    }
-
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
@@ -37,5 +28,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .httpBasic();
     }
 }

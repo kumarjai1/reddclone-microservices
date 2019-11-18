@@ -19,6 +19,7 @@ import java.util.Arrays;
 @ComponentScan("com.ga")
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
@@ -29,17 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
         http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/comments/list").permitAll()
-                .antMatchers("/comments/**").permitAll()
-                .and()
-                .httpBasic()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .httpBasic();
     }
 
 

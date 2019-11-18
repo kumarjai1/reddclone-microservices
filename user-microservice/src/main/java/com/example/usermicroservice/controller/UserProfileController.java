@@ -13,9 +13,14 @@ public class UserProfileController {
     @Autowired
     UserProfileService userProfileService;
 
-    @PostMapping("/{username}")
+    @PostMapping
     public UserProfile createUserProfile(@RequestBody UserProfile userProfile, @RequestHeader("username") String username) {
         return userProfileService.createProfile(userProfile, username);
+    }
+
+    @PutMapping("/{username}")
+    public UserProfile updateProfile(@RequestBody UserProfile profile, @RequestHeader("username") String username) {
+        return userProfileService.updateUserProfile(username, profile);
     }
 
     @GetMapping

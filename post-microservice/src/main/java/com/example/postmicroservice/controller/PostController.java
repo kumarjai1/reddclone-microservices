@@ -21,8 +21,8 @@ public class PostController {
         return postService.createPost(username, post);
     }
 
-    @GetMapping("/{userId}")
-    public Iterable<Post> listPostByUser(@PathVariable String username) {
+    @GetMapping
+    public Iterable<Post> listPostByUser(@RequestHeader String username) {
         return postService.listPostsByUser(username);
     }
 

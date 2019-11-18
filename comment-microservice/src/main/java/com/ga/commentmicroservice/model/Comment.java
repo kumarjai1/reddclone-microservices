@@ -17,9 +17,6 @@ public class Comment {
     private String text;
 
     @Column
-    private Long userId;
-
-    @Column
     private String username;
 
     public String getUsername() {
@@ -57,14 +54,6 @@ public class Comment {
 
     public void setPostId(Long postId) {
         this.postId = postId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
     }
 
     public UserBean getUser() {

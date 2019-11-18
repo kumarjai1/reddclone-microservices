@@ -26,13 +26,13 @@ public class CommentController {
     }*/
 
     @PostMapping("/{postId}")
-    public Comment createComment(@RequestHeader("userId") Long userId,@RequestHeader("username") String username, @PathVariable String postId, @RequestBody Comment comment) {
-        return commentService.createComment(userId,username, postId, comment);
+    public Comment createComment(@RequestHeader("username") String username, @PathVariable String postId, @RequestBody Comment comment) {
+        return commentService.createComment(username, postId, comment);
     }
 
     @GetMapping("/user")
-    public Iterable<Comment> findCommentsByUser_id(@RequestHeader("userId") Long userId) {
-        return commentService.getCommentsByUserId(userId);
+    public Iterable<Comment> findCommentsByUser(@RequestHeader("username") String username) {
+        return commentService.getCommentsByUser(username);
     }
 
     @GetMapping("/{postId}")
@@ -41,8 +41,8 @@ public class CommentController {
     }
 
     @DeleteMapping("/{commentId}")
-    public Long deleteCommentByUser(@RequestHeader("userId") Long userId, @PathVariable Long commentId) {
-        return commentService.deleteCommentByUser(userId, commentId);
+    public Long deleteCommentByUser(@RequestHeader("username") String username, @PathVariable Long commentId) {
+        return commentService.deleteCommentByUser(username, commentId);
     }
 
     @DeleteMapping("/post/{postId}")
