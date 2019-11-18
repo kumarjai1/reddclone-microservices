@@ -14,13 +14,14 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Override
-    public Comment createComment(Long userId, String postId, Comment comment) {
+    public Comment createComment(Long userId, String username, String postId, Comment comment) {
 
 //        Long user_id = Long.parseLong(userId);
         Long foundPostId = Long.parseLong(postId);
         System.out.println(foundPostId);
         comment.setUserId(userId);
         comment.setPostId(foundPostId);
+        comment.setUsername(username);
 
         return commentRepository.save(comment);
     }

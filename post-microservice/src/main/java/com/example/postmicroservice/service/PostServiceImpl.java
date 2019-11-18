@@ -35,7 +35,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public Iterable<Post> listPostsByUser(String username) {
 
-        Long user_id = Long.parseLong(username);
+        //Long user_id = Long.parseLong(username);
 
 //        List<Post> userPosts = new ArrayList<>();
 //        for (Post post: postRepository.findAll()) {
@@ -68,7 +68,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public Long deletePost(String username, Long postId) {
         Post post = postRepository.findById(postId).orElse(null);
-        Long user_id = Long.parseLong(username);
+        //Long user_id = Long.parseLong(username);
         if (post.getUsername() == username ) {
             deleteCommentsOfPost(postId);
             postRepository.delete(post);

@@ -16,8 +16,19 @@ public class Comment {
     @Column(nullable = false)
     private String text;
 
-    @Column(nullable = false)
+    @Column
     private Long userId;
+
+    @Column
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     @Transient
     UserBean user;
