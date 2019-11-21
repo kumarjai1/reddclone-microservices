@@ -101,6 +101,22 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
 
     * Sunday(Nov 17, 2019) - Connected to the front-end.
     
+    * Thursday / Friday (Nov 21/22, 2019)- Setting up RabbitMq and inter-service communication.
+    
+    * Saturday & Sunday (Nov 23/24, 2019)- Finish the inter-service communication and complete Swagger.
+    
+    * Monday (Nov 25, 2019)- Finish Swagger, start Logging 
+    
+    * Tuesday (Nov 26. 2019)- Finish Logging, Monitoring etc
+    
+    * Wednesday (Nov 27, 2019)- Start Jenkins
+    
+    * Thursday- Sunday (Nov 28 to Dec 1, 2019) Start testing.
+    
+    * Monday/ Tuesday (Dec 2- Dec 3, 2019) - Deployment and Error Handling 
+    
+    * Wednesday (Dec 3, 2019) - Presentations
+    
             *-*-*-*-*-*-*
             
 ## Backlog
