@@ -91,3 +91,17 @@ services:
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
+  rabbitmq: 
+    image: rabbitmq:latest
+    ports:
+      - '5673:5672'
+      - '15673:15672'
+    working_dir: /app 
+    volumes: 
+      - ./rabbit:/app
+    # command: 'mvn spring-boot:run'
+    depends_on:
+      - eureka
+    environment:
+        - RABBITMQ_DEFAULT_USER = user
+        - RABBITMQ_DEFAULT_PASS = pass
