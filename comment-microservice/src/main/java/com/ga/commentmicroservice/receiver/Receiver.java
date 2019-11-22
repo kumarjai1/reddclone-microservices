@@ -17,7 +17,9 @@ public class Receiver {
     //receiving postid from the post microservice to delete comments by postid
     @RabbitHandler
     public String deleteCommentsByPostId(String message){
+        System.out.println("msg received " + message);
         Long postId = Long.parseLong(message);
+        System.out.println("msg received " + message);
         return String.valueOf(commentService.deleteCommentsByPostId(postId));
     }
 

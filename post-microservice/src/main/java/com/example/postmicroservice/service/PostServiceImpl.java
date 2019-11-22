@@ -84,8 +84,8 @@ public class PostServiceImpl implements PostService {
 
     //Post sender to rabbitmq for the message - sending the post id
     private Long deleteCommentsOfPostUsingRabbitMq(Long postId){
-
         String res = (String) rabbitTemplate.convertSendAndReceive(queue.getName(), postId);
+        System.out.println("msg sent:" + postId);
         return Long.parseLong(res);
     }
 
