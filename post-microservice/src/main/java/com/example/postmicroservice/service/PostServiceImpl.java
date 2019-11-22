@@ -2,6 +2,9 @@ package com.example.postmicroservice.service;
 
 import com.example.postmicroservice.model.Post;
 import com.example.postmicroservice.repository.PostRepository;
+import com.netflix.discovery.converters.Auto;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -24,8 +27,11 @@ public class PostServiceImpl implements PostService {
 
     @Autowired
     PostRepository postRepository;
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
-
+    @Autowired
+    Queue queue;
 
     @Override
     public Iterable<Post> listPosts() {
@@ -56,8 +62,9 @@ public class PostServiceImpl implements PostService {
 //        //Long user_id = Long.parseLong(username);
         if (post.getUsername().equals(username)) {
 
-            deleteCommentsOfPost(postId);
+            //deleteCommentsOfPost(postId);
 //            postRepository.delete(post);
+            deleteCommentsOfPostUsingRabbitMq(postId);
             postRepository.deleteById(postId);
         } else {
             return 0L;
@@ -72,6 +79,12 @@ public class PostServiceImpl implements PostService {
         HttpEntity<String> entity = new HttpEntity<String>(headers);
         Long res =  restTemplate.exchange("http://comments-api:2123/post/"+postId, HttpMethod.DELETE, entity, Long.class).getBody();
         return res;
+    }
+
+    private Long deleteCommentsOfPostUsingRabbitMq(Long postId){
+
+        String res = (String) rabbitTemplate.convertSendAndReceive(queue.getName(), postId);
+        return Long.parseLong(res);
     }
 
 }
