@@ -30,9 +30,6 @@ public class PostServiceImpl implements PostService {
     @Autowired
     RabbitTemplate rabbitTemplate;
 
-    @Autowired
-    Queue queue;
-
     @Override
     public Iterable<Post> listPosts() {
         return postRepository.findAll();
@@ -64,6 +61,7 @@ public class PostServiceImpl implements PostService {
 
             //deleteCommentsOfPost(postId);
 //            postRepository.delete(post);
+            System.out.println("msg send started:" + postId);
             deleteCommentsOfPostUsingRabbitMq(postId);
             postRepository.deleteById(postId);
         } else {
@@ -84,9 +82,12 @@ public class PostServiceImpl implements PostService {
 
     //Post sender to rabbitmq for the message - sending the post id
     private Long deleteCommentsOfPostUsingRabbitMq(Long postId){
-        String res = (String) rabbitTemplate.convertSendAndReceive(queue.getName(), postId);
+        System.out.println("msg sending:" + postId);
+        String res = (String) rabbitTemplate.convertSendAndReceive("post.comment", postId);
+        System.out.println(res);
         System.out.println("msg sent:" + postId);
-        return Long.parseLong(res);
+        Long postIdSent = Long.parseLong(res);
+        return postIdSent;
     }
 
 }

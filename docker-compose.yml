@@ -12,7 +12,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=dev
   rabbitmq: 
-    image: "rabbitmq:3-management"
+    image: "rabbitmq:management"
     ports:
       - '5672:5672'
       - '15672:15672'
@@ -20,9 +20,9 @@ services:
     volumes:
       - ./rabbit:/app
     # command: 'mvn spring-boot:run'
-    environment:
-        - RABBITMQ_DEFAULT_USER=guest
-        - RABBITMQ_DEFAULT_PASS=guest      
+    # environment:
+    #     - RABBITMQ_DEFAULT_USER=guest
+    #     - RABBITMQ_DEFAULT_PASS=guest      
   api-gateway:
     image: maven:3.6.1-jdk-8
     ports:
@@ -89,10 +89,12 @@ services:
       - ./post-microservice:/app
     depends_on:
       - eureka
-      - rabbitmq
+      # - rabbitmq
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
+    links: 
+        - rabbitmq
   comments-api:
     image: maven:3.6.1-jdk-8
     ports:
@@ -102,8 +104,10 @@ services:
       - ./comment-microservice:/app
     depends_on:
       - eureka
-      - rabbitmq
+      # - rabbitmq
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
+    links: 
+      - rabbitmq
 
