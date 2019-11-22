@@ -9,9 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 @RabbitListener(queues= "post.comment")
 public class Receiver {
+
     @Autowired
     CommentService commentService;
 
+
+    //receiving postid from the post microservice to delete comments by postid
     @RabbitHandler
     public String deleteCommentsByPostId(String message){
         Long postId = Long.parseLong(message);
