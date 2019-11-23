@@ -15,24 +15,14 @@ public class Receiver {
     CommentService commentService;
 
 
-//    receiving postid from the post microservice to delete comments by postid
+    @RabbitListener(queuesToDeclare = @Queue ("post.comment"))
     @RabbitHandler
-    public String deleteCommentsByPostId(String message){
-        System.out.println("msg received " + message);
+    public Long receive(String message) {
+        System.out.println("message receving: " + message);
         Long postId = Long.parseLong(message);
-        System.out.println("msg received " + message);
-        return String.valueOf(commentService.deleteCommentsByPostId(postId));
-    }
-
-//
-////    @RabbitListener(queuesToDeclare = @Queue ("post.comment"))
-//    @RabbitHandler
-//    public void receive(String message) {
-//        System.out.println("message receving: " + message);
-//        Long postId = Long.parseLong(message);
-//        System.out.println("message received: " + message);
-////        commentService.deleteCommentsByPostId(postId);
+        System.out.println("message received: " + message);
 //        commentService.deleteCommentsByPostId(postId);
-//    }
+        return commentService.deleteCommentsByPostId(postId);
+    }
 
 }
