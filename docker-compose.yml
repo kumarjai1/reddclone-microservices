@@ -11,6 +11,17 @@ services:
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
+  swagger:
+    image: maven:3.6.1-jdk-8
+    ports:
+      - '3535:3535'
+    volumes:
+      - ./swagger:/app
+    depends_on:
+      - eureka
+    command: 'mvn spring-boot:run'
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
   rabbitmq: 
     image: "rabbitmq:3-management"
     ports:
@@ -106,4 +117,3 @@ services:
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
-
