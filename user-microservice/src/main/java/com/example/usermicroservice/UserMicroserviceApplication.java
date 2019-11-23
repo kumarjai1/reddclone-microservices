@@ -17,7 +17,6 @@ import javax.validation.Valid;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
 public class UserMicroserviceApplication {
 
 	public static void main(String[] args) {
@@ -40,7 +39,7 @@ public class UserMicroserviceApplication {
 		return "Hello suckers";
 	}
 
-	@PostMapping("/signup")
+	/*@PostMapping("/signup")
 	public ResponseEntity signup(@Valid @RequestBody User user) {
 		return ResponseEntity.ok(userService.signup(user));
 	}
@@ -58,5 +57,5 @@ public class UserMicroserviceApplication {
 	@PostMapping("{userId}/{roleId}")
 	public Iterable<UserRole> addRole (@PathVariable Long userId, @PathVariable Long roleId) {
 		return userService.addRole(userId, roleId);
-	}
+	}*/
 }
