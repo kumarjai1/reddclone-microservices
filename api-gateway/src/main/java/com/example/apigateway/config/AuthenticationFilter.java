@@ -6,6 +6,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,9 +36,8 @@ public class AuthenticationFilter extends ZuulFilter {
     System.out.println(username);
     if (username !="anonymousUser") {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
   @Override
@@ -51,8 +51,8 @@ public class AuthenticationFilter extends ZuulFilter {
       String userId = String.valueOf(user.getId());
       ctx.addZuulRequestHeader("userId", userId);
       ctx.addZuulRequestHeader("username", username);
+      System.out.println("found user username: " + username);
     }
-
     return null;
   }
 }

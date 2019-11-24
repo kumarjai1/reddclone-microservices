@@ -1,5 +1,7 @@
 package com.example.usermicroservice;
 
+import com.example.usermicroservice.exception.EntityNotFoundException;
+import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
 //import com.example.usermicroservice.model.UserRole;
 //import com.example.usermicroservice.service.UserRoleService;
@@ -46,7 +48,7 @@ public class UserMicroserviceApplication {
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity login(@RequestBody User user) {
+	public ResponseEntity login(@Valid @RequestBody User user) throws LoginException, EntityNotFoundException {
 		return ResponseEntity.ok(userService.login(user));
 	}
 

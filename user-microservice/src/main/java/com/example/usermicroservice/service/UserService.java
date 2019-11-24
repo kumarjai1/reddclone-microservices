@@ -1,5 +1,7 @@
 package com.example.usermicroservice.service;
 
+import com.example.usermicroservice.exception.EntityNotFoundException;
+import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.util.JwtResponse;
@@ -11,7 +13,7 @@ public interface UserService extends UserDetailsService {
 
     JwtResponse signup(User user);
 
-    JwtResponse login(User user);
+    JwtResponse login(User user) throws LoginException, EntityNotFoundException;
 
     User getUser(String username);
 

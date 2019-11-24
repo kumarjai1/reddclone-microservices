@@ -71,22 +71,12 @@ public class CommentServiceImpl implements CommentService {
     private Long checkIfPostExists(Long postId) {
         System.out.println("receiving postId back from post: " + postId);
         Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
-        if (res !=null) {
+        if (res != null) {
             return res;
         }
 
         System.out.println("Comment check post id exists received:" + res);
         throw new EntityNotFoundException("Post doesn't exist");
     }
-
-
-//    private Long deleteCommentsOfPostUsingRabbitMq(Long postId){
-//        System.out.println("msg sending:" + postId);
-//        Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
-//        System.out.println(res);
-//        System.out.println("msg sent:" + postId);
-////        Long postIdSent = Long.parseLong(res);
-//        return res;
-//    }
 
 }

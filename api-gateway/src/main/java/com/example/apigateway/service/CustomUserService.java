@@ -28,9 +28,12 @@ public class CustomUserService implements UserDetailsService {
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     System.out.println("loadUser");
     UserBean user = userRepository.getUserByUsername(username);
-    System.out.println(user.getUsername());
-    if(user==null)
-      throw new UsernameNotFoundException("User null");
+    System.out.println("found user username: " + user.getUsername());
+    if(user == null) {
+      System.out.println("not found user username: " + username);
+      throw new UsernameNotFoundException("Unknown username " + username);
+    }
+
 
     return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
         true, true, true, true, new ArrayList<>());
@@ -39,7 +42,7 @@ public class CustomUserService implements UserDetailsService {
   private List<GrantedAuthority> getGrantedAuthorities(UserBean user){
     List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 //    TODO : add this back in for user roles
-//    authorities.add(new SimpleGrantedAuthority(user.getUserRole().getName()));
+//    authorities.add(new SimpleGrSystem.out.println("error coming here handleexceptionentitynotfound");antedAuthority(user.getUserRole().getName()));
 
     return authorities;
   }

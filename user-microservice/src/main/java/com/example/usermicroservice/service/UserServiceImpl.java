@@ -1,5 +1,7 @@
 package com.example.usermicroservice.service;
 
+import com.example.usermicroservice.exception.EntityNotFoundException;
+import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRepository;
@@ -14,7 +16,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,11 +50,9 @@ public class UserServiceImpl implements UserService {
             userRole = new UserRole();
             userRole.setName("ROLE_USER");
             userRoleService.createRole(userRole);
-
         }
         userRoles.add(userRole);
         user.setUserRoles(userRoles);
-
         user.setPassword(encoder().encode(user.getPassword()));
         User savedUser = userRepository.save(user);
 
@@ -65,22 +64,26 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public JwtResponse login(User user) {
+    public JwtResponse login(User user) throws LoginException, EntityNotFoundException {
         //TODO: test user respository login method with the custom query
         User foundUser = userRepository.findUserByEmail(user.getEmail());
         System.out.println(foundUser.getUsername() + " " + foundUser.getEmail());
-        if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
-            System.out.println(foundUser.getUsername());
-
+        if (foundUser != null &&
+                encoder().matches(user.getPassword(), foundUser.getPassword())) {
             return new JwtResponse(jwtUtil.generateToken(foundUser.getUsername()), foundUser.getUsername());
+        } else if (foundUser != null && !encoder().matches(user.getPassword(), foundUser.getPassword())) {
+            System.out.println("username is coming here error - error");
+            throw new LoginException("Username / password incorrect"); //TODO: throw an exception
         }
-        return null; //TODO: throw an exception
+        System.out.println("username it coming here error");
+        throw new EntityNotFoundException("User not found");
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findUserByUsername(username);
 
+        if (user == null) throw new UsernameNotFoundException("Unknown username " + username);
         return new org.springframework.security.core.userdetails
                 .User(user.getUsername(),
                 encoder().encode(user.getPassword()), getGrantedAuthorities(user));
@@ -114,9 +117,10 @@ public class UserServiceImpl implements UserService {
             if (userRole != null) {
                 user.getUserRoles().add(userRole);
                 userRepository.save(user); //TODO: change to method, updateUser
-            } else {
-                throw new EntityNotFoundException();
             }
+//            else {
+//                throw new EntityNotFoundException("Role does not exist");
+//            }
         }
         return user.getUserRoles();
     }
