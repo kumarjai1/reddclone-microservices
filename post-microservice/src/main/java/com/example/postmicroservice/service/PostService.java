@@ -13,7 +13,7 @@ public interface PostService {
     public Post createPost(String username, Post post);
 
     Long deletePost(String userId, Long postId);
-
+    Long findPostById (Long postId);
 
 //    public Post getPostById(Long postId);
 }

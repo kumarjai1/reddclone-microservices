@@ -4,6 +4,7 @@ import com.example.postmicroservice.model.Post;
 import com.example.postmicroservice.repository.PostRepository;
 import com.netflix.discovery.converters.Auto;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 
+import javax.persistence.EntityNotFoundException;
 import javax.xml.stream.events.Comment;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,14 +72,31 @@ public class PostServiceImpl implements PostService {
         return post.getId();
     }
 
-    private Long deleteCommentsOfPost(Long postId){
-        RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<String> entity = new HttpEntity<String>(headers);
-        Long res =  restTemplate.exchange("http://comments-api:2123/post/"+postId, HttpMethod.DELETE, entity, Long.class).getBody();
-        return res;
+    @RabbitListener(queues = "post.comment")
+    @Override
+    public Long findPostById(Long postId) {
+        Post post = postRepository.findById(postId).orElse(null);
+
+
+        if (post != null) {
+            System.out.println("post does exist so send back the postid" + post.getId());
+            Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", post.getId());
+
+            return res;
+        }
+
+        return null;
+
     }
+
+//    private Long deleteCommentsOfPost(Long postId){
+//        RestTemplate restTemplate = new RestTemplate();
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+//        HttpEntity<String> entity = new HttpEntity<String>(headers);
+//        Long res =  restTemplate.exchange("http://comments-api:2123/post/"+postId, HttpMethod.DELETE, entity, Long.class).getBody();
+//        return res;
+//    }
 
 
     //Post sender to rabbitmq for the message - sending the post id
