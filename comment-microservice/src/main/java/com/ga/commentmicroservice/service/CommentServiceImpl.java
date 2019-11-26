@@ -19,15 +19,15 @@ public class CommentServiceImpl implements CommentService {
     private RabbitTemplate rabbitTemplate;
 
     @Override
-    public Comment createComment(String username, String postId, Comment comment) {
+    public Comment createComment(String username, Long postId, Comment comment) {
 
 //        Long user_id = Long.parseLong(userId);
-        Long foundPostId = Long.parseLong(postId);
-        System.out.println(foundPostId);
+//        Long foundPostId = Long.parseLong(postId);
+        System.out.println(postId);
 //        comment.setUserId(userId);
 //        String checkPostIdExists = (String) rabbitTemplate.convertSendAndReceive("post.comment", foundPostId);
-        System.out.println(checkIfPostExists(foundPostId));
-        comment.setPostId(checkIfPostExists(foundPostId));
+        System.out.println(checkIfPostExists(postId));
+        comment.setPostId(checkIfPostExists(postId));
 
         comment.setUsername(username);
 

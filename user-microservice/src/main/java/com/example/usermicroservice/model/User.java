@@ -19,7 +19,6 @@ public class User {
 
 //    @NotBlank(message = "Username cannot be blank")
     @Column(unique = true, nullable = false)
-    @NotBlank(message= "Enter an username!")
     private String username;
 
     @Column(unique = true, nullable = false)

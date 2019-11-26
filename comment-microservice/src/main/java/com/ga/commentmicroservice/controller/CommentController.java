@@ -38,7 +38,7 @@ public class CommentController {
             @RequestHeader("username") String username, @ApiParam(value="Token", required = true)
             @PathVariable String postId,
             @RequestBody @ApiParam(value = "Comment Body", required = true) Comment comment) {
-        return commentService.createComment(username, postId, comment);
+        return commentService.createComment(username, Long.parseLong(postId), comment);
     }
 
     @ApiIgnore
@@ -49,20 +49,20 @@ public class CommentController {
 
     @ApiOperation(value="Lists all comments by PostId", produces="application/json")
     @GetMapping("/{postId}")
-    public Iterable<Comment> getCommentsByPostId(@PathVariable Long postId) {
-        return commentService.getCommentsByPostId(postId);
+    public Iterable<Comment> getCommentsByPostId(@PathVariable String postId) {
+        return commentService.getCommentsByPostId(Long.parseLong(postId));
     }
 
     @ApiOperation(value="Deletes a Comment by CommentId", produces = "Integer")
     @DeleteMapping("/{commentId}")
     public Long deleteCommentByUser(
             @RequestHeader("username") @ApiParam(value="Token", required = true) String username,
-            @PathVariable @ApiParam(value = "Id of existing post", required=true) Long commentId) {
-        return commentService.deleteCommentByUser(username, commentId);
+            @PathVariable @ApiParam(value = "Id of existing post", required=true) String commentId) {
+        return commentService.deleteCommentByUser(username, Long.parseLong(commentId));
     }
 
     @DeleteMapping("/post/{postId}")
-    public Long deleteCommentsByPostId (@PathVariable Long postId) {
-        return commentService.deleteCommentsByPostId(postId);
+    public Long deleteCommentsByPostId (@PathVariable String postId) {
+        return commentService.deleteCommentsByPostId(Long.parseLong(postId));
     }
 }

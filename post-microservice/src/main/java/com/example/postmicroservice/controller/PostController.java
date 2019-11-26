@@ -44,7 +44,7 @@ public class PostController {
     public Long deletePost(
             @RequestHeader("username") @ApiParam(value="Token", required = true) String username,
             @PathVariable @ApiParam(value = "Id of existing post", required=true) String postId) throws EntityNotFound {
-        return postService.deletePost(username, Long.valueOf(postId));
+        return postService.deletePost(username, Long.parseLong(postId));
     }
 
 //    @GetMapping("/{postId}/comment")
