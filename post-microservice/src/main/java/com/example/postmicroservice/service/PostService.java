@@ -1,5 +1,6 @@
 package com.example.postmicroservice.service;
 
+import com.example.postmicroservice.exception.EntityNotFound;
 import com.example.postmicroservice.model.Post;
 
 import javax.xml.stream.events.Comment;
@@ -12,8 +13,8 @@ public interface PostService {
 
     public Post createPost(String username, Post post);
 
-    Long deletePost(String userId, Long postId);
-    Long findPostById (Long postId);
+    Long deletePost(String userId, Long postId) throws EntityNotFound;
+    Long findPostById (Long postId) throws EntityNotFound;
 
 //    public Post getPostById(Long postId);
 }

@@ -1,5 +1,6 @@
 package com.example.postmicroservice.controller;
 
+import com.example.postmicroservice.exception.EntityNotFound;
 import com.example.postmicroservice.model.Post;
 import com.example.postmicroservice.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class PostController {
 
 
     @DeleteMapping("/{postId}")
-    public Long deletePost(@RequestHeader("username") String username, @PathVariable Long postId) {
+    public Long deletePost(@RequestHeader("username") String username, @PathVariable Long postId) throws EntityNotFound {
         return postService.deletePost(username, postId);
     }
 

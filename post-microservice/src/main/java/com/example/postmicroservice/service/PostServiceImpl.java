@@ -1,5 +1,6 @@
 package com.example.postmicroservice.service;
 
+import com.example.postmicroservice.exception.EntityNotFound;
 import com.example.postmicroservice.model.Post;
 import com.example.postmicroservice.repository.PostRepository;
 import com.netflix.discovery.converters.Auto;
@@ -40,7 +41,6 @@ public class PostServiceImpl implements PostService {
     @Override
     public Iterable<Post> listPostsByUser(String username) {
         return postRepository.findPostsByUsername(username);
-
     }
 
     @Override
@@ -54,16 +54,16 @@ public class PostServiceImpl implements PostService {
 
     @Transactional
     @Override
-    public Long deletePost(String username, Long postId) {
+    public Long deletePost(String username, Long postId) throws EntityNotFound {
         Post post = postRepository.findById(postId).orElse(null);
-//        System.out.println(post.getDescription());
-//        System.out.println(post.getUsername() + " passed username:" + username);
-//        //Long user_id = Long.parseLong(username);
-        if (post.getUsername().equals(username)) {
+        System.out.println("post should return null");
+        System.out.println(post);
 
-            //deleteCommentsOfPost(postId);
-//            postRepository.delete(post);
+        if(post == null) throw new EntityNotFound("Post doesn't exist, go ahead, create it!");
+        else if (post.getUsername().equals(username)) {
+
             System.out.println("msg send started:" + postId);
+
             deleteCommentsOfPostUsingRabbitMq(postId);
             postRepository.deleteById(postId);
         } else {
@@ -74,11 +74,11 @@ public class PostServiceImpl implements PostService {
 
     @RabbitListener(queues = "post.comment")
     @Override
-    public Long findPostById(Long postId) {
+    public Long findPostById(Long postId) throws EntityNotFound {
         Post post = postRepository.findById(postId).orElse(null);
 
-
-        if (post != null) {
+        if (post == null) throw new EntityNotFound("Post doesn't exist");
+        else if (post != null) {
             System.out.println("post does exist so send back the postid" + post.getId());
             Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", post.getId());
 
@@ -88,15 +88,6 @@ public class PostServiceImpl implements PostService {
         return null;
 
     }
-
-//    private Long deleteCommentsOfPost(Long postId){
-//        RestTemplate restTemplate = new RestTemplate();
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-//        HttpEntity<String> entity = new HttpEntity<String>(headers);
-//        Long res =  restTemplate.exchange("http://comments-api:2123/post/"+postId, HttpMethod.DELETE, entity, Long.class).getBody();
-//        return res;
-//    }
 
 
     //Post sender to rabbitmq for the message - sending the post id
