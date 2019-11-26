@@ -1,5 +1,6 @@
 package com.example.usermicroservice.controller;
 
+import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class UserRoleController {
     }
 
     @GetMapping("/{rolename}")
-    public UserRole getRole(@PathVariable String rolename) {
+    public UserRole getRole(@PathVariable String rolename) throws EntityNotFoundException {
         return userRoleService.getRole(rolename);
     }
 

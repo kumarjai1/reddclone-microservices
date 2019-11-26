@@ -1,6 +1,7 @@
 package com.example.usermicroservice.service;
 
 
+import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,8 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
     @Override
-    public UserRole getRole(String roleName) {
+    public UserRole getRole(String roleName) throws EntityNotFoundException {
+        if (userRoleRepository.findByName(roleName) == null) throw new EntityNotFoundException("Role doesn't exist");
         return userRoleRepository.findByName(roleName);
     }
 

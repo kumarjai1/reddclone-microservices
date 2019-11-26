@@ -35,7 +35,7 @@ public class UserProfileServiceImpl implements UserProfileService {
         User user = userService.getUser(username);
         UserProfile foundProfile = user.getUserProfile();
         System.out.println("1. username: " + username + " usernameUser:" + user.getUsername());
-
+        
 
         if (user.getUsername() != null) {
             System.out.println("2. usernamePassed: " + username);

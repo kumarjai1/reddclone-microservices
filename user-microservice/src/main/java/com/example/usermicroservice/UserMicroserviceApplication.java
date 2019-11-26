@@ -1,5 +1,6 @@
 package com.example.usermicroservice;
 
+import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
@@ -43,7 +44,7 @@ public class UserMicroserviceApplication {
 	}
 
 	@PostMapping("/signup")
-	public ResponseEntity signup(@Valid @RequestBody User user) {
+	public ResponseEntity signup(@Valid @RequestBody User user) throws EntityAlreadyExists, EntityNotFoundException {
 		return ResponseEntity.ok(userService.signup(user));
 	}
 
@@ -58,7 +59,7 @@ public class UserMicroserviceApplication {
 	}
 
 	@PostMapping("{userId}/{roleId}")
-	public Iterable<UserRole> addRole (@PathVariable Long userId, @PathVariable Long roleId) {
+	public Iterable<UserRole> addRole (@PathVariable Long userId, @PathVariable Long roleId) throws EntityNotFoundException {
 		return userService.addRole(userId, roleId);
 	}
 }

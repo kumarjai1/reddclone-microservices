@@ -1,5 +1,6 @@
 package com.example.usermicroservice.service;
 
+import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
@@ -16,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityExistsException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,9 +43,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public JwtResponse signup(User user) {
+    public JwtResponse signup(User user) throws EntityAlreadyExists, EntityNotFoundException {
+
+        if (getUser(user.getUsername()) != null || userRepository.findUserByEmail(user.getEmail()) != null) {
+            throw new EntityAlreadyExists("User with this username or email already exists");
+        }
 
         List<UserRole> userRoles = new ArrayList<>();
+
+        //TODO: make sure I am able to create role, if database is empty and role_user doesn't exist
         UserRole userRole = userRoleService.getRole("ROLE_USER");
 
         if (userRole == null) {
@@ -57,26 +65,27 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.save(user);
 
         if(savedUser != null) {
-//            UserDetails userDetails = loadUserByUsername(user.getUsername());
             return new JwtResponse(jwtUtil.generateToken(savedUser.getUsername()), savedUser.getUsername());
         }
+
         return null;
     }
 
     @Override
     public JwtResponse login(User user) throws LoginException, EntityNotFoundException {
-        //TODO: test user respository login method with the custom query
         User foundUser = userRepository.findUserByEmail(user.getEmail());
-        System.out.println(foundUser.getUsername() + " " + foundUser.getEmail());
-        if (foundUser != null &&
+
+        if  (foundUser == null) {
+            throw new EntityNotFoundException("User with this email doesn't exist, sign up");
+        } else if (foundUser != null &&
                 encoder().matches(user.getPassword(), foundUser.getPassword())) {
             return new JwtResponse(jwtUtil.generateToken(foundUser.getUsername()), foundUser.getUsername());
         } else if (foundUser != null && !encoder().matches(user.getPassword(), foundUser.getPassword())) {
             System.out.println("username is coming here error - error");
-            throw new LoginException("Username / password incorrect"); //TODO: throw an exception
+            throw new LoginException("email / password incorrect"); //TODO: throw an exception
         }
-        System.out.println("username it coming here error");
-        throw new EntityNotFoundException("User not found");
+
+        return null;
     }
 
     @Override
@@ -109,19 +118,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Iterable<UserRole> addRole(Long userId, Long roleId) {
-        //TODO: check if userid belongs to the user
+    public Iterable<UserRole> addRole(Long userId, Long roleId) throws EntityNotFoundException {
         User user = userRepository.findById(userId).orElse(null);
         UserRole userRole = userRoleService.getRoleById(roleId);
         if (user != null) {
-            if (userRole != null) {
-                user.getUserRoles().add(userRole);
-                userRepository.save(user); //TODO: change to method, updateUser
+            if (userRole == null) {
+                throw new EntityNotFoundException("Role doesn't exists, create the role first");
             }
-//            else {
-//                throw new EntityNotFoundException("Role does not exist");
-//            }
+            else if (userRole != null) {
+                user.getUserRoles().add(userRole);
+                updateUser(user);
+            }
+        } else if (user == null) {
+            throw new EntityNotFoundException("User doesn't exist");
         }
+
         return user.getUserRoles();
     }
 

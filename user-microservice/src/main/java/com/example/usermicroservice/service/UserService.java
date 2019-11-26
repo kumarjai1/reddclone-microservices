@@ -1,5 +1,6 @@
 package com.example.usermicroservice.service;
 
+import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.exception.LoginException;
 import com.example.usermicroservice.model.User;
@@ -11,7 +12,7 @@ public interface UserService extends UserDetailsService {
 
     Iterable<User> listUsers();
 
-    JwtResponse signup(User user);
+    JwtResponse signup(User user) throws EntityAlreadyExists, EntityNotFoundException;
 
     JwtResponse login(User user) throws LoginException, EntityNotFoundException;
 
@@ -19,7 +20,7 @@ public interface UserService extends UserDetailsService {
 
     Iterable<UserRole> getUserRoles(Long userId);
 
-    Iterable<UserRole> addRole (Long userId, Long roleId);
+    Iterable<UserRole> addRole (Long userId, Long roleId) throws EntityNotFoundException;
 
     User updateUser(User user);
 }
