@@ -1,5 +1,6 @@
 package com.example.usermicroservice.service;
 
+
 import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
 import com.example.usermicroservice.exception.LoginException;
@@ -51,7 +52,7 @@ public class UserServiceImpl implements UserService {
 
         List<UserRole> userRoles = new ArrayList<>();
 
-        //TODO: make sure I am able to create role, if database is empty and role_user doesn't exist
+        //TODO: make sure I am able to create role, if database is empty and role_user doesn't exist -  it was working  11.25.2019
         UserRole userRole = userRoleService.getRole("ROLE_USER");
 
         if (userRole == null) {

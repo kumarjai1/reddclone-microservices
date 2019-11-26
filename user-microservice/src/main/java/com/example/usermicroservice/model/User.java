@@ -19,16 +19,17 @@ public class User {
 
 //    @NotBlank(message = "Username cannot be blank")
     @Column(unique = true, nullable = false)
+    @NotBlank(message= "Enter an username!")
     private String username;
 
     @Column(unique = true, nullable = false)
-    @NotBlank(message = "email cannot be blank")
+    @NotBlank(message = "Email cannot be blank")
     @Email(message = "User email is invalid")
     private String email;
 
 //    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", nullable = false)
-    @NotBlank(message = "password cannot be blank")
+    @NotBlank(message = "Password cannot be blank")
     private String password;
 
     public User() { }
