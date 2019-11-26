@@ -29,7 +29,7 @@ public class PostController {
 
 
     @DeleteMapping("/{postId}")
-    public Long deletePost(@RequestHeader("username") String username, @PathVariable Long postId) throws EntityNotFound {
+    public Long deletePost(@RequestHeader("username") String username, @PathVariable Long postId) {
         return postService.deletePost(username, postId);
     }
 

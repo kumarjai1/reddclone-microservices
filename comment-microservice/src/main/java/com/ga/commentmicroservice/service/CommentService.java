@@ -1,10 +1,11 @@
 package com.ga.commentmicroservice.service;
 
+import com.ga.commentmicroservice.exception.EntityNotFound;
 import com.ga.commentmicroservice.model.Comment;
 
 public interface CommentService{
 
-    Comment createComment(String username, String postId, Comment comment);
+    Comment createComment(String username, String postId, Comment comment) throws EntityNotFound;
 
     Iterable<Comment> listComments();
 

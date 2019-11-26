@@ -1,5 +1,6 @@
 package com.ga.commentmicroservice.controller;
 
+import com.ga.commentmicroservice.exception.EntityNotFound;
 import com.ga.commentmicroservice.model.Comment;
 import com.ga.commentmicroservice.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class CommentController {
     }*/
 
     @PostMapping("/{postId}")
-    public Comment createComment(@RequestHeader("username") String username, @PathVariable String postId, @RequestBody Comment comment) {
+    public Comment createComment(@RequestHeader("username") String username, @PathVariable String postId, @RequestBody Comment comment) throws EntityNotFound {
         return commentService.createComment(username, postId, comment);
     }
 
