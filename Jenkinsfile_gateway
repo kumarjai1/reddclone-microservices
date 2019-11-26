@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
                     image 'maven:3.6.1-jdk-8'
-                    args ' --privileged -u="root" -v /tmp/.m2:/root/.m2 -v /usr/local/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock'
+                    args ' --privileged -u root -v /tmp/.m2:/root/.m2 -v /usr/local/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock'
                 }
     }
     options {
@@ -33,13 +33,13 @@ pipeline {
         stage('Coverage') {
             steps {
               dir("api-gateway") {              
-                sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+                sh 'mvn clean package jacoco:report'
               }
             }
             post {
               always {
                 dir("api-gateway") {              
-                  cobertura coberturaReportFile: 'target/site/cobertura/coverage.xml'
+                  publishCoverage adapters: [jacocoAdapter('target/site/jacoco/jacoco.xml')]
                 }
               }
             }
