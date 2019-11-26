@@ -2,6 +2,7 @@ package com.example.usermicroservice.controller;
 
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserRoleService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
+@Api(tags="User Role Handler")
 public class UserRoleController {
 
     @Autowired

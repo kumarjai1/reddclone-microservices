@@ -35,7 +35,8 @@ public class ServiceDescriptionUpdater {
 
     public static final List<Service> services = Arrays.asList(
                                                                 new Service("users-api", "http://users-api:2121"),
-                                                                new Service("posts-api", "http://posts-api:2121")
+                                                                new Service("posts-api", "http://posts-api:2122"),
+                                                                new Service("comments-api","http://comments-api:2123")
     );
     @Autowired
     private DiscoveryClient discoveryClient;

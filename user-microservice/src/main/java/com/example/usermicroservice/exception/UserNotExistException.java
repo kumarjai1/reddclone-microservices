@@ -1,4 +1,7 @@
 package com.example.usermicroservice.exception;
 
-public class UserNotExistException {
+public class UserNotExistException extends Exception{
+    public UserNotExistException(String message) {
+        super(message);
+    }
 }

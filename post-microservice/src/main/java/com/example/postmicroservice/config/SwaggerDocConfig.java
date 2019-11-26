@@ -15,9 +15,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 public class SwaggerDocConfig {
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Comments")
+                .title("Posts")
                 .description(
-                        "Comments API")
+                        "Posts API")
                 .termsOfServiceUrl("")
                 .version("0.0.1-SNAPSHOT")
                 .build();
@@ -27,7 +27,7 @@ public class SwaggerDocConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .paths(PathSelectors.any())
-                .apis(RequestHandlerSelectors.basePackage("com.ga.commentmicroservice.controller")).build()
+                .apis(RequestHandlerSelectors.basePackage("com.example.postmicroservice.controller")).build()
                 .apiInfo(apiInfo());
     }
 }

@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Entity
@@ -16,13 +18,17 @@ public class User {
     private Long id;
 
     @Column(unique = true, nullable = false)
+    @NotBlank(message= "Enter an username!")
     private String username;
 
     @Column(unique = true, nullable = false)
+    @NotBlank(message = "Enter an email!")
+    @Email(message= "Enter a valid email!")
     private String email;
 
 //    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", nullable = false)
+    @NotBlank(message = "Enter a Password!")
     private String password;
 
     public User() { }

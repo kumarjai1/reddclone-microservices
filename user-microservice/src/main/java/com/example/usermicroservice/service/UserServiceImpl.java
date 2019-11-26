@@ -1,5 +1,6 @@
 package com.example.usermicroservice.service;
 
+import com.example.usermicroservice.exception.UserNotExistException;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRepository;
@@ -65,9 +66,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public JwtResponse login(User user) {
+    public JwtResponse login(User user) throws UserNotExistException {
         //TODO: test user respository login method with the custom query
         User foundUser = userRepository.findUserByEmail(user.getEmail());
+        if(foundUser == null) throw new UserNotExistException("User does not exist!");
         System.out.println(foundUser.getUsername() + " " + foundUser.getEmail());
         if (foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
             System.out.println(foundUser.getUsername());
