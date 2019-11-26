@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 10:59:06 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574783946317
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apache.tomcat.embed\:tomcat-embed-el\:jar\:9.0.21 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/tomcat/embed/tomcat-embed-el/9.0.21/tomcat-embed-el-9.0.21.jar. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574783925015

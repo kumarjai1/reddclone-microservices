@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 10:58:24 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574783904037
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apiguardian\:apiguardian-api\:pom\:1.0.0 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574783903945

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 10:58:16 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574783896813
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact antlr\:antlr\:pom\:2.7.7 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7.pom. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574783896717

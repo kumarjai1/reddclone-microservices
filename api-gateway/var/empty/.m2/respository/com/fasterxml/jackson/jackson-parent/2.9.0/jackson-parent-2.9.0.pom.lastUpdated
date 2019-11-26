@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 10:57:55 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574783875141
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact com.fasterxml.jackson\:jackson-parent\:pom\:2.9.0 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/com/fasterxml/jackson/jackson-parent/2.9.0/jackson-parent-2.9.0.pom. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574783875037

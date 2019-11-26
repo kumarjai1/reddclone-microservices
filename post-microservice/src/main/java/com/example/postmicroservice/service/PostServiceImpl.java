@@ -96,7 +96,6 @@ public class PostServiceImpl implements PostService {
         Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
         System.out.println(res);
         System.out.println("msg sent:" + postId);
-//        Long postIdSent = Long.parseLong(res);
         return res;
     }
 

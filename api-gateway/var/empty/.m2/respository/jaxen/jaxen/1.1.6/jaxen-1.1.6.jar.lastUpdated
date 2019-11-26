@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 10:59:38 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574783978200
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact jaxen\:jaxen\:jar\:1.1.6 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/jaxen/jaxen/1.1.6/jaxen-1.1.6.jar. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574783977828
