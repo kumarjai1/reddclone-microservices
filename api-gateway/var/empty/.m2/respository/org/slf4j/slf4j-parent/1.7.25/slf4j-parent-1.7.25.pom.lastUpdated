@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 26 14:36:59 EST 2019
+https\://repo.maven.apache.org/maven2/.lastUpdated=1574797019110
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.slf4j\:slf4j-parent\:pom\:1.7.25 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1574797019006
