@@ -2,6 +2,7 @@ package com.example.postmicroservice.service;
 
 import com.example.postmicroservice.exception.EntityNotFound;
 import com.example.postmicroservice.model.Post;
+import com.example.postmicroservice.mq.Sender;
 import com.example.postmicroservice.repository.PostRepository;
 import com.netflix.discovery.converters.Auto;
 import org.springframework.amqp.core.Queue;
@@ -32,6 +33,9 @@ public class PostServiceImpl implements PostService {
     PostRepository postRepository;
     @Autowired
     RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    Sender sender;
 
     @Override
     public Iterable<Post> listPosts() {
@@ -64,7 +68,7 @@ public class PostServiceImpl implements PostService {
 
             System.out.println("msg send started:" + postId);
 
-            deleteCommentsOfPostUsingRabbitMq(postId);
+            sender.deleteCommentsOfPostUsingRabbitMq(postId);
             postRepository.deleteById(postId);
         } else {
             return 0L;
@@ -90,14 +94,7 @@ public class PostServiceImpl implements PostService {
     }
 
 
-    //Post sender to rabbitmq for the message - sending the post id
-    private Long deleteCommentsOfPostUsingRabbitMq(Long postId){
-        System.out.println("msg sending:" + postId);
-        Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
-        System.out.println(res);
-        System.out.println("msg sent:" + postId);
-        return res;
-    }
+
 
 }
 
