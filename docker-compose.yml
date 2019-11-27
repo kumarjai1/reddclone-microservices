@@ -26,7 +26,7 @@ services:
   api-gateway:
     image: maven:3.6.1-jdk-8
     ports:
-      - '8080:8080'
+      - '8181:8080'
     working_dir: /app
     volumes:
       - ./api-gateway:/app

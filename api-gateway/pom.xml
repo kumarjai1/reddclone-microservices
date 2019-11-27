@@ -108,18 +108,18 @@
             <plugin>
             	 <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-surefire-plugin</artifactId>
-                 <version>2.21.0</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
+                 <version>2.19.1</version>
+<!--                <configuration>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                </configuration>-->
       	    </plugin>
 
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.6.0.1398</version>
-            </plugin>
 <!--            <plugin>-->
+<!--                <groupId>org.sonarsource.scanner.maven</groupId>-->
+<!--                <artifactId>sonar-maven-plugin</artifactId>-->
+<!--                <version>3.6.0.1398</version>-->
+<!--            </plugin>-->
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
 <!--                <groupId>org.codehaus.mojo</groupId>-->
 <!--                <artifactId>cobertura-maven-plugin</artifactId>-->
 <!--                <version>2.7</version>-->
@@ -133,9 +133,9 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <configuration>
-                            <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
-                        </configuration>
+<!--                        <configuration>-->
+<!--                            <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>-->
+<!--                        </configuration>-->
                     </execution>
                     <execution>
                         <id>report</id>
@@ -143,9 +143,9 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
-                        <configuration>
-                            <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
-                        </configuration>
+<!--                        <configuration>-->
+<!--                            <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>-->
+<!--                        </configuration>-->
                     </execution>
                 </executions>
             </plugin>
