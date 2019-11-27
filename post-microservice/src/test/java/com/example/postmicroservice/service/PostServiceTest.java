@@ -11,13 +11,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
@@ -101,8 +101,6 @@ public class PostServiceTest {
     @Test(expected = EntityNotFound.class)
     public void deletePost_Exception_Error() throws EntityNotFound {
         when(postRepository.findById(anyLong())).thenReturn(java.util.Optional.ofNullable(null));
-        when(sender.deleteCommentsOfPostUsingRabbitMq(anyLong())).thenReturn(1L);
-        doNothing().when(postRepository).deleteById(anyLong());
 
         Long actual = postService.deletePost("jai", 1L);
         assertEquals(java.util.Optional.ofNullable(actual),java.util.Optional.ofNullable(1L));
@@ -120,7 +118,6 @@ public class PostServiceTest {
     @Test(expected=EntityNotFound.class)
     public void findPostById_Exeption_Error() throws EntityNotFound {
         when(postRepository.findById(anyLong())).thenReturn(java.util.Optional.ofNullable(null));
-        when(rabbitTemplate.convertSendAndReceive(anyString(),anyLong())).thenReturn(1L);
         Long actual = postService.findPostById(1L);
         assertEquals(java.util.Optional.ofNullable(actual),java.util.Optional.ofNullable(1L));
 
