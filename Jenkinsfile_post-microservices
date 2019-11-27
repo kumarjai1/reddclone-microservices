@@ -46,9 +46,9 @@ pipeline {
         }
         stage('Build Docker'){
             steps{
-                dir("posts-microservice"){
+                dir("post-microservice"){
                     script{
-                        docker.build("ghazanfar9131/posts-api:0.0.1-SNAPSHOT")
+                        docker.build("hristina/posts-api:0.0.1-SNAPSHOT")
                     }
                 }
             }
