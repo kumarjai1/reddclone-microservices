@@ -25,45 +25,4 @@ public class UserMicroserviceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UserMicroserviceApplication.class, args);
 	}
-
-//	@Autowired
-//	UserService userService;
-//
-//
-//	//  @PreAuthorize("hasRole('ROLE_ADMIN')")
-////    @GetMapping("/list")
-////    public Iterable<User> listUsers(@RequestHeader("username") String username) {
-////        System.out.println(username);
-////        return userService.listUsers();
-////    }
-//
-//	@GetMapping("/hello")
-//	public String hello () {
-//		return "Hello suckers";
-//	}
-//
-//<<<<<<< HEAD
-//	@PostMapping("/signup")
-//	public ResponseEntity signup(@Valid @RequestBody User user) throws EntityAlreadyExists, EntityNotFoundException {
-//=======
-//	/*@PostMapping("/signup")
-//	public ResponseEntity signup(@Valid @RequestBody User user) {
-//>>>>>>> 14ad146e22da562c03793d580ccae7b9e73a5fe8
-//		return ResponseEntity.ok(userService.signup(user));
-//	}
-//
-//	@PostMapping("/login")
-//	public ResponseEntity login(@Valid @RequestBody User user) throws LoginException, EntityNotFoundException {
-//		return ResponseEntity.ok(userService.login(user));
-//	}
-//
-//	@GetMapping("/{userId}/roles")
-//	public Iterable<UserRole> listUserRoles(@PathVariable Long userId) {
-//		return userService.getUserRoles(userId);
-//	}
-//
-//	@PostMapping("{userId}/{roleId}")
-//	public Iterable<UserRole> addRole (@PathVariable Long userId, @PathVariable Long roleId) throws EntityNotFoundException {
-//		return userService.addRole(userId, roleId);
-//	}*/
 }
