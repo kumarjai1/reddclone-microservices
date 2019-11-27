@@ -105,7 +105,7 @@ public class UserServiceTest {
         System.out.println(user1.getUsername());
         when(userRoleService.getRole(any())).thenReturn(userRole);
         when(userRepository.findUserByUsername(any())).thenReturn(null);
-        when(encoder.encode(anyString())).thenReturn(encodedPassword);
+//        when(encoder.encode(anyString())).thenReturn(encodedPassword);
         when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
         when(userRepository.save(any())).thenReturn(user1);
 
