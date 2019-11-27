@@ -1,5 +1,6 @@
 package com.example.usermicroservice.service;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.assertj.core.api.Assertions.*;
@@ -13,19 +14,27 @@ import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserRepository;
 import com.example.usermicroservice.util.JwtResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@ExtendWith(SpringExtension.class)
+@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class UserServiceTest {
 
     private User user1;
@@ -45,7 +54,7 @@ public class UserServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @BeforeEach
+    @Before
     public void init () {
         userRole.setId(1);
         userRole.setName("ROLE_USER");
@@ -73,19 +82,37 @@ public class UserServiceTest {
     @Mock
     JwtUtil jwtUtil;
 
+//    @Test
+//    public void signup_ValidUser_Sucess() throws EntityNotFoundException, EntityAlreadyExists {
+//        when(userRoleService.getRole(any())).thenReturn(userRole);
+//        when(encoder.encode(anyString())).thenReturn(encodedPassword);
+//        when(userRepository.save(any())).thenReturn(user1);
+//        when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
+//        when(userRepository.findUserByUsername(anyString())).thenReturn(user1);
+//
+//        JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
+//        JwtResponse returnedJwtResponse = userService.signup(user1);
+//
+//        assertThat(returnedJwtResponse).isNotNull();
+//        assertThat(returnedJwtResponse).isEqualToComparingFieldByField(jwtResponse);
+//
+//    }
+
     @Test
-    public void signup_ValidUser_Sucess() throws EntityNotFoundException, EntityAlreadyExists {
+    public void signup_String_SUCCESS() throws EntityNotFoundException, EntityAlreadyExists {
+//        String expectedToken = "12345";
+        System.out.println(generatedToken);
+        System.out.println(user1.getUsername());
         when(userRoleService.getRole(any())).thenReturn(userRole);
+        when(userRepository.findUserByUsername(any())).thenReturn(null);
         when(encoder.encode(anyString())).thenReturn(encodedPassword);
-        when(userRepository.save(any())).thenReturn(user1);
         when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
-        when(userRepository.findUserByUsername(anyString())).thenReturn(user1);
+        when(userRepository.save(any())).thenReturn(user1);
+
 
         JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
         JwtResponse returnedJwtResponse = userService.signup(user1);
 
-        assertThat(returnedJwtResponse).isNotNull();
-        assertThat(returnedJwtResponse).isEqualToComparingFieldByField(jwtResponse);
-
+        assertEquals(returnedJwtResponse.getToken(), jwtResponse.getToken());
     }
 }
