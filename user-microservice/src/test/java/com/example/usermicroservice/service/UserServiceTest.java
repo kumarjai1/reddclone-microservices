@@ -109,10 +109,8 @@ public class UserServiceTest {
         when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
         when(userRepository.save(any())).thenReturn(user1);
 
-
         JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
         JwtResponse returnedJwtResponse = userService.signup(user1);
-
         assertEquals(returnedJwtResponse.getToken(), jwtResponse.getToken());
     }
 }
