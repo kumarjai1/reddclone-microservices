@@ -1,24 +1,32 @@
 package com.example.usermicroservice.controller;
 
+
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration(classes = {UserController.class})
+//@ExtendWith(SpringExtension.class)
+////@SpringBootTest
+import static org.assertj.core.api.Assertions.*;
+
 import com.example.usermicroservice.config.JwtUtil;
 import com.example.usermicroservice.exception.UserExceptionHandler;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserService;
 import com.example.usermicroservice.util.JwtResponse;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -31,11 +39,9 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-//@ExtendWith(SpringExtension.class)
-//@ContextConfiguration(classes = {UserController.class})
-//@ExtendWith(SpringExtension.class)
-////@SpringBootTest
-//@WebMvcTest(UserController.class)
+@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
+@WebMvcTest(UserController.class)
 public class UserControllerTest {
 
     private MockMvc mockMvc;
@@ -55,13 +61,7 @@ public class UserControllerTest {
     @Mock
     private JwtUtil jwtUtil;
 
-//    @BeforeEach
-//    public void init () {
-//
-//    }
-
     public UserControllerTest() {
-        System.out.println("test");
         user1 = new User();
         userRole = new UserRole();
         userRoles = new ArrayList<>();
@@ -71,9 +71,8 @@ public class UserControllerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @BeforeEach
+    @Before
     public void init() {
-        System.out.println("test");
         mockMvc = MockMvcBuilders.standaloneSetup(userController)
                 .setControllerAdvice(UserExceptionHandler.class)
                 .build();
@@ -97,15 +96,38 @@ public class UserControllerTest {
 
         JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
         when(userService.signup(any())).thenReturn(jwtResponse);
-
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().json(objectMapper.writeValueAsString(jwtResponse)));
     }
 
     @Test
-    void justAnExample() {
-        System.out.println("test");
+    public void signup_BlankUsername_Failure() throws Exception {
+        user1.setUsername("");
+        System.out.println("printing username after empty: " + user1.getUsername());
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/signup")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(user1));
+
+        MvcResult mvcResult = mockMvc.perform(requestBuilder)
+                .andExpect(status().isBadRequest())
+                .andReturn();
+
+    }
+
+    @Test
+    public void login_ValidUser_ReturnsJsonAndUsername() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(user1));
+
+        JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
+        when(userService.login(any())).thenReturn(jwtResponse);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(jwtResponse)));
     }
 
 
