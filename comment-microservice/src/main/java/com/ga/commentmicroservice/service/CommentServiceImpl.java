@@ -1,6 +1,7 @@
 package com.ga.commentmicroservice.service;
 
 import com.ga.commentmicroservice.model.Comment;
+import com.ga.commentmicroservice.mq.Sender;
 import com.ga.commentmicroservice.repository.CommentRepository;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +17,24 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Autowired
-    private RabbitTemplate rabbitTemplate;
+    Sender sender;
+
 
     @Override
     public Comment createComment(String username, Long postId, Comment comment) {
 
 //        Long user_id = Long.parseLong(userId);
 //        Long foundPostId = Long.parseLong(postId);
-        System.out.println(postId);
 //        comment.setUserId(userId);
 //        String checkPostIdExists = (String) rabbitTemplate.convertSendAndReceive("post.comment", foundPostId);
-        System.out.println(checkIfPostExists(postId));
-        comment.setPostId(checkIfPostExists(postId));
+//        System.out.println(checkIfPostExists(postId));
+        comment.setPostId(sender.checkIfPostExists(postId));
 
         comment.setUsername(username);
 
-        return commentRepository.save(comment);
+        Comment savedComment = commentRepository.save(comment);
+
+        return savedComment;
     }
 
     @Override
@@ -68,15 +71,6 @@ public class CommentServiceImpl implements CommentService {
         return comment.getId();
     }
 
-    private Long checkIfPostExists(Long postId) {
-        System.out.println("receiving postId back from post: " + postId);
-        Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
-        if (res != null) {
-            return res;
-        }
 
-        System.out.println("Comment check post id exists received:" + res);
-        throw new EntityNotFoundException("Post doesn't exist");
-    }
 
 }
