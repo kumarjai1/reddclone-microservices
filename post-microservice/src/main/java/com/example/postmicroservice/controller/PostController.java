@@ -35,7 +35,7 @@ public class PostController {
 
     @ApiIgnore
     @GetMapping
-    public Iterable<Post> listPostByUser(@RequestHeader String username) {
+    public Iterable<Post> listPostByUser(@RequestHeader("username") String username) {
         return postService.listPostsByUser(username);
     }
 
