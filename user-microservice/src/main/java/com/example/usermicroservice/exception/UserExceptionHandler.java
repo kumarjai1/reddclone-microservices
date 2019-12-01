@@ -30,8 +30,6 @@ public class UserExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(EntityAlreadyExists.class)
     public ResponseEntity<ErrorResponse> handleUserAlreadyExistException(EntityAlreadyExists e){
-//        List<String> details = Arrays.asList(e.getMessage());
-//        String causeMessage = (e.getCause() == null) ? "" : e.getMessage();
         ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, e.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }

@@ -44,13 +44,13 @@ public class ErrorResponse {
         this.timestamp = timestamp;
     }
 
-    public ErrorResponse(HttpStatus httpStatus, String message, String cause, String timestamp) {
-        super();
-        this.httpStatus = httpStatus;
-        this.message = message;
-        this.cause = cause;
-        this.timestamp = timestamp;
-    }
+//    public ErrorResponse(HttpStatus httpStatus, String message, String cause, String timestamp) {
+//        super();
+//        this.httpStatus = httpStatus;
+//        this.message = message;
+//        this.cause = cause;
+//        this.timestamp = timestamp;
+//    }
 
     public ErrorResponse(HttpStatus httpStatus, String message) {
         super();

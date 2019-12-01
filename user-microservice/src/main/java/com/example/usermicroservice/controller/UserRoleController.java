@@ -26,7 +26,7 @@ public class UserRoleController {
     }
 
     @GetMapping("/{rolename}")
-    public UserRole getRole(@PathVariable String rolename) throws EntityNotFoundException {
+    public UserRole getRole(@PathVariable String rolename)  {
         return userRoleService.getRole(rolename);
     }
 
@@ -35,4 +35,8 @@ public class UserRoleController {
         return userRoleService.listRoles();
     }
 
+    @GetMapping("/roles/{roleId}")
+    public UserRole getRoleById(@PathVariable Long roleId) throws EntityNotFoundException {
+        return userRoleService.getRoleById(roleId);
+    }
 }

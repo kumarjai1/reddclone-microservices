@@ -25,6 +25,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
@@ -102,8 +103,8 @@ public class UserControllerTest {
     }
 
     @Test
-    public void signup_BlankUsername_Failure() throws Exception {
-        user1.setUsername("");
+    public void signup_BadEmailInput_Failure() throws Exception {
+        user1.setEmail("");
         System.out.println("printing username after empty: " + user1.getUsername());
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/signup")
@@ -113,7 +114,20 @@ public class UserControllerTest {
         MvcResult mvcResult = mockMvc.perform(requestBuilder)
                 .andExpect(status().isBadRequest())
                 .andReturn();
+    }
 
+    @Test
+    public void signup_BlankPasswords_Failure() throws Exception {
+        user1.setPassword("");
+        System.out.println("printing username after empty: " + user1.getUsername());
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/signup")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(user1));
+
+        MvcResult mvcResult = mockMvc.perform(requestBuilder)
+                .andExpect(status().isBadRequest())
+                .andReturn();
     }
 
     @Test
@@ -130,5 +144,45 @@ public class UserControllerTest {
                 .andExpect(content().json(objectMapper.writeValueAsString(jwtResponse)));
     }
 
+    @Test
+    @WithMockUser(username = "user1")
+    public void listUsers_AuthorizedUSer_ReturnsListOfUsers() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/list");
 
+        List<User> users = new ArrayList<>();
+        users.add(user1);
+        when (userService.listUsers()).thenReturn(users);
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(users)));
+
+    }
+
+    @Test
+    public void listUserRoles_ValidUserPassed_ReturnsAllUserRoles() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/" + user1.getUsername()+"/roles");
+
+        when(userService.getUserRoles(user1.getUsername())).thenReturn(userRoles);
+        System.out.println(userRoles);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(userRoles)));
+
+    }
+
+    @Test
+    public void addRoleToUser_AuthorizedUser_ReturnsUserRolesWithNewRole () throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/"+user1.getId()+"/"+userRole.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(user1));
+
+        when(userService.addRole(any(), any())).thenReturn(userRoles);
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(userRoles)));
+    }
 }
