@@ -109,24 +109,24 @@ public class UserServiceTest {
         assertThat(doThrow(EntityAlreadyExists.class));
     }
 
-    @Test
-    public void login_ValidUserInfo_Success() throws EntityNotFoundException {
-        when(userRepository.findUserByEmail(any())).thenReturn(user1);
-        when(encoder.encode(any())).thenReturn(encodedPassword);
-        when(encoder.matches(any(),any())).thenReturn(true);
-        when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
-
-        JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
-        System.out.println(jwtResponse.getUsername()+ "token: " + jwtResponse.getToken());
-
-        JwtResponse returnedJwtResponse = userService.login(user1);
-        System.out.println(jwtResponse);
-
-        assertThat(jwtResponse).isNotNull();
-        assertThat(returnedJwtResponse).isNotNull();
-        assertThat(returnedJwtResponse).isEqualToComparingFieldByField(jwtResponse);
-        verify(jwtUtil, times(1)).generateToken(any());
-    }
+//    @Test
+//    public void login_ValidUserInfo_Success() throws EntityNotFoundException {
+//        when(userRepository.findUserByEmail(any())).thenReturn(user1);
+//        when(encoder.encode(any())).thenReturn(encodedPassword);
+//        when(encoder.matches(any(),any())).thenReturn(true);
+//        when(jwtUtil.generateToken(any())).thenReturn(generatedToken);
+//
+//        JwtResponse jwtResponse = new JwtResponse(generatedToken, user1.getUsername());
+//        System.out.println(jwtResponse.getUsername()+ "token: " + jwtResponse.getToken());
+//
+//        JwtResponse returnedJwtResponse = userService.login(user1);
+//        System.out.println(jwtResponse);
+//
+//        assertThat(jwtResponse).isNotNull();
+//        assertThat(returnedJwtResponse).isNotNull();
+//        assertThat(returnedJwtResponse).isEqualToComparingFieldByField(jwtResponse);
+//        verify(jwtUtil, times(1)).generateToken(any());
+//    }
 
     @Test (expected = LoginException.class)
     public void login_PasswordsIncorrectGiven_ThrowException() throws EntityNotFoundException, LoginException {
