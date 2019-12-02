@@ -18,6 +18,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.persistence.EntityExistsException;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +40,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRoleService userRoleService;
+
+    private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class.getName());
 
     @Override
     public Iterable<User> listUsers() {
@@ -66,6 +71,7 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.save(user);
 
         if(savedUser != null) {
+            logger.info("User signed up");
             return new JwtResponse(jwtUtil.generateToken(savedUser.getUsername()), savedUser.getUsername());
         }
 
@@ -77,6 +83,7 @@ public class UserServiceImpl implements UserService {
         User foundUser = userRepository.findUserByEmail(user.getEmail());
 
         if  (foundUser == null) {
+            logger.error("User not found error thrown with email: " + user.getEmail());
             throw new EntityNotFoundException("User with this email doesn't exist, sign up");
         } else if (foundUser != null &&
                 encoder().matches(user.getPassword(), foundUser.getPassword())) {
