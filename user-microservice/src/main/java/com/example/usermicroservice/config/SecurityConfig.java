@@ -46,9 +46,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .httpBasic();
     }
 
-    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService);
-    }
+//    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(userService);
+//    }
 
 
 }

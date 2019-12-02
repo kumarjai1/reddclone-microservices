@@ -89,23 +89,23 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findUserByUsername(username);
-
-        if (user == null) throw new UsernameNotFoundException("Unknown username " + username);
-        return new org.springframework.security.core.userdetails
-                .User(user.getUsername(),
-                encoder().encode(user.getPassword()), getGrantedAuthorities(user));
-    }
-
-    private List<GrantedAuthority> getGrantedAuthorities(User user){
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-
-//        authorities.add(new SimpleGrantedAuthority("admin"));
-
-        return authorities;
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        User user = userRepository.findUserByUsername(username);
+//
+//        if (user == null) throw new UsernameNotFoundException("Unknown username " + username);
+//        return new org.springframework.security.core.userdetails
+//                .User(user.getUsername(),
+//                encoder().encode(user.getPassword()), getGrantedAuthorities(user));
+//    }
+//
+//    private List<GrantedAuthority> getGrantedAuthorities(User user){
+//        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+//
+////        authorities.add(new SimpleGrantedAuthority("admin"));
+//
+//        return authorities;
+//    }
 
     @Override
     public User getUser(String username) {

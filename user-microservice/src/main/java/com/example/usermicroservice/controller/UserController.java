@@ -26,11 +26,10 @@ public class UserController {
 
 
     //  @PreAuthorize("hasRole('ROLE_ADMIN')")
-//    @GetMapping("/list")
-//    public Iterable<User> listUsers(@RequestHeader("username") String username) {
-//        System.out.println(username);
-//        return userService.listUsers();
-//    }
+    @GetMapping("/list")
+    public Iterable<User> listUsers() {
+        return userService.listUsers();
+    }
 
     @ApiOperation(value="Provides Sign Up", produces="application/json")
     @PostMapping("/signup")
