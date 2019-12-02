@@ -52,6 +52,7 @@ public class UserServiceImpl implements UserService {
     public JwtResponse signup(User user) throws EntityAlreadyExists, EntityNotFoundException {
 
         if (getUser(user.getUsername()) != null || userRepository.findUserByEmail(user.getEmail()) != null) {
+            logger.error("User already exists with the email or username: " + user.getEmail() + " | " + user.getUsername());
             throw new EntityAlreadyExists("User with this username or email already exists");
         }
 
@@ -71,7 +72,7 @@ public class UserServiceImpl implements UserService {
         User savedUser = userRepository.save(user);
 
         if(savedUser != null) {
-            logger.info("User signed up");
+            logger.info("User signed up with an email: " + savedUser.getEmail());
             return new JwtResponse(jwtUtil.generateToken(savedUser.getUsername()), savedUser.getUsername());
         }
 
@@ -83,13 +84,15 @@ public class UserServiceImpl implements UserService {
         User foundUser = userRepository.findUserByEmail(user.getEmail());
 
         if  (foundUser == null) {
-            logger.error("User not found error thrown with email: " + user.getEmail());
+            logger.error("User not found with email: " + user.getEmail());
             throw new EntityNotFoundException("User with this email doesn't exist, sign up");
         } else if (foundUser != null &&
                 encoder().matches(user.getPassword(), foundUser.getPassword())) {
+            logger.info("User logged in with email: " + foundUser.getEmail());
             return new JwtResponse(jwtUtil.generateToken(foundUser.getUsername()), foundUser.getUsername());
         } else if (foundUser != null && !encoder().matches(user.getPassword(), foundUser.getPassword())) {
-            System.out.println("username is coming here error - error");
+//            System.out.println("username is coming here error - error");
+            logger.error("User tried to login with incorrect password");
             throw new LoginException("email / password incorrect"); //TODO: throw an exception
         }
 
@@ -121,23 +124,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Iterable<UserRole> getUserRoles(String username) {
+        logger.info("User is logged in and gets list of user roles");
         User user = userRepository.findUserByUsername(username);
         return user.getUserRoles();
     }
 
     @Override
     public Iterable<UserRole> addRole(Long userId, Long roleId) throws EntityNotFoundException {
+        logger.info("User is logged in and wants to add role");
         User user = userRepository.findById(userId).orElse(null);
         UserRole userRole = userRoleService.getRoleById(roleId);
         if (user != null) {
             if (userRole == null) {
+                logger.error("User is logged in adds a role that doesn't exist.");
                 throw new EntityNotFoundException("Role doesn't exists, create the role first");
             }
             else if (userRole != null) {
+                logger.info("Adding the role '" + userRole.getName() + "' " + "to user '" + user.getUsername() + "'.");
                 user.getUserRoles().add(userRole);
                 updateUser(user);
             }
         } else if (user == null) {
+            logger.error("Trying to add a role to a user that doesn't exist");
             throw new EntityNotFoundException("User doesn't exist");
         }
 
@@ -146,6 +154,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
+        logger.info("Updating user info with username: " + user.getUsername());
         return userRepository.save(user);
     }
 
