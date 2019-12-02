@@ -5,6 +5,8 @@ import com.example.postmicroservice.model.Post;
 import com.example.postmicroservice.mq.Sender;
 import com.example.postmicroservice.repository.PostRepository;
 import com.netflix.discovery.converters.Auto;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -29,6 +31,8 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
 
+    private Logger logger = LoggerFactory.getLogger(PostServiceImpl.class);
+
     @Autowired
     PostRepository postRepository;
     @Autowired
@@ -39,11 +43,15 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Iterable<Post> listPosts() {
+
+
         return postRepository.findAll();
     }
 
     @Override
-    public Iterable<Post> listPostsByUser(String username) {
+    public Iterable<Post> listPostsByUser(String username)
+    {
+        logger.info("Return Posts of username: "+username);
         return postRepository.findPostsByUsername(username);
     }
 
@@ -52,7 +60,11 @@ public class PostServiceImpl implements PostService {
             //Long user_id = Long.parseLong(username);
 
             post.setUsername(username);
-            return postRepository.save(post);
+            Post savedPost = postRepository.save(post);
+        if (savedPost != null) {
+            logger.info("Post Created, By Username: "+username+" , postId:"+savedPost.getId());
+        }
+            return savedPost;
         }
 
 
@@ -63,7 +75,10 @@ public class PostServiceImpl implements PostService {
         System.out.println("post should return null");
         System.out.println(post);
 
-        if(post == null) throw new EntityNotFound("Post doesn't exist, go ahead, create it!");
+        if(post == null) {
+            logger.warn("DELETE POST: postId {} doesn't Exit.",postId);
+            throw new EntityNotFound("Post doesn't exist, go ahead, create it!");
+        }
         else if (post.getUsername().equals(username)) {
 
             System.out.println("msg send started:" + postId);
@@ -81,7 +96,8 @@ public class PostServiceImpl implements PostService {
     public Long findPostById(Long postId) throws EntityNotFound {
         Post post = postRepository.findById(postId).orElse(null);
 
-        if (post == null) throw new EntityNotFound("Post doesn't exist");
+        if (post == null)
+            throw new EntityNotFound("Post doesn't exist");
         else if (post != null) {
             System.out.println("post does exist so send back the postid" + post.getId());
             Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", post.getId());
