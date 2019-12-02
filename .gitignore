@@ -90,8 +90,9 @@ modules.xml
 
 # End of https://www.gitignore.io/api/intellij+all
 
-/home/jai/Documents/ga_cognizant/project3/user-microservice/users-api.log
-/home/jai/Documents/ga_cognizant/project3/post-microservice/posts-api.log
-/home/jai/Documents/ga_cognizant/project3/comment-microservice/comment-api.log
-/home/jai/Documents/ga_cognizant/project3/api-gateway/gateway.log
-/home/jai/Documents/ga_cognizant/project3/eureka-server/eureka.log
+#ignore log files
+./user-microservice/users-api.log
+./post-microservice/posts-api.log
+./comment-microservice/comment-api.log
+./api-gateway/gateway.log
+./eureka-server/eureka.log
