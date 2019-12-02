@@ -86,18 +86,18 @@ public class UserRoleControllerTest {
                 .andExpect(content().json(objectMapper.writeValueAsString(userRole)));
     }
 
-//    @Test
-//    public void getRoleById_RoleWithIdExists_Success () throws Exception {
-//        RequestBuilder requestBuilder = MockMvcRequestBuilders
-//                .get("/roles/"+userRole.getId());
-//
-//        when(userRoleService.getRoleById(any())).thenReturn(userRole);
-//        System.out.println(userRole.getId());
-//
-//        mockMvc.perform(requestBuilder)
-//                .andExpect(status().isOk());
-////                .andExpect(content().json(objectMapper.writeValueAsString(userRole)));
-//    }
+    @Test
+    public void getRoleById_RoleWithIdExists_Success () throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/roles/"+userRole.getId());
+
+        when(userRoleService.getRoleById(any())).thenReturn(userRole);
+        System.out.println(userRole.getId());
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk());
+//                .andExpect(content().json(objectMapper.writeValueAsString(userRole)));
+    }
 
     @Test
     public void creatRole_AuthenticatedUsed_Success () throws Exception {
