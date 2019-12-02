@@ -13,7 +13,7 @@ public class Sender {
     private RabbitTemplate rabbitTemplate;
     public Long checkIfPostExists(Long postId) {
         System.out.println("receiving postId back from post: " + postId);
-        Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", postId);
+        Long res = (Long) rabbitTemplate.convertSendAndReceive("comment.post", postId);
         if (res != null) {
             return res;
         }
