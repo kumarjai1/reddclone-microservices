@@ -5,12 +5,9 @@ import com.example.usermicroservice.model.UserProfile;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.repository.UserProfileRepository;
 import com.example.usermicroservice.repository.UserRepository;
-import com.example.usermicroservice.util.AuthenticationUtil;
+//import com.example.usermicroservice.util.AuthenticationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-
-import javax.persistence.EntityNotFoundException;
 
 @Service
 public class UserProfileServiceImpl implements UserProfileService {
@@ -18,8 +15,8 @@ public class UserProfileServiceImpl implements UserProfileService {
     @Autowired
     UserProfileRepository userProfileRepository;
 
-    @Autowired
-    AuthenticationUtil authenticationUtil;
+//    @Autowired
+//    AuthenticationUtil authenticationUtil;
 
     @Autowired
     UserService userService;

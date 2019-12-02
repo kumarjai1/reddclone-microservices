@@ -9,8 +9,8 @@ public interface UserRoleService {
 
     UserRole createRole(UserRole newRole);
 
-    UserRole getRole(String roleName) throws EntityNotFoundException;
-    UserRole getRoleById (Long roleId);
+    UserRole getRole(String roleName);
+    UserRole getRoleById (Long roleId) throws EntityNotFoundException;
 
     Iterable<UserRole> listRoles();
 

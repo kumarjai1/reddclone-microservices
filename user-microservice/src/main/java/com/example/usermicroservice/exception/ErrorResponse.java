@@ -9,7 +9,7 @@ public class ErrorResponse {
 
     private HttpStatus httpStatus;
     private String message;
-    private String cause;
+//    private String cause;
     private String timestamp;
 
     public HttpStatus getHttpStatus() {
@@ -28,13 +28,13 @@ public class ErrorResponse {
         this.message = message;
     }
 
-    public String getCause() {
-        return cause;
-    }
+//    public String getCause() {
+//        return cause;
+//    }
 
-    public void setCause(String cause) {
-        this.cause = cause;
-    }
+//    public void setCause(String cause) {
+//        this.cause = cause;
+//    }
 
     public String getTimestamp() {
         return timestamp;
@@ -44,13 +44,13 @@ public class ErrorResponse {
         this.timestamp = timestamp;
     }
 
-    public ErrorResponse(HttpStatus httpStatus, String message, String cause, String timestamp) {
-        super();
-        this.httpStatus = httpStatus;
-        this.message = message;
-        this.cause = cause;
-        this.timestamp = timestamp;
-    }
+//    public ErrorResponse(HttpStatus httpStatus, String message, String cause, String timestamp) {
+//        super();
+//        this.httpStatus = httpStatus;
+//        this.message = message;
+//        this.cause = cause;
+//        this.timestamp = timestamp;
+//    }
 
     public ErrorResponse(HttpStatus httpStatus, String message) {
         super();

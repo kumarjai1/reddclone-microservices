@@ -21,13 +21,13 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
     @Override
-    public UserRole getRole(String roleName) throws EntityNotFoundException {
-        if (userRoleRepository.findByName(roleName) == null) throw new EntityNotFoundException("Role doesn't exist");
+    public UserRole getRole(String roleName) {
         return userRoleRepository.findByName(roleName);
     }
 
     @Override
-    public UserRole getRoleById(Long roleId) {
+    public UserRole getRoleById(Long roleId) throws EntityNotFoundException {
+        if (userRoleRepository.findById(Math.toIntExact(roleId)).orElse(null) == null) throw new EntityNotFoundException("Such a role doesn't exist, please create it first");
         return userRoleRepository.findById(Math.toIntExact(roleId)).orElse(null);
     }
 

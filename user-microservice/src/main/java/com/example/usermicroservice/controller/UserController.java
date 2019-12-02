@@ -2,7 +2,6 @@ package com.example.usermicroservice.controller;
 
 import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
-import com.example.usermicroservice.exception.UserNotExistException;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserService;
@@ -26,11 +25,10 @@ public class UserController {
 
 
     //  @PreAuthorize("hasRole('ROLE_ADMIN')")
-//    @GetMapping("/list")
-//    public Iterable<User> listUsers(@RequestHeader("username") String username) {
-//        System.out.println(username);
-//        return userService.listUsers();
-//    }
+    @GetMapping("/list")
+    public Iterable<User> listUsers() {
+        return userService.listUsers();
+    }
 
     @ApiOperation(value="Provides Sign Up", produces="application/json")
     @PostMapping("/signup")
@@ -44,9 +42,9 @@ public class UserController {
         return ResponseEntity.ok(userService.login(user));
     }
 
-    @GetMapping("/{userId}/roles")
-    public Iterable<UserRole> listUserRoles(@PathVariable Long userId) {
-        return userService.getUserRoles(userId);
+    @GetMapping("/{username}/roles")
+    public Iterable<UserRole> listUserRoles(@PathVariable String username) {
+        return userService.getUserRoles(username);
     }
 
     @PostMapping("{userId}/{roleId}")
