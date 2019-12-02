@@ -27,8 +27,8 @@ public class Comment {
         this.username = username;
     }
 
-    @Transient
-    UserBean user;
+//    @Transient
+//    UserBean user;
 
     public Comment() { }
 
@@ -56,11 +56,11 @@ public class Comment {
         this.postId = postId;
     }
 
-    public UserBean getUser() {
-        return user;
-    }
-
-    public void setUser(UserBean user) {
-        this.user = user;
-    }
+//    public UserBean getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(UserBean user) {
+//        this.user = user;
+//    }
 }

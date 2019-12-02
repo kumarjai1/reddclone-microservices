@@ -8,6 +8,7 @@ import javax.persistence.EntityNotFoundException;
 
 @Component
 public class Sender {
+
     @Autowired
     private RabbitTemplate rabbitTemplate;
     public Long checkIfPostExists(Long postId) {

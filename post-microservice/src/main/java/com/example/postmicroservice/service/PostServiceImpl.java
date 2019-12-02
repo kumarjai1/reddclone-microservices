@@ -91,6 +91,7 @@ public class PostServiceImpl implements PostService {
         return post.getId();
     }
 
+    //failing currently and returning post id even if none exists
     @RabbitListener(queues = "post.comment")
     @Override
     public Long findPostById(Long postId) throws EntityNotFound {
