@@ -2105,3 +2105,1114 @@ Caused by: java.sql.SQLFeatureNotSupportedException: Method org.postgresql.jdbc.
 2019-12-02 15:55:28.547  WARN 1 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
 2019-12-02 15:55:28.559  INFO 1 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
 2019-12-02 15:55:34.726  INFO 1 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:56:40.864  INFO 1 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-02 15:56:55.714  INFO 1 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-02 15:56:57.826  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 15:57:00.585  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-02 15:57:02.947  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-02 15:57:02.959  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-02 15:57:06.269  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-02 15:57:06.301  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-02 15:57:10.275  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 15:57:10.830  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:57:10.832  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:57:10.836  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:57:10.838  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:57:10.843  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:57:10.849  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 15:57:10.851  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:57:20.104 ERROR 1 --- [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:430) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:276) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:272) [eureka-client-1.9.13.jar:1.9.13]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2$$FastClassBySpringCGLIB$$ead0fc6c.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:356) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:246) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$f782b7fb.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.example.apigateway.ZuulGatewayApplication.main(ZuulGatewayApplication.java:18) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:558) ~[na:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 85 common frames omitted
+
+2019-12-02 15:57:20.133  WARN 1 --- [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:57:20.173 ERROR 1 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:430) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:276) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:272) [eureka-client-1.9.13.jar:1.9.13]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2$$FastClassBySpringCGLIB$$ead0fc6c.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$bb4794f2.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:356) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:246) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$f782b7fb.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.example.apigateway.ZuulGatewayApplication.main(ZuulGatewayApplication.java:18) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_222]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_222]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_222]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_222]
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:558) ~[na:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_222]
+
+2019-12-02 15:57:20.197  WARN 1 --- [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2019-12-02 15:57:20.246  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-02 15:57:20.329  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-02 15:57:20.381  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575302240344 with initial instances count: 0
+2019-12-02 15:57:20.443  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2019-12-02 15:57:20.471  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575302240471, current=UP, previous=STARTING]
+2019-12-02 15:57:20.517  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 15:57:20.512  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway: registering service...
+2019-12-02 15:57:20.760  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 15:57:24.984  INFO 1 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 15:57:28.939  INFO 1 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2019-12-02 15:57:29.105  INFO 1 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2019-12-02 15:57:29.985  INFO 1 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2019-12-02 15:57:33.969  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-02 15:57:33.992  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2019-12-02 15:57:34.231  INFO 1 --- [main] c.e.apigateway.ZuulGatewayApplication    : Started ZuulGatewayApplication in 424.603 seconds (JVM running for 514.478)
+2019-12-02 15:57:34.545 ERROR 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-12-02 15:57:34.555  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:57:34.587  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:57:34.590  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:57:39.114 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : users-api Error : I/O error on GET request for "http://users-api:2121/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:39.152 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@64ad0934 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:39.259  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:39.384 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : posts-api Error : I/O error on GET request for "http://posts-api:2122/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:39.430 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@7507bc64 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:39.444  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:39.514 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : comments-api Error : I/O error on GET request for "http://comments-api:2123/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:39.518 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@3005d1e1 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:39.531  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:44.697 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : users-api Error : I/O error on GET request for "http://users-api:2121/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:44.728 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@64ad0934 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:44.834  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:44.845 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : posts-api Error : I/O error on GET request for "http://posts-api:2122/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:44.848 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@7507bc64 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:44.933  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:44.986 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : comments-api Error : I/O error on GET request for "http://comments-api:2123/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:45.178 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@3005d1e1 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:45.407  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:50.409  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:57:50.433  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:57:50.442  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:57:50.443  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:57:50.446  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:57:50.452  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 15:57:50.557  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:57:52.180 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : users-api Error : I/O error on GET request for "http://users-api:2121/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:52.507 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@64ad0934 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:52.656  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:57:52.720 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Error while getting service definition for service : posts-api Error : I/O error on GET request for "http://posts-api:2122/v2/api-docs": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) 
+2019-12-02 15:57:52.762 ERROR 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Skipping service id : com.example.apigateway.swagger.ServiceDescriptionUpdater$Service@7507bc64 Error : Could not get Swagegr definition from API 
+2019-12-02 15:57:52.785  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:58:08.034  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway: registering service...
+2019-12-02 15:58:01.044 ERROR 1 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 common frames omitted
+
+2019-12-02 15:58:09.643  WARN 1 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:58:10.296 ERROR 1 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:18.081 ERROR 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.7.jar:4.5.7]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.7.jar:4.5.7]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-12-02 15:58:18.774  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:58:19.398  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:20.526  WARN 1 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:20.543  WARN 1 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205) [na:1.8.0_222]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:39.170 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+javax.ws.rs.WebApplicationException: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:198) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+	at com.netflix.discovery.converters.EurekaJacksonCodec$ApplicationsDeserializer.deserialize(EurekaJacksonCodec.java:805) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.converters.EurekaJacksonCodec$ApplicationsDeserializer.deserialize(EurekaJacksonCodec.java:791) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(ObjectReader.java:1703) ~[jackson-databind-2.9.8.jar:2.9.8]
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1608) ~[jackson-databind-2.9.8.jar:2.9.8]
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1188) ~[jackson-databind-2.9.8.jar:2.9.8]
+	at com.netflix.discovery.converters.EurekaJacksonCodec.readValue(EurekaJacksonCodec.java:213) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.converters.wrappers.CodecWrappers$LegacyJacksonJson.decode(CodecWrappers.java:314) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:103) ~[eureka-client-1.9.13.jar:1.9.13]
+	... 26 common frames omitted
+
+2019-12-02 15:58:40.183  WARN 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+2019-12-02 15:58:40.418 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:50.798  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway: registering service...
+2019-12-02 15:58:51.351  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/68c0228c6c0f:api-gateway - registration status: 204
+2019-12-02 15:58:56.019  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:16.756  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:21.864  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:59:22.900  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:59:22.915  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:59:24.800  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:59:26.169  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:59:26.407  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 15:59:26.412  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:59:48.067  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 15:59:50.366  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:50.598  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:56.356  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:56.634  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 15:59:56.837  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:02.149  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:02.197  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:02.292  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:07.302  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:07.437  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:07.509  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:15.065  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:17.434  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:22.548  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:27.911  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:28.262  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:28.653  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:33.811  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:33.833  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:33.901  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:39.048  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:39.196  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:39.247  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:44.284  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:44.318  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:44.353  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:49.434  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:49.487  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:49.530  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:54.569  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:54.616  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:00:54.701  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:00.092  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:00.215  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:00.248  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:05.302  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:05.361  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:05.411  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:10.484  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:10.511  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:10.572  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:15.607  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:15.630  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:15.678  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:20.721  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:20.783  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:20.802  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:25.823  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:25.837  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:25.882  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:30.916  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:30.941  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:30.992  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:35.988  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:36.082  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:36.153  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:41.178  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:41.201  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:41.227  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:46.280  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:46.328  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:46.367  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:51.525  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:52.161  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:52.577  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:57.703  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:58.096  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:01:58.494  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:04.534  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:05.059  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:05.735  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:10.563  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 16:02:10.842  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:10.907  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:10.965  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:15.995  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:16.014  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:16.045  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:21.069  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:21.099  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:21.124  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:26.905  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:27.914  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:27.946  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:33.086  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:33.224  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:33.479  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:38.565  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:38.743  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:38.786  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:43.938  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:44.023  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:44.071  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:49.092  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:49.111  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:49.157  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:54.211  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:54.265  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:54.315  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:59.336  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:59.354  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:02:59.371  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:04.413  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:04.482  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:04.570  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:09.682  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:09.793  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:09.882  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:14.980  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:15.025  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:15.050  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:20.103  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:20.135  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:20.175  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:25.218  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:25.259  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:25.284  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:30.311  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:30.384  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:30.453  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:35.487  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:35.776  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:35.837  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:40.874  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:40.903  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:40.937  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:45.997  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:46.055  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:46.130  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:51.172  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:51.197  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:51.234  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:56.255  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:56.269  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:03:56.287  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:01.335  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:01.383  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:01.438  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:06.458  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:06.476  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:06.526  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:11.577  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:11.627  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:11.663  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:16.704  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:16.724  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:16.754  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:21.785  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:21.806  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:21.829  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:26.854  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:26.894  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:26.912  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:31.963  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:32.019  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:32.084  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:37.118  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:37.205  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:37.347  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:42.385  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:42.403  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:42.433  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:47.468  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:47.492  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:47.516  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:52.545  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:52.576  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:52.598  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:57.634  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:57.651  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:04:57.672  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:02.732  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:02.781  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:02.815  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:07.809  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:07.829  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:07.856  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:12.921  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:12.989  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:13.022  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:18.055  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:18.071  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:18.092  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:23.123  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:23.192  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:23.260  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:28.285  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:28.314  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:28.347  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:33.436  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:33.512  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:33.588  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:38.596  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:38.621  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:38.651  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:43.734  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:43.785  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:43.808  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:48.868  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:48.919  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:48.944  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:54.024  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:54.063  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:54.089  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:59.117  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:59.168  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:05:59.188  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:04.196  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:04.230  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:04.250  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:09.362  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:09.403  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:09.447  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:14.614  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:14.689  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:14.807  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:19.909  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:19.973  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:20.040  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:25.178  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:25.238  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:25.262  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:30.308  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:30.343  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:30.375  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:35.381  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:35.405  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:35.437  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:40.474  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:40.514  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:40.544  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:45.592  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:45.649  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:45.698  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:50.736  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:50.767  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:50.807  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:55.849  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:55.886  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:06:55.966  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:00.998  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:01.044  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:01.080  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:06.090  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:06.129  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:06.167  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:10.242  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 16:07:11.209  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:11.238  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:11.294  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:16.346  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:16.371  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:16.395  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:21.445  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:21.470  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:21.507  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:26.582  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:26.604  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:26.648  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:31.733  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:31.782  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:31.809  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:36.804  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:36.833  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:36.858  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:41.919  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:41.978  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:42.363  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:47.454  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:47.771  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:48.053  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:53.116  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:53.142  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:53.162  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:58.190  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:58.209  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:07:58.233  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:03.272  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:03.292  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:03.336  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:08.338  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:08.357  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:08.385  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:13.423  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:13.456  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:13.495  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:18.552  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:18.578  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:18.632  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:23.703  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:23.748  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:23.817  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:28.951  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:29.056  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:29.154  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:34.157  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:34.183  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:34.232  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:39.383  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:39.441  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:39.620  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:44.678  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:44.721  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:44.752  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:49.806  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:49.838  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:49.874  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:54.906  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:54.955  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:08:55.006  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:00.044  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:00.070  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:00.100  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:05.152  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:05.199  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:05.273  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:10.349  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:10.373  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:10.413  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:15.457  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:15.530  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:15.566  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:20.635  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:20.719  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:20.734  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:25.765  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:25.785  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:25.804  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:30.842  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:30.871  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:30.897  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:35.973  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:35.997  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:36.028  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:41.069  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:41.090  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:41.114  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:46.163  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:46.200  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:46.220  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:51.252  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:51.289  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:51.377  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:56.410  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:56.443  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:09:56.480  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:01.519  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:01.590  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:01.606  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:06.602  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:06.618  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:06.648  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:11.684  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:11.704  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:11.748  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:16.804  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:16.829  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:16.854  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:21.903  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:21.969  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:21.996  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:27.028  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:27.054  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:27.104  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:32.150  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:32.171  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:32.191  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:37.188  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:37.217  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:37.237  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:42.279  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:42.315  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:42.346  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:47.390  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:47.427  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:47.449  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:52.490  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:52.538  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:52.568  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:57.620  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:57.648  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:10:57.688  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:02.742  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:02.855  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:02.887  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:07.880  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:07.909  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:07.931  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:12.955  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:12.977  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:12.998  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:18.025  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:18.061  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:18.082  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:23.120  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:23.146  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:23.172  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:28.212  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:28.230  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:28.271  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:33.288  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:33.307  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:33.318  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:38.321  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:38.336  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:38.387  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:43.434  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:43.456  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:43.475  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:48.503  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:48.531  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:48.552  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:53.599  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:53.624  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:53.652  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:58.700  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:58.726  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:11:58.742  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:03.762  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:03.788  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:03.810  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:08.843  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:08.858  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:08.879  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:09.955  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 16:12:13.939  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:13.970  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:13.999  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:19.043  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:19.074  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:19.096  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:24.128  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:24.149  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:24.189  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:29.223  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:29.242  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:29.257  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:34.257  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:34.277  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:34.305  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:39.344  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:39.369  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:39.393  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:44.435  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:44.481  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:44.508  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:49.530  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:49.553  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:49.585  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:54.614  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:54.661  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:54.729  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:59.776  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:59.797  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:12:59.821  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:04.814  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:04.845  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:04.863  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:09.902  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:09.934  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:09.960  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:15.000  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:15.018  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:15.060  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:20.093  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:20.134  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:20.162  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:25.200  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:25.231  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:25.263  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:30.320  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:30.341  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:30.362  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:35.377  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:35.407  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:35.441  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:40.466  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:40.499  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:40.518  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:45.553  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:45.576  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:45.599  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:50.625  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:50.647  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:50.673  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:55.715  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:55.780  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:13:55.823  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:00.852  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:00.873  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:00.895  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:05.892  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:05.920  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:05.958  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:11.023  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:11.047  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:11.091  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:16.156  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:16.186  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:16.218  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:21.249  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:21.273  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:21.306  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:26.390  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:26.457  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:26.523  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:31.619  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:31.665  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02
+2019-12-02 16:14:31.702  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-02

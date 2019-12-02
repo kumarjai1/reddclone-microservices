@@ -4,6 +4,8 @@ import com.example.apigateway.bean.UserBean;
 import com.example.apigateway.repository.UserRepository;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AuthenticationFilter extends ZuulFilter {
+
+  private Logger logger = LoggerFactory.getLogger(AuthenticationFilter.class);
 
   @Autowired
   UserRepository userRepository;
@@ -47,11 +51,12 @@ public class AuthenticationFilter extends ZuulFilter {
     UserBean user = null;
 
     if (userRepository.getUserByUsername(username) !=null) {
+      logger.info("Return User by username: "+username);
       user = userRepository.getUserByUsername(username);
       String userId = String.valueOf(user.getId());
       ctx.addZuulRequestHeader("userId", userId);
       ctx.addZuulRequestHeader("username", username);
-      System.out.println("found user username: " + username);
+      logger.info("Return Posts of username: "+username);
     }
     return null;
   }

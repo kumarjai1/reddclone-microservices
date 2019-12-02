@@ -1,7 +1,10 @@
 package com.example.apigateway.service;
 
 import com.example.apigateway.bean.UserBean;
+import com.example.apigateway.config.AuthenticationFilter;
 import com.example.apigateway.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,6 +19,7 @@ import java.util.List;
 
 @Service
 public class CustomUserService implements UserDetailsService {
+  private Logger logger = LoggerFactory.getLogger(CustomUserService.class);
 
   @Autowired
   @Qualifier("encoder")
@@ -26,11 +30,11 @@ public class CustomUserService implements UserDetailsService {
 
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    System.out.println("loadUser");
+    logger.info("loadUser");
     UserBean user = userRepository.getUserByUsername(username);
-    System.out.println("found user username: " + user.getUsername());
+    logger.info("found user username: " + user.getUsername());
     if(user == null) {
-      System.out.println("not found user username: " + username);
+      logger.info("not found user username: " + username);
       throw new UsernameNotFoundException("Unknown username " + username);
     }
 
