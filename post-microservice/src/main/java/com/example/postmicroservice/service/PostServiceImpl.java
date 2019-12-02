@@ -116,7 +116,6 @@ public class PostServiceImpl implements PostService {
      *
      * @param postId comes from the RabbitMq comment service
      * @return Long postId
-     * @throws EntityNotFound
      */
     @RabbitListener(queues = "comment.post")
     @Override
