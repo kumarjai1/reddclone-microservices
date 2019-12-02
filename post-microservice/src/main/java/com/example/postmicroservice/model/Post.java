@@ -3,6 +3,18 @@ package com.example.postmicroservice.model;
 import javax.persistence.*;
 import java.util.List;
 
+/***
+ * Creates a Post Schema in the database
+ * Post composes of the following properties:
+ * Postid- Long,
+ * Tile- Stirng,
+ * Description- String,
+ * Username- String
+ * @author      Hristina Lapanova (hristina.lapanova@gmail.com), Jai Kumar (jai.essarani@gmail.com)
+ * @version     0.01                 (current version number of program)
+ * @since       0.01          (the version of the package this class was first added to)
+
+ */
 @Entity
 @Table(name = "posts")
 public class Post {
@@ -16,17 +28,6 @@ public class Post {
 
     @Column
     private String description;
-
-//    @Column
-//    private Long userId;
-//
-//    public Long getUserId() {
-//        return userId;
-//    }
-//
-//    public void setUserId(Long userId) {
-//        this.userId = userId;
-//    }
 
     @Column
     private String username;

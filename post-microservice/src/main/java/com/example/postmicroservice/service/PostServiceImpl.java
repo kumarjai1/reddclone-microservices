@@ -27,7 +27,9 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-
+/**
+ * Implements the Post Service CRUD functionality
+ */
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -41,6 +43,10 @@ public class PostServiceImpl implements PostService {
     @Autowired
     Sender sender;
 
+    /**
+     *
+     * @return All Posts
+     */
     @Override
     public Iterable<Post> listPosts() {
 
@@ -48,6 +54,11 @@ public class PostServiceImpl implements PostService {
         return postRepository.findAll();
     }
 
+    /**
+     * Username passed on by the header to get all posts by that user
+     * @param username
+     * @return List of post by username
+     */
     @Override
     public Iterable<Post> listPostsByUser(String username)
     {
@@ -55,10 +66,14 @@ public class PostServiceImpl implements PostService {
         return postRepository.findPostsByUsername(username);
     }
 
+    /**
+     *
+     * @param username passed on by the header
+     * @param post accepted from the body
+     * @return savedPost
+     */
     @Override
         public Post createPost(String username, Post post) {
-            //Long user_id = Long.parseLong(username);
-
             post.setUsername(username);
             Post savedPost = postRepository.save(post);
         if (savedPost != null) {
@@ -67,7 +82,13 @@ public class PostServiceImpl implements PostService {
             return savedPost;
         }
 
-
+    /**
+     *
+     * @param username passed on by the header
+     * @param postId passed on by the path
+     * @return Long postId of deleted post
+     * @throws EntityNotFound
+     */
     @Transactional
     @Override
     public Long deletePost(String username, Long postId) throws EntityNotFound {
@@ -91,7 +112,12 @@ public class PostServiceImpl implements PostService {
         return post.getId();
     }
 
-    //failing currently and returning post id even if none exists
+    /**
+     *
+     * @param postId comes from the RabbitMq comment service
+     * @return Long postId
+     * @throws EntityNotFound
+     */
     @RabbitListener(queues = "comment.post")
     @Override
     public Long findPostById(Long postId) throws EntityNotFound {
