@@ -120,12 +120,13 @@ public class PostServiceImpl implements PostService {
      */
     @RabbitListener(queues = "comment.post")
     @Override
-    public Long findPostById(Long postId) throws EntityNotFound {
+    public Long findPostById(Long postId) {
         Post post = postRepository.findById(postId).orElse(null);
 
-        if (post == null)
-            throw new EntityNotFound("Post doesn't exist");
-        else if (post != null) {
+//        if (post == null)
+//            throw new EntityNotFound("Post doesn't exist");
+//        else
+        if (post != null) {
             System.out.println("post does exist so send back the postid" + post.getId());
             Long res = (Long) rabbitTemplate.convertSendAndReceive("post.comment", post.getId());
 
