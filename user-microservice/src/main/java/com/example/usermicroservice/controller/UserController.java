@@ -44,9 +44,9 @@ public class UserController {
         return ResponseEntity.ok(userService.login(user));
     }
 
-    @GetMapping("/{userId}/roles")
-    public Iterable<UserRole> listUserRoles(@PathVariable Long userId) {
-        return userService.getUserRoles(userId);
+    @GetMapping("/{username}/roles")
+    public Iterable<UserRole> listUserRoles(@PathVariable String username) {
+        return userService.getUserRoles(username);
     }
 
     @PostMapping("{userId}/{roleId}")

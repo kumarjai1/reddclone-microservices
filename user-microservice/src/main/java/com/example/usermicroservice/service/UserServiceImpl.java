@@ -113,8 +113,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Iterable<UserRole> getUserRoles(Long userId) {
-        User user = userRepository.findById(userId).orElse(null);
+    public Iterable<UserRole> getUserRoles(String username) {
+        User user = userRepository.findUserByUsername(username);
         return user.getUserRoles();
     }
 

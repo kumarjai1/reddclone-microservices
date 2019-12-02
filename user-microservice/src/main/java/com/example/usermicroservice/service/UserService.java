@@ -18,7 +18,7 @@ public interface UserService extends UserDetailsService {
 
     User getUser(String username);
 
-    Iterable<UserRole> getUserRoles(Long userId);
+    Iterable<UserRole> getUserRoles(String username);
 
     Iterable<UserRole> addRole (Long userId, Long roleId) throws EntityNotFoundException;
 
