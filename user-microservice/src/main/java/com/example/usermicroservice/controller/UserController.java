@@ -2,7 +2,6 @@ package com.example.usermicroservice.controller;
 
 import com.example.usermicroservice.exception.EntityAlreadyExists;
 import com.example.usermicroservice.exception.EntityNotFoundException;
-import com.example.usermicroservice.exception.UserNotExistException;
 import com.example.usermicroservice.model.User;
 import com.example.usermicroservice.model.UserRole;
 import com.example.usermicroservice.service.UserService;
