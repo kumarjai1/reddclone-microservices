@@ -135,11 +135,10 @@ public class PostIntegrationTest {
     }
 
     @Test
-    public void receiveMsg_idSent_Success() throws InterruptedException {
+    public void receiveMsg_idSent_Success(){// throws InterruptedException {
         rabbitTemplate.convertSendAndReceive("post.comment", 1);
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
         assertEquals(java.util.Optional.ofNullable(dummyReceiver.getId()), 1);
-
     }
 
 
