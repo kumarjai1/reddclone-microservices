@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+/**
+ * Implements the Post Service CRUD functionality
+ */
 @Service
 public class CommentServiceImpl implements CommentService {
     private Logger logger = LoggerFactory.getLogger(CommentServiceImpl.class);
@@ -22,7 +25,13 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     Sender sender;
 
-
+    /**
+     *
+     * @param username passed on by the header
+     * @param postId passed on by the header
+     * @param comment accepted from the body
+     * @return savedComment
+     */
     @Override
     public Comment createComment(String username, Long postId, Comment comment) {
 
@@ -44,11 +53,21 @@ public class CommentServiceImpl implements CommentService {
         return savedComment;
     }
 
+    /**
+     *
+     * @return All comments
+     */
     @Override
     public Iterable<Comment> listComments() {
 
         return commentRepository.findAll();
     }
+
+    /**
+     *
+     * @param username passed on by the header
+     * @return List of comments by username
+     */
 
     @Override
     public Iterable<Comment> getCommentsByUser(String username) {
@@ -56,10 +75,21 @@ public class CommentServiceImpl implements CommentService {
         return commentRepository.findCommentsByUsername(username);
     }
 
+    /**
+     *
+     * @param postId passed on by the header
+     * @return List of comments by postId
+     */
     @Override
     public Iterable<Comment> getCommentsByPostId(Long postId) {
         return commentRepository.findCommentsByPostId(postId);
     }
+
+    /**
+     *
+     * @param postId passed on by the header
+     * @return Long postId
+     */
 
     @Override
     public Long deleteCommentsByPostId(Long postId) {
@@ -67,6 +97,13 @@ public class CommentServiceImpl implements CommentService {
         commentRepository.deleteAll(comments);
         return postId;
     }
+
+    /**
+     *
+     * @param username passed on by the header
+     * @param commentId passed on by the path
+     * @return Long commentId of deleted comment
+     */
 
     @Override
     public Long deleteCommentByUser(String username, Long commentId) {

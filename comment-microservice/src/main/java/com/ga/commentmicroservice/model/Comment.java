@@ -2,6 +2,17 @@ package com.ga.commentmicroservice.model;
 
 
 import javax.persistence.*;
+/***
+ * Creates a Comment Schema in the database
+ * Comment composes of the following properties:
+ * Commentid- Long,
+ * Text- String,
+ * Username- String
+ * @author      Hristina Lapanova (hristina.lapanova@gmail.com), Jai Kumar (jai.essarani@gmail.com)
+ * @version     0.01                 (current version number of program)
+ * @since       0.01          (the version of the package this class was first added to)
+
+ */
 
 @Entity
 @Table(name = "comments")
