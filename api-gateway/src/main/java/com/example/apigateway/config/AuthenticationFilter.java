@@ -57,6 +57,7 @@ public class AuthenticationFilter extends ZuulFilter {
       ctx.addZuulRequestHeader("userId", userId);
       ctx.addZuulRequestHeader("username", username);
       logger.info("Return Posts of username: "+username);
+      return ctx;
     }
     return null;
   }

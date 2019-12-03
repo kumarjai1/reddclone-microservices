@@ -74,29 +74,57 @@ public class PostIntegrationTest {
 //    }
     @ClassRule
     public static final ExternalResource resource = new ExternalResource() {
-    private Broker broker = new Broker();
-    @Override
-    protected void before() throws Throwable {
-        Properties properties = new Properties();
-        properties.load(new FileInputStream(new File("src/test/resources/application-qa.properties")));
-        String amqpPort = properties.getProperty("spring.rabbitmq.port");
-        File tmpFolder = Files.createTempDir();
-        String userDir = System.getProperty("user.dir").toString();
-        File file = new File(userDir);
-        String homePath = file.getAbsolutePath();
-        BrokerOptions brokerOptions = new BrokerOptions();
-        brokerOptions.setConfigProperty("qpid.work_dir", tmpFolder.getAbsolutePath());
-        brokerOptions.setConfigProperty("qpid.amqp_port", amqpPort);
-        brokerOptions.setConfigProperty("qpid.home_dir", homePath);
-        brokerOptions.setInitialConfigurationLocation(homePath + "/src/test/resources/QpidConfig.json");
-        broker.startup(brokerOptions);
-    }
+        private Broker broker = new Broker();
+        @Override
+        protected void before() throws Throwable {
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(new File("src/test/resources/application-qa.properties")));
+            String amqpPort = properties.getProperty("spring.rabbitmq.port");
+            File tmpFolder = Files.createTempDir();
+            String userDir = System.getProperty("user.dir").toString();
+            File file = new File(userDir);
+            String homePath = file.getAbsolutePath();
+            BrokerOptions brokerOptions = new BrokerOptions();
+            brokerOptions.setConfigProperty("qpid.work_dir", tmpFolder.getAbsolutePath());
+            brokerOptions.setConfigProperty("qpid.amqp_port", amqpPort);
+            brokerOptions.setConfigProperty("qpid.home_dir", homePath);
+            brokerOptions.setInitialConfigurationLocation(homePath + "/src/test/resources/QpidConfig.json");
+            broker.startup(brokerOptions);
+        }
 
-    @Override
-    protected void after() {
-        broker.shutdown();
-    }
+        @Override
+        protected void after() {
+            broker.shutdown();
+        }
     };
+
+
+//    @ClassRule
+//    public static final ExternalResource resource = new ExternalResource() {
+//        private Broker broker = new Broker();
+//
+//        @Override
+//        protected void before() throws Throwable {
+//            Properties properties = new Properties();
+//            properties.load(new FileInputStream(new File("src/test/resources/application.properties")));
+//            String amqpPort = properties.getProperty("spring.rabbitmq.port");
+//            File tmpFolder = Files.createTempDir();
+//            String userDir = System.getProperty("user.dir").toString();
+//            File file = new File(userDir);
+//            String homePath = file.getAbsolutePath();
+//            BrokerOptions brokerOptions = new BrokerOptions();
+//            brokerOptions.setConfigProperty("qpid.work_dir", tmpFolder.getAbsolutePath());
+//            brokerOptions.setConfigProperty("qpid.amqp_port", amqpPort);
+//            brokerOptions.setConfigProperty("qpid.home_dir", homePath);
+//            brokerOptions.setInitialConfigurationLocation(homePath + "/src/test/resources/qpid-config.json");
+//            broker.startup(brokerOptions);
+//        }
+//
+//        @Override
+//        protected void after() {
+//            broker.shutdown();
+//        }
+//    };
 
     private Post createPost(){
         Post post = new Post();
@@ -108,7 +136,7 @@ public class PostIntegrationTest {
 
     @Test
     public void receiveMsg_idSent_Success() throws InterruptedException {
-        rabbitTemplate.convertAndSend("post.comment", 1);
+        rabbitTemplate.convertSendAndReceive("post.comment", 1);
         Thread.sleep(5000);
         assertEquals(java.util.Optional.ofNullable(dummyReceiver.getId()), 1);
 
