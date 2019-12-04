@@ -115,10 +115,10 @@ public class CommentControllerTest {
     @Test
     public void getCommentsByPostId_List_Success() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
-                .get("/user")
+                .get("/"+dummyComment.getPostId())
                 .header("username","robin")
                 .contentType(MediaType.APPLICATION_JSON);
-        when(commentService.getCommentsByUser(anyString())).thenReturn(listCommentsDummy);
+        when(commentService.getCommentsByPostId(any())).thenReturn(listCommentsDummy);
         ResultActions result = mockMvc
                 .perform(requestBuilder)
                 .andExpect(status().isOk());
