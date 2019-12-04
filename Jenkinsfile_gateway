@@ -48,7 +48,7 @@ pipeline {
           steps {
             dir("api-gateway") {
               script {
-                docker.build("jaik92/api-gateway:0.0.1-SNAPSHOT")
+                docker.build("hristina/posts-api:0.0.1-SNAPSHOT")
               }
             }
           }
