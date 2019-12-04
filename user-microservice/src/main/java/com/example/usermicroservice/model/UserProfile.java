@@ -22,7 +22,7 @@ public class UserProfile {
     private String address;
 
     @JsonIgnore
-    @OneToOne (cascade = {CascadeType.ALL})
+    @OneToOne (mappedBy = "userProfile", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "user_profile_id")
     private User user;
 

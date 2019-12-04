@@ -31,15 +31,13 @@ public class UserProfileServiceImpl implements UserProfileService {
 
     @Override
     public UserProfile createProfile(UserProfile userProfile, String username) {
-//        Authentication authentication = authenticationUtil.getAuthentication();
-//        System.out.println("1. auth: "+ authentication.getName() + " | username passsed: " + username);
-//
+
         User user = userService.getUser(username);
         UserProfile foundProfile = user.getUserProfile();
         logger.info("Creating profile for user");
 
         if (user.getUsername() != null) {
-            logger.info("Creating profile for the user found  with with username: " + user.getUsername());
+            logger.info("Creating profile for the user found with with username: " + user.getUsername());
 //            System.out.println("2. usernamePassed: " + username);
 
             if (foundProfile != null) {
@@ -65,18 +63,18 @@ public class UserProfileServiceImpl implements UserProfileService {
     public UserProfile getUserProfile(String username) {
         User user = userService.getUser(username);
         logger.info("Getting userprofile for specific user");
-        System.out.println(user.getUsername() + " passed username:" + username);
-
+//        System.out.println(user.getUsername() + " passed username:" + username);
+//
         if (user == null) {
             logger.error("User doesn't exist, so no profile is shown");
             return null;
         }
-
+//
         UserProfile savedProfile = userProfileRepository.findUserProfileByUsername(username);
         if (savedProfile == null) {
-            logger.error("User profile is null or doesn't exist so create new profile");
+            logger.error("User profile doesn't exist so first create a new profile");
             savedProfile = new UserProfile();
-            userProfileRepository.save(savedProfile);
+//            userProfileRepository.save(savedProfile);
             savedProfile.setUser(user);
             user.setUserProfile(savedProfile);
             userService.updateUser(user);
@@ -84,7 +82,7 @@ public class UserProfileServiceImpl implements UserProfileService {
             return userProfileRepository.save(savedProfile);
         }
         return savedProfile;
-
+        
     }
 
 }

@@ -1,0 +1,927 @@
+2019-12-02 15:52:21.366  INFO 1 --- [main] c.e.p.PostMicroserviceApplication        : The following profiles are active: dev
+2019-12-02 15:53:01.936  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 15:53:10.177  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7701ms. Found 1 repository interfaces.
+2019-12-02 15:53:27.703  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2c038692-cff6-34bc-acbf-3e0bf8765674
+2019-12-02 15:53:33.766  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf121ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.587  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$f59eea27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.694  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.721  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@16f1474' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.757  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$1a738cd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.830  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:35.983  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dc716f1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:36.427  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$790b24ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:53:57.878  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2122 (http)
+2019-12-02 15:53:58.340  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-02 15:53:58.365  INFO 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-12-02 15:54:01.424  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-02 15:54:01.448  INFO 1 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 99688 ms
+2019-12-02 15:54:14.152  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 15:54:17.080  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 15:54:20.009  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 15:54:21.092  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 15:54:21.123  INFO 1 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 15:54:24.176  INFO 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 15:54:30.145  INFO 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-12-02 15:54:31.268  INFO 1 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-12-02 15:54:31.385  INFO 1 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@28fcdc17
+2019-12-02 15:54:47.207  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 15:55:23.180  WARN 1 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 15:55:45.765  INFO 1 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 15:56:20.212  INFO 1 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e9254e0c-8ccc-4e06-9a86-f63c438d6df8
+
+2019-12-02 15:56:32.059  INFO 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@299d2aba, org.springframework.security.web.context.SecurityContextPersistenceFilter@75f684, org.springframework.security.web.header.HeaderWriterFilter@7123aff8, org.springframework.security.web.authentication.logout.LogoutFilter@6857ec06, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7da2a264, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f9f5c8b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f88d3b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@728cbfdc, org.springframework.security.web.session.SessionManagementFilter@39c41527, org.springframework.security.web.access.ExceptionTranslationFilter@13d4bd79]
+2019-12-02 15:56:36.090  WARN 1 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:56:36.109  INFO 1 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:56:36.411  WARN 1 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:56:36.421  INFO 1 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:56:46.828  INFO 1 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:57:14.853  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 15:57:15.431  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-02 15:57:17.301  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-02 15:57:17.320  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-02 15:57:19.191  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-02 15:57:19.196  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-02 15:57:26.275  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 15:57:26.875  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:57:26.881  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:57:26.920  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:57:26.939  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:57:26.951  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:57:26.954  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 15:57:26.959  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:57:39.804  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 15:57:39.988  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-02 15:57:40.036  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-02 15:57:40.511  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575302260494 with initial instances count: 0
+2019-12-02 15:57:40.726  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POSTS with eureka with status UP
+2019-12-02 15:57:40.772  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575302260772, current=UP, previous=STARTING]
+2019-12-02 15:57:41.364  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 15:57:41.644  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/56f8d7abe7c8:posts:2122: registering service...
+2019-12-02 15:57:42.465  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 15:57:47.285  INFO 1 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 15:57:49.653  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/56f8d7abe7c8:posts:2122 - registration status: 204
+2019-12-02 15:58:09.111  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2019-12-02 15:58:10.165  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:58:11.553  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:58:17.618  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:58:18.970  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:58:19.602  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:58:19.994  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-12-02 15:58:20.552  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:58:36.759 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-12-02 15:58:36.332 ERROR 1 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_222]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_222]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 26 common frames omitted
+
+2019-12-02 15:58:37.889  WARN 1 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:58:37.653  WARN 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2019-12-02 15:58:40.151  WARN 1 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205) [na:1.8.0_222]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:40.390  WARN 1 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205) [na:1.8.0_222]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_222]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:41.429  INFO 1 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.SocketException: Connection reset
+2019-12-02 15:58:42.083 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://eureka:8761/eureka/}
+
+javax.ws.rs.WebApplicationException: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:198) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+Caused by: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+	at com.netflix.discovery.converters.EurekaJacksonCodec$ApplicationsDeserializer.deserialize(EurekaJacksonCodec.java:805) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.converters.EurekaJacksonCodec$ApplicationsDeserializer.deserialize(EurekaJacksonCodec.java:791) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.fasterxml.jackson.databind.ObjectReader._unwrapAndDeserialize(ObjectReader.java:1703) ~[jackson-databind-2.9.9.jar:2.9.9]
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1608) ~[jackson-databind-2.9.9.jar:2.9.9]
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1188) ~[jackson-databind-2.9.9.jar:2.9.9]
+	at com.netflix.discovery.converters.EurekaJacksonCodec.readValue(EurekaJacksonCodec.java:213) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.converters.wrappers.CodecWrappers$LegacyJacksonJson.decode(CodecWrappers.java:314) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:103) ~[eureka-client-1.9.13.jar:1.9.13]
+	... 26 common frames omitted
+
+2019-12-02 15:58:42.372  INFO 1 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2019-12-02 15:58:42.392  WARN 1 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+2019-12-02 15:58:42.451 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/56f8d7abe7c8:posts:2122 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1069) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:983) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-02 15:58:43.002  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2019-12-02 15:58:48.331  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2ba7599c:1/SimpleConnection@4d18834e [delegate=amqp://guest@172.19.0.7:5672/, localPort= 38348]
+2019-12-02 15:58:54.001  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2122 (http) with context path ''
+2019-12-02 15:58:54.022  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 2122
+2019-12-02 15:58:54.058  INFO 1 --- [main] c.e.p.PostMicroserviceApplication        : Started PostMicroserviceApplication in 458.373 seconds (JVM running for 590.897)
+2019-12-02 15:59:40.240  INFO 1 --- [http-nio-2122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-02 15:59:40.252  INFO 1 --- [http-nio-2122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-02 15:59:40.512  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 15:59:40.635  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 15:59:41.001  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 15:59:41.740  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 15:59:41.767  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 15:59:41.845  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-12-02 15:59:42.096  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 15:59:48.100  INFO 1 --- [http-nio-2122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7843 ms
+2019-12-02 15:59:48.928  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 16:02:27.205  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 16:07:27.537  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 16:12:27.250  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 15:57:50.479  INFO 29488 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 15:57:55.530  INFO 29488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 15:57:56.112  INFO 29488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 467ms. Found 1 repository interfaces.
+2019-12-02 15:57:58.867  INFO 29488 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 15:57:59.544  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cfcf04d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:57:59.727  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a5aab887] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:57:59.765  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:57:59.768  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5eb5da12' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:57:59.839  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ca7f5b39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:57:59.860  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:00.019  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8c7d3d7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:00.138  INFO 29488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2916f34a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:00.868  INFO 29488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 15:58:01.565  INFO 29488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 15:58:01.833  INFO 29488 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 15:58:02.069  INFO 29488 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 15:58:02.073  INFO 29488 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 15:58:02.522  INFO 29488 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 15:58:02.946  INFO 29488 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 15:58:04.943  INFO 29488 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3bc891f2'
+2019-12-02 15:58:04.950  INFO 29488 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 15:58:09.483  WARN 29488 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 15:58:11.216  INFO 29488 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 15:58:11.719  INFO 29488 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: be8bbd5d-e3ee-4be7-89b8-9cd065dd3b43
+
+2019-12-02 15:58:13.088  INFO 29488 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eec5fa6, org.springframework.security.web.context.SecurityContextPersistenceFilter@79bf39e5, org.springframework.security.web.header.HeaderWriterFilter@7acfcfc4, org.springframework.security.web.authentication.logout.LogoutFilter@6c8672b9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2114eb1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@364c93e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f5167f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21579b35, org.springframework.security.web.session.SessionManagementFilter@38856d6e, org.springframework.security.web.access.ExceptionTranslationFilter@2c8f65da]
+2019-12-02 15:58:14.513  WARN 29488 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 15:58:14.527  WARN 29488 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:58:14.528  INFO 29488 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:58:14.545  WARN 29488 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:58:14.547  INFO 29488 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:58:16.483  INFO 29488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:58:20.633  INFO 29488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 15:58:20.640  INFO 29488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 15:58:20.750  INFO 29488 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 15:58:21.214  INFO 29488 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:58:21.236  INFO 29488 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 15:58:21.255  INFO 29488 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:58:21.282 ERROR 29488 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 15:58:21.287  INFO 29488 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:58:21.317  INFO 29488 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 35.457 seconds (JVM running for 39.301)
+2019-12-02 15:58:21.396  INFO 29488 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@200e6029, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@28fef9a2]; rollback [true]
+2019-12-02 15:58:21.697  INFO 29488 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@200e6029, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 15:58:21.773  INFO 29488 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 15:58:21.784  INFO 29488 --- [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 15:58:21.804  INFO 29488 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 15:58:21.805  INFO 29488 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 15:58:21.819  INFO 29488 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 15:58:21.820  INFO 29488 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:58:21.836  INFO 29488 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 15:58:21.839  INFO 29488 --- [Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 15:58:21.850  WARN 29488 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 15:58:21.854 ERROR 29488 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 15:58:21.858  WARN 29488 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 15:58:21.858 ERROR 29488 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 15:58:21.860  WARN 29488 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-02 15:58:21.864  INFO 29488 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 15:58:21.901  INFO 29488 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 15:58:51.655  INFO 29565 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 15:58:55.297  INFO 29565 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 15:58:55.474  INFO 29565 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144ms. Found 1 repository interfaces.
+2019-12-02 15:58:56.538  INFO 29565 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 15:58:57.024  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e7f2d5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.132  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$272cf595] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.150  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.153  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@51e3d37e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.203  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$4c019847] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.217  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.297  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dff7a8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.357  INFO 29565 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aa993058] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 15:58:57.908  INFO 29565 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 15:58:58.788  INFO 29565 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 15:58:59.089  INFO 29565 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 15:58:59.328  INFO 29565 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 15:58:59.331  INFO 29565 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 15:58:59.715  INFO 29565 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 15:59:00.186  INFO 29565 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 15:59:02.308  INFO 29565 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@26a33cf'
+2019-12-02 15:59:02.316  INFO 29565 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 15:59:07.218  WARN 29565 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 15:59:09.253  INFO 29565 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 15:59:09.695  INFO 29565 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7cc0b21a-a087-4528-9d4e-4013a1264b4c
+
+2019-12-02 15:59:10.542  INFO 29565 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25b83dce, org.springframework.security.web.context.SecurityContextPersistenceFilter@364c93e6, org.springframework.security.web.header.HeaderWriterFilter@709d2a6c, org.springframework.security.web.authentication.logout.LogoutFilter@799cf32d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e5e3147, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66a8ff6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b576ff8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74cd8c55, org.springframework.security.web.session.SessionManagementFilter@1dd9a3ae, org.springframework.security.web.access.ExceptionTranslationFilter@1f0f92f5]
+2019-12-02 15:59:11.477  WARN 29565 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 15:59:11.487  WARN 29565 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:59:11.487  INFO 29565 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:59:11.501  WARN 29565 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 15:59:11.501  INFO 29565 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 15:59:12.068  INFO 29565 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:59:14.547  INFO 29565 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 15:59:14.558  INFO 29565 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 15:59:14.639  INFO 29565 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 15:59:15.502  INFO 29565 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:59:15.522  INFO 29565 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 15:59:15.542  INFO 29565 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:59:15.558 ERROR 29565 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 15:59:15.561  INFO 29565 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 15:59:15.604  INFO 29565 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 27.762 seconds (JVM running for 30.406)
+2019-12-02 15:59:15.897  INFO 29565 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@5d782a4a, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@28fef9a2]; rollback [true]
+2019-12-02 15:59:16.542  INFO 29565 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@5d782a4a, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 15:59:16.592  INFO 29565 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 15:59:16.601  INFO 29565 --- [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 15:59:16.610  INFO 29565 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 15:59:16.611  INFO 29565 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 15:59:16.625  INFO 29565 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 15:59:16.626  INFO 29565 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 15:59:16.637  INFO 29565 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 15:59:16.638  INFO 29565 --- [Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 15:59:16.643  WARN 29565 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 15:59:16.644 ERROR 29565 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 15:59:16.646  WARN 29565 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 15:59:16.647 ERROR 29565 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 15:59:16.647  WARN 29565 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-02 15:59:16.656  INFO 29565 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 15:59:16.671  INFO 29565 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 16:01:08.885  INFO 29702 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 16:01:11.380  INFO 29702 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 16:01:11.634  INFO 29702 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232ms. Found 1 repository interfaces.
+2019-12-02 16:01:12.567  INFO 29702 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 16:01:13.033  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b98d9ce8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.152  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$523b6522] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.193  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.198  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@472d0f4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.223  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$771007d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.245  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.305  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$390dea1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.365  INFO 29702 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d5a79fe5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:01:13.975  INFO 29702 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 16:01:14.628  INFO 29702 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 16:01:14.870  INFO 29702 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 16:01:15.059  INFO 29702 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 16:01:15.062  INFO 29702 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 16:01:15.457  INFO 29702 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 16:01:15.860  INFO 29702 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 16:01:17.683  INFO 29702 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@29188050'
+2019-12-02 16:01:17.692  INFO 29702 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:01:21.088  WARN 29702 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 16:01:22.340  INFO 29702 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 16:01:22.610  INFO 29702 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 632d6a2d-c180-4095-acc6-9e63fa175407
+
+2019-12-02 16:01:23.043  INFO 29702 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45e35a0d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1abbc1d4, org.springframework.security.web.header.HeaderWriterFilter@f83d121, org.springframework.security.web.authentication.logout.LogoutFilter@5ac7550a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4eec5fa6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ad26381, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@353422fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21d15932, org.springframework.security.web.session.SessionManagementFilter@364c93e6, org.springframework.security.web.access.ExceptionTranslationFilter@5bcfdaf3]
+2019-12-02 16:01:23.590  WARN 29702 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 16:01:23.598  WARN 29702 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:01:23.598  INFO 29702 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:01:23.610  WARN 29702 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:01:23.611  INFO 29702 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:01:24.205  INFO 29702 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:01:26.552  INFO 29702 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 16:01:26.558  INFO 29702 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 16:01:26.642  INFO 29702 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 16:01:26.923  INFO 29702 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:01:26.938  INFO 29702 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:01:26.952  INFO 29702 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:01:26.966 ERROR 29702 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:01:26.970  INFO 29702 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:01:27.000  INFO 29702 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 21.41 seconds (JVM running for 24.357)
+2019-12-02 16:01:27.065  INFO 29702 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@3889c343, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@265c0752]; rollback [true]
+2019-12-02 16:01:27.291  INFO 29702 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@3889c343, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 16:01:27.329  INFO 29702 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 16:01:27.334  INFO 29702 --- [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 16:01:27.343  INFO 29702 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 16:01:27.344  INFO 29702 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 16:01:27.355  INFO 29702 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 16:01:27.356  INFO 29702 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:01:27.367  INFO 29702 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:01:27.368  INFO 29702 --- [Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 16:01:27.372  WARN 29702 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 16:01:27.372 ERROR 29702 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 16:01:27.373  WARN 29702 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 16:01:27.374 ERROR 29702 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 16:01:27.374  WARN 29702 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-02 16:01:27.376  INFO 29702 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 16:01:27.407  INFO 29702 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 16:02:44.846  INFO 29772 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 16:02:47.631  INFO 29772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 16:02:47.821  INFO 29772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171ms. Found 1 repository interfaces.
+2019-12-02 16:02:49.676  INFO 29772 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 16:02:50.438  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b98d9ce8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.604  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$523b6522] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.659  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.672  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a479fda' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.705  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$771007d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.725  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.807  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$390dea1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:50.910  INFO 29772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d5a79fe5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:02:52.007  INFO 29772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 16:02:52.831  INFO 29772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 16:02:53.176  INFO 29772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 16:02:53.533  INFO 29772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 16:02:53.546  INFO 29772 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 16:02:54.112  INFO 29772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 16:02:54.954  INFO 29772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 16:02:57.763  INFO 29772 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@29188050'
+2019-12-02 16:02:57.772  INFO 29772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:03:00.902  WARN 29772 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 16:03:02.565  INFO 29772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 16:03:02.903  INFO 29772 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74315fb3-0cbb-448f-b516-27df57b216ec
+
+2019-12-02 16:03:03.360  INFO 29772 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cd6698b, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b50f432, org.springframework.security.web.header.HeaderWriterFilter@587400a9, org.springframework.security.web.authentication.logout.LogoutFilter@353422fd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2dbcee03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f83d121, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ac2c5a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ac7550a, org.springframework.security.web.session.SessionManagementFilter@7acfcfc4, org.springframework.security.web.access.ExceptionTranslationFilter@f453129]
+2019-12-02 16:03:03.840  WARN 29772 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 16:03:03.850  WARN 29772 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:03:03.851  INFO 29772 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:03:03.864  WARN 29772 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:03:03.865  INFO 29772 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:03:04.581  INFO 29772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:03:07.371  INFO 29772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 16:03:07.387  INFO 29772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 16:03:07.472  INFO 29772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 16:03:07.830  INFO 29772 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:03:07.846  INFO 29772 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:03:07.860  INFO 29772 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:03:07.874 ERROR 29772 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:03:07.877  INFO 29772 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:03:07.908  INFO 29772 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 27.112 seconds (JVM running for 29.891)
+2019-12-02 16:03:07.973  INFO 29772 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@4df5f119, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2f3c7b24]; rollback [true]
+2019-12-02 16:03:08.343  INFO 29772 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@76ed1b7c testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@4df5f119, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11fc564b testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@78186a70, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cf4d528, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@68ceda24, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@382db087], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 16:03:08.373  INFO 29772 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 16:03:08.377  INFO 29772 --- [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 16:03:08.387  INFO 29772 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 16:03:08.387  INFO 29772 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 16:03:08.395  INFO 29772 --- [Thread-6] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 16:03:08.396  INFO 29772 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:03:08.409  INFO 29772 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:03:08.410  INFO 29772 --- [Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 16:03:08.413  WARN 29772 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 16:03:08.413 ERROR 29772 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 16:03:08.415  WARN 29772 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-02 16:03:08.416 ERROR 29772 --- [Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-02 16:03:08.421  WARN 29772 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-02 16:03:08.424  INFO 29772 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 16:03:08.432  INFO 29772 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 16:09:38.925  INFO 30138 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 16:10:02.729  INFO 30138 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 16:10:04.545  INFO 30138 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1763ms. Found 1 repository interfaces.
+2019-12-02 16:10:12.978  INFO 30138 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 16:10:18.065  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f237a18d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:19.269  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$8ae569c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:19.532  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:19.548  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d804450' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:19.866  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$afba0c79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:19.914  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:20.964  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$71b7eebf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:21.527  INFO 30138 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e51a48a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:10:29.581  INFO 30138 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 16:10:38.143  INFO 30138 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 16:10:40.128  INFO 30138 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 16:10:41.705  INFO 30138 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 16:10:41.814  INFO 30138 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 16:10:44.444  INFO 30138 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 16:10:46.215  INFO 30138 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 16:10:50.285  INFO 30138 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3fa8287a'
+2019-12-02 16:10:50.299  INFO 30138 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:10:57.699  WARN 30138 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 16:10:59.967  INFO 30138 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 16:11:00.453  INFO 30138 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2ca4a3aa-afda-4e78-bfab-1fb4a255be47
+
+2019-12-02 16:11:01.080  INFO 30138 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@652fc1d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@58e031a, org.springframework.security.web.header.HeaderWriterFilter@3a829c47, org.springframework.security.web.authentication.logout.LogoutFilter@754f1c59, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ca3d310, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@396bee2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71009a2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a813b53, org.springframework.security.web.session.SessionManagementFilter@78510e48, org.springframework.security.web.access.ExceptionTranslationFilter@576ac192]
+2019-12-02 16:11:02.503  WARN 30138 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 16:11:02.597  WARN 30138 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:11:02.613  INFO 30138 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:11:02.682  WARN 30138 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:11:02.683  INFO 30138 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:11:03.951  INFO 30138 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:11:04.421  INFO 30138 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [resources/index.html]
+2019-12-02 16:11:08.787  INFO 30138 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-12-02 16:11:09.977  INFO 30138 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-12-02 16:11:10.811  INFO 30138 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 16:11:10.831  INFO 30138 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 16:11:11.151  INFO 30138 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 16:11:12.457  INFO 30138 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:11:12.529  INFO 30138 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:11:12.657  INFO 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:11:12.695 ERROR 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:11:12.714  INFO 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:11:12.917  INFO 30138 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 109.252 seconds (JVM running for 119.484)
+2019-12-02 16:11:13.131  INFO 30138 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@45eab322 testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@1a147e51, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@f017dd0 testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b1a8f6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2a22ad2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@8ed9cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2063c53e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3a121ad5]; rollback [true]
+2019-12-02 16:11:13.873  INFO 30138 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@45eab322 testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@1a147e51, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@f017dd0 testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b1a8f6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2a22ad2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@8ed9cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2063c53e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 16:11:14.806  INFO 30138 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:11:14.807  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:11:14.820  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2019-12-02 16:11:15.194  INFO 30138 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:11:15.195  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:11:15.197  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-12-02 16:11:15.569  INFO 30138 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:11:15.570  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:11:15.572  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-12-02 16:11:15.642  INFO 30138 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:11:15.645  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:11:15.647  INFO 30138 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-12-02 16:11:17.701  INFO 30138 --- [main] c.e.p.service.PostServiceImpl            : Post Created, By Username: username , postId:1
+2019-12-02 16:11:17.745  WARN 30138 --- [main] c.e.p.service.PostServiceImpl            : DELETE POST: postId 1 doesn't Exit.
+2019-12-02 16:11:17.804  INFO 30138 --- [main] c.e.p.service.PostServiceImpl            : Return Posts of username: username
+2019-12-02 16:11:17.884  WARN 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:11:18.640  INFO 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@37a46e57: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2019-12-02 16:11:18.644  INFO 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:11:18.647 ERROR 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:11:18.648  INFO 30138 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:11:18.652  INFO 30138 --- [Thread-7] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 16:11:18.661  INFO 30138 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 16:11:18.669  INFO 30138 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 16:11:18.669  INFO 30138 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 16:11:18.685  INFO 30138 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 16:11:18.686  INFO 30138 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:11:18.703  INFO 30138 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:11:18.706  INFO 30138 --- [Thread-7] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 16:11:18.772  INFO 30138 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 16:11:18.801  INFO 30138 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 16:30:07.030  INFO 31938 --- [main] c.e.p.integration.PostIntegrationTest    : The following profiles are active: qa
+2019-12-02 16:30:26.541  INFO 31938 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 16:30:27.417  INFO 31938 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 532ms. Found 1 repository interfaces.
+2019-12-02 16:30:30.445  INFO 31938 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9537f6ac-a6a7-358c-bc76-5afca9a1a496
+2019-12-02 16:30:31.856  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7034614c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.370  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$8e22986] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.419  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.424  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1c6dfdb1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.546  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2db6cc38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.606  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:32.711  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$efb4ae7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:33.074  INFO 31938 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8c4e6449] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 16:30:34.169  INFO 31938 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 16:30:35.900  INFO 31938 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 16:30:36.454  INFO 31938 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 16:30:37.527  INFO 31938 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 16:30:37.539  INFO 31938 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 16:30:38.843  INFO 31938 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 16:30:40.208  INFO 31938 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-02 16:30:44.286  INFO 31938 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@26f37094'
+2019-12-02 16:30:44.299  INFO 31938 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:30:49.506  WARN 31938 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 16:30:51.884  INFO 31938 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-02 16:30:52.371  INFO 31938 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4316472d-4300-47dc-9a09-458c7f612a5e
+
+2019-12-02 16:30:52.880  INFO 31938 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36270efd, org.springframework.security.web.context.SecurityContextPersistenceFilter@157fd719, org.springframework.security.web.header.HeaderWriterFilter@5d35bb35, org.springframework.security.web.authentication.logout.LogoutFilter@718bfb05, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@185e5f3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6db5cee0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24456a1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@357ff0c9, org.springframework.security.web.session.SessionManagementFilter@75dd6ead, org.springframework.security.web.access.ExceptionTranslationFilter@1ba82]
+2019-12-02 16:30:54.569  WARN 31938 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2019-12-02 16:30:54.584  WARN 31938 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:30:54.584  INFO 31938 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:30:54.614  WARN 31938 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 16:30:54.615  INFO 31938 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 16:30:55.717  INFO 31938 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:30:56.268  INFO 31938 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [resources/index.html]
+2019-12-02 16:30:59.647  INFO 31938 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-02 16:30:59.655  INFO 31938 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 16:30:59.838  INFO 31938 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 16:31:00.482  INFO 31938 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:31:00.575  INFO 31938 --- [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:31:00.664  INFO 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:31:00.691 ERROR 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:31:00.699  INFO 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:31:00.873  INFO 31938 --- [main] c.e.p.integration.PostIntegrationTest    : Started PostIntegrationTest in 67.765 seconds (JVM running for 73.153)
+2019-12-02 16:31:01.081  INFO 31938 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@45eab322 testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@444083fa, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@f017dd0 testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b1a8f6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2a22ad2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@8ed9cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2063c53e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3f7d4bbd]; rollback [true]
+2019-12-02 16:31:01.624  INFO 31938 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@45eab322 testClass = PostIntegrationTest, testInstance = com.example.postmicroservice.integration.PostIntegrationTest@444083fa, testMethod = deletePost_ShouldDeleteComments_PostExist@PostIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@f017dd0 testClass = PostIntegrationTest, locations = '{}', classes = '{class com.example.postmicroservice.PostMicroserviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{qa}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b1a8f6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2a22ad2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@8ed9cf, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2063c53e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-12-02 16:31:02.672  INFO 31938 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:31:02.673  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:31:02.674  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-12-02 16:31:03.011  INFO 31938 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:31:03.011  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:31:03.012  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2019-12-02 16:31:03.323  INFO 31938 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:31:03.327  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:31:03.328  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-12-02 16:31:03.425  INFO 31938 --- [main] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2019-12-02 16:31:03.428  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-02 16:31:03.430  INFO 31938 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2019-12-02 16:31:04.987  INFO 31938 --- [main] c.e.p.service.PostServiceImpl            : Post Created, By Username: username , postId:1
+2019-12-02 16:31:05.011  WARN 31938 --- [main] c.e.p.service.PostServiceImpl            : DELETE POST: postId 1 doesn't Exit.
+2019-12-02 16:31:05.084  INFO 31938 --- [main] c.e.p.service.PostServiceImpl            : Return Posts of username: username
+2019-12-02 16:31:05.758  WARN 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+2019-12-02 16:31:05.881  INFO 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2736b07b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2019-12-02 16:31:05.884  INFO 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:31:05.887 ERROR 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:62) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:530) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:702) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2076) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2050) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2030) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:403) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1777) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1758) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1195) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1041) [spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1102) ~[amqp-client-5.4.3.jar:5.4.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1054) ~[amqp-client-5.4.3.jar:5.4.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:484) ~[spring-rabbit-2.1.8.RELEASE.jar:2.1.8.RELEASE]
+	... 11 common frames omitted
+
+2019-12-02 16:31:05.888  INFO 31938 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-02 16:31:05.890  INFO 31938 --- [Thread-7] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 16:31:05.899  INFO 31938 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-02 16:31:05.918  INFO 31938 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2019-12-02 16:31:05.919  INFO 31938 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2019-12-02 16:31:05.941  INFO 31938 --- [Thread-7] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2019-12-02 16:31:05.942  INFO 31938 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 16:31:05.990  INFO 31938 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 16:31:06.015  INFO 31938 --- [Thread-7] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-02 16:31:06.054  INFO 31938 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 16:31:06.062  INFO 31938 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

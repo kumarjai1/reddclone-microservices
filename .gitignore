@@ -94,5 +94,8 @@ modules.xml
 ./user-microservice/users-api.log
 ./post-microservice/posts-api.log
 ./comment-microservice/comment-api.log
+./comment-microservice/comment-microservice.log
 ./api-gateway/gateway.log
 ./eureka-server/eureka.log
+./post-microservice/post-microservice.log
+

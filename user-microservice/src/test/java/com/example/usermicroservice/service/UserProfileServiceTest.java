@@ -103,7 +103,7 @@ public class UserProfileServiceTest {
         when(userService.getUser(anyString())).thenReturn(user);
         when(userProfileRepository.findUserProfileByUsername(anyString())).thenReturn(null);
         when(userProfileRepository.save(any())).thenReturn(userProfile);
-        when(userService.updateUser(any())).thenReturn(user);
+//        when(userService.updateUser(any())).thenReturn(user);
 
         UserProfile returnedUserProfile = userProfileService.getUserProfile(user.getUsername());
 
