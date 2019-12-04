@@ -154,9 +154,10 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
             
 ## Swagger 
 
-    We added Swagger to each Microservice to document the APIs used in them. For a setup there is a SwaggerDocConfig 
-    file in each microservice. In the Controller we added @ApiOperation for each method to describe their functionality 
-    and what it produces. We used @ApiParam to describe what parameters it requires.
+    We added Swagger to each Microservice to document the APIs used in them. For a setup 
+    there is a SwaggerDocConfig file in each microservice. In the Controller we added 
+    @ApiOperation for each method to describe their functionality and what it produces. 
+    We used @ApiParam to describe what parameters it requires.
 
 ![alt text](img/Users.png)
            
@@ -173,8 +174,8 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
     brew services start elasticsearch
     brew services start kibana
     
-    The name of the logging file was added to the application.properties file. We initiated a logger in the ServiceImpl
-    classes and logged.info(msg) or logger.warn(msg) for each method.
+    The name of the logging file was added to the application.properties file. We initiated a 
+    logger in the ServiceImpl classes and logged.info(msg) or logger.warn(msg) for each method.
 
 
 
@@ -184,10 +185,11 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
 
 ## JavaDocs
 
-    We started with running mvn javadoc:javadoc in the terminal. Then opened the index.html in the target folder.
-    For a set up we added the information about the contributors to the project as well as its current version on top of 
-    the Model in each microservice. We continued with adding more comments in the rest of the classes with descriptions 
-    of their functionality and what parameters they take and what results they return using annotations such as @param, @return).
+    We started with running mvn javadoc:javadoc in the terminal. Then opened the index.html in the target 
+    folder.For a set up we added the information about the contributors to the project as well as its current 
+    version on top of the Model in each microservice. We continued with adding more comments in the rest of 
+    the classes with descriptions of their functionality and what parameters they take and what results they 
+    return using annotations such as @param, @return).
 
 ![alt text](img/JavaDocsPost.png)
 
