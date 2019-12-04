@@ -61,7 +61,7 @@ public class JwtRequestFilterTest {
         when(request.getHeader(anyString())).thenReturn(headerToken);
         when(jwtUtil.getUsernameFromToken(any())).thenReturn(username);
         when(userService.loadUserByUsername(anyString())).thenReturn(userDetails);
-        when(jwtUtil.validateToken(any(), any())).thenReturn(true);
+//        when(jwtUtil.validateToken(any(), any())).thenReturn(true);
 
         jwtRequestFilter.doFilterInternal(request, response, filterChain);
     }
