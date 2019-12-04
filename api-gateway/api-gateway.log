@@ -5353,3 +5353,443 @@ Caused by: com.netflix.client.ClientException: Load balancer does not have avail
 2019-12-04 02:05:01.094  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
 2019-12-04 02:05:01.105  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
 2019-12-04 02:05:01.116  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:06.122  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:06.126  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:06.129  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:11.145  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:11.157  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:11.169  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:16.183  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:16.193  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:16.202  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:20.852 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/7e857ee66d38:api-gateway - was unable to refresh its cache! status = com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z
+
+java.lang.NoSuchMethodError: com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.shutdown(RetryableEurekaHttpClient.java:92) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.TransportUtils.shutdown(TransportUtils.java:40) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:70) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-04 02:05:21.208  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:21.213  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:21.218  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:26.234  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:26.244  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:26.251  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:31.256  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:31.260  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:31.264  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:36.279  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:36.291  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:36.303  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:38.225  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:05:38.226  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:05:38.323  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:05:38.323  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:05:38.324  WARN 1 --- [http-nio-8080-exec-10] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:05:41.317  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:41.328  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:41.336  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:45.869  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:05:45.870  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:05:45.962  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:05:45.963  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:05:46.043  INFO 1 --- [http-nio-8080-exec-8] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:05:46.046  INFO 1 --- [http-nio-8080-exec-8] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-comments
+2019-12-04 02:05:46.046  INFO 1 --- [http-nio-8080-exec-8] c.netflix.loadbalancer.BaseLoadBalancer  : Client: comments instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=comments,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-12-04 02:05:46.049  INFO 1 --- [http-nio-8080-exec-8] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-12-04 02:05:46.055  INFO 1 --- [http-nio-8080-exec-8] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:05:46.057  INFO 1 --- [http-nio-8080-exec-8] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client comments initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=comments,current list of Servers=[a839ed9e19bf:2123],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:a839ed9e19bf:2123;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 00:00:00 UTC 1970;	First connection made: Thu Jan 01 00:00:00 UTC 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@5914dd78
+2019-12-04 02:05:46.074  WARN 1 --- [http-nio-8080-exec-8] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:05:46.343  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:46.352  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:46.361  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:47.053  INFO 1 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:05:51.366  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:51.370  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:51.374  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:56.391  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:56.403  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:05:56.415  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:01.431  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:01.442  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:01.453  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:06.468  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:06.478  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:06.485  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:07.999  INFO 1 --- [http-nio-8080-exec-1] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:08.000  INFO 1 --- [http-nio-8080-exec-1] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:08.094  INFO 1 --- [http-nio-8080-exec-1] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:08.095  INFO 1 --- [http-nio-8080-exec-1] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:08.172  INFO 1 --- [http-nio-8080-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: posts.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:06:08.175  INFO 1 --- [http-nio-8080-exec-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-posts
+2019-12-04 02:06:08.175  INFO 1 --- [http-nio-8080-exec-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: posts instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=posts,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-12-04 02:06:08.189  INFO 1 --- [http-nio-8080-exec-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-12-04 02:06:08.191  INFO 1 --- [http-nio-8080-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: posts.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:06:08.194  INFO 1 --- [http-nio-8080-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client posts initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=posts,current list of Servers=[6f28106d4bd1:2122],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:6f28106d4bd1:2122;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 00:00:00 UTC 1970;	First connection made: Thu Jan 01 00:00:00 UTC 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@69945533
+2019-12-04 02:06:08.207  WARN 1 --- [http-nio-8080-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command posts is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:09.191  INFO 1 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: posts.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 02:06:11.500  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:11.511  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:11.518  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:13.091  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:13.092  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:13.183  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:13.183  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:13.186  WARN 1 --- [http-nio-8080-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:16.533  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:16.544  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:16.555  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:20.275  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:20.276  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:20.371  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:20.372  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:20.372  WARN 1 --- [http-nio-8080-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:21.568  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:21.577  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:21.586  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:23.203  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:23.204  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:23.304  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:23.304  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:23.305  WARN 1 --- [http-nio-8080-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:26.598  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:26.608  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:26.617  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:27.066  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:27.067  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:27.171  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:27.172  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:27.172  WARN 1 --- [http-nio-8080-exec-7] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:30.141  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:30.142  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:30.235  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:30.236  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:30.237  WARN 1 --- [http-nio-8080-exec-10] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:31.632  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:31.643  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:31.653  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:32.728  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:32.729  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:32.820  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:32.820  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:32.821  WARN 1 --- [http-nio-8080-exec-8] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:36.669  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:36.682  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:36.693  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:37.192  INFO 1 --- [http-nio-8080-exec-2] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:06:37.193  INFO 1 --- [http-nio-8080-exec-2] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:06:37.291  INFO 1 --- [http-nio-8080-exec-2] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:06:37.291  INFO 1 --- [http-nio-8080-exec-2] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:06:37.292  WARN 1 --- [http-nio-8080-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:06:41.706  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:41.718  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:41.727  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:46.743  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:46.755  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:46.767  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:51.783  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:51.795  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:51.805  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:56.822  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:56.833  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:06:56.842  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:01.859  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:01.872  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:01.884  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:06.899  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:06.910  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:06.924  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:11.939  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:11.950  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:11.961  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:16.975  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:16.986  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:16.997  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:20.294  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:07:22.009  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:22.020  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:22.030  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:27.037  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:27.041  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:27.046  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:32.061  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:32.071  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:32.079  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:33.421  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:07:33.422  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : found user username: user3
+2019-12-04 02:07:33.512  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return User by username: user3
+2019-12-04 02:07:33.512  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return Posts of username: user3
+2019-12-04 02:07:33.513  WARN 1 --- [http-nio-8080-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:07:37.091  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:37.100  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:37.107  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:41.941  WARN 1 --- [http-nio-8080-exec-3] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:07:41.942  WARN 1 --- [http-nio-8080-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:07:42.112  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:42.119  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:42.125  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:47.140  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:47.151  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:47.157  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:49.737  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:07:49.738  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:07:49.832  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:07:49.834  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:07:49.836  WARN 1 --- [http-nio-8080-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:07:52.163  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:52.168  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:52.173  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:53.061  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:07:53.063  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:07:53.155  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:07:53.155  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:07:53.156  WARN 1 --- [http-nio-8080-exec-6] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:07:55.134  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:07:55.135  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:07:55.223  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:07:55.223  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:07:55.224  WARN 1 --- [http-nio-8080-exec-7] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:07:57.185  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:57.195  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:57.206  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:07:58.319  WARN 1 --- [http-nio-8080-exec-9] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:07:58.321  WARN 1 --- [http-nio-8080-exec-9] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:00.540  WARN 1 --- [http-nio-8080-exec-10] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:08:00.542  WARN 1 --- [http-nio-8080-exec-10] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command posts is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:02.218  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:02.228  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:02.237  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:05.053  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:05.054  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:05.146  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:05.146  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:05.147  WARN 1 --- [http-nio-8080-exec-8] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command posts is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:07.252  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:07.264  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:07.276  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:08.415  INFO 1 --- [http-nio-8080-exec-2] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:08.416  INFO 1 --- [http-nio-8080-exec-2] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:08.510  INFO 1 --- [http-nio-8080-exec-2] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:08.510  INFO 1 --- [http-nio-8080-exec-2] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:08.511  WARN 1 --- [http-nio-8080-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:11.845  WARN 1 --- [http-nio-8080-exec-1] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:08:11.846  WARN 1 --- [http-nio-8080-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:12.291  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:12.303  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:12.313  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:13.646  WARN 1 --- [http-nio-8080-exec-4] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:08:13.647  WARN 1 --- [http-nio-8080-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:17.328  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:17.341  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:17.350  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:21.687  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:21.687  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:21.786  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:21.788  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:21.788  WARN 1 --- [http-nio-8080-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:22.365  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:22.376  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:22.390  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:24.703  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:24.704  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:24.806  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:24.806  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:24.807  WARN 1 --- [http-nio-8080-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:26.639  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:26.639  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:26.729  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:26.729  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:26.730  WARN 1 --- [http-nio-8080-exec-6] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:27.404  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:27.416  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:27.427  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:28.350  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:28.351  INFO 1 --- [http-nio-8080-exec-7] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:28.457  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:28.457  INFO 1 --- [http-nio-8080-exec-7] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:28.458  WARN 1 --- [http-nio-8080-exec-7] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:32.441  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:32.453  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:32.465  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:33.247  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:33.248  INFO 1 --- [http-nio-8080-exec-10] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:33.337  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:33.338  INFO 1 --- [http-nio-8080-exec-10] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:33.338  WARN 1 --- [http-nio-8080-exec-10] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:37.357  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:37.358  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:37.446  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:37.446  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:37.446  WARN 1 --- [http-nio-8080-exec-8] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:37.476  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:37.482  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:37.493  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:42.498  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:42.504  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:42.509  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:46.430  INFO 1 --- [http-nio-8080-exec-1] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:46.431  INFO 1 --- [http-nio-8080-exec-1] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:46.528  INFO 1 --- [http-nio-8080-exec-1] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:46.528  INFO 1 --- [http-nio-8080-exec-1] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:46.529  WARN 1 --- [http-nio-8080-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:47.524  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:47.538  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:47.546  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:48.104  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:48.105  INFO 1 --- [http-nio-8080-exec-4] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:48.200  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:48.202  INFO 1 --- [http-nio-8080-exec-4] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:48.204  WARN 1 --- [http-nio-8080-exec-4] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:50.661  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:50.662  INFO 1 --- [http-nio-8080-exec-5] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:50.754  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:50.755  INFO 1 --- [http-nio-8080-exec-5] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:50.755  WARN 1 --- [http-nio-8080-exec-5] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:52.560  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:52.573  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:52.581  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:55.780  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:08:55.781  INFO 1 --- [http-nio-8080-exec-6] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:08:55.877  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:08:55.878  INFO 1 --- [http-nio-8080-exec-6] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:08:55.878  WARN 1 --- [http-nio-8080-exec-6] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command users is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:08:57.598  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:57.611  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:08:57.622  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:02.632  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:02.638  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:02.642  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:07.654  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:07.664  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:07.674  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:09.583  INFO 1 --- [http-nio-8080-exec-9] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:09:09.584  INFO 1 --- [http-nio-8080-exec-9] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:09:09.676  INFO 1 --- [http-nio-8080-exec-9] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:09:09.677  INFO 1 --- [http-nio-8080-exec-9] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:09:09.677  WARN 1 --- [http-nio-8080-exec-9] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command posts is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:09:12.689  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:12.700  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:12.709  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:17.724  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:17.734  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:17.743  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:20.772  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:09:20.773  INFO 1 --- [http-nio-8080-exec-8] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:09:20.872  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:09:20.872  INFO 1 --- [http-nio-8080-exec-8] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:09:20.872  WARN 1 --- [http-nio-8080-exec-8] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command posts is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:09:22.757  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:22.769  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:22.778  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:27.369  WARN 1 --- [http-nio-8080-exec-2] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-04 02:09:27.372  WARN 1 --- [http-nio-8080-exec-2] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:09:27.792  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:27.800  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:27.806  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:32.810  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:32.814  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:32.818  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:37.830  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:37.839  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:37.849  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:39.246  WARN 1 --- [http-nio-8080-exec-1] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:09:42.868  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:42.872  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:42.875  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:46.469  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : loadUser
+2019-12-04 02:09:46.470  INFO 1 --- [http-nio-8080-exec-3] c.e.a.service.CustomUserService          : found user username: user1
+2019-12-04 02:09:46.574  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return User by username: user1
+2019-12-04 02:09:46.574  INFO 1 --- [http-nio-8080-exec-3] c.e.a.config.AuthenticationFilter        : Return Posts of username: user1
+2019-12-04 02:09:46.575  WARN 1 --- [http-nio-8080-exec-3] o.s.c.n.z.f.r.s.AbstractRibbonCommand    : The Hystrix timeout of 60000ms for the command comments is set lower than the combination of the Ribbon read and connect timeout, 240000ms.
+2019-12-04 02:09:47.880  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:47.883  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:47.886  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:52.891  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:52.895  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:52.911  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:57.915  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:57.918  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:09:57.922  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:02.934  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:02.943  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:02.952  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:07.963  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:07.973  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:07.981  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:12.987  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:12.991  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:12.996  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:18.003  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:18.008  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:18.013  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:23.025  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:23.037  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:23.048  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:28.053  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:28.056  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:28.060  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:33.075  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:33.086  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:33.098  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:38.112  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:38.125  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:38.134  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:43.147  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:43.158  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:43.168  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:48.182  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:48.193  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:48.204  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:53.216  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:53.221  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:53.225  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:58.242  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:58.252  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:10:58.264  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:03.277  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:03.287  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:03.298  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:08.313  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:08.324  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:08.336  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:13.348  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:13.359  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:13.369  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:18.384  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:18.395  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:18.408  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:23.422  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:23.432  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:23.443  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:28.456  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:28.467  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:28.479  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:33.492  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:33.503  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:33.514  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:38.528  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:38.539  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:38.552  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:43.565  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:43.576  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:43.586  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:48.602  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:48.612  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:48.622  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:53.634  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:53.644  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 02:11:53.652  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
