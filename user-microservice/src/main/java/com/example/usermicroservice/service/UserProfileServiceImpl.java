@@ -82,7 +82,7 @@ public class UserProfileServiceImpl implements UserProfileService {
             return userProfileRepository.save(savedProfile);
         }
         return savedProfile;
-        
+
     }
 
 }

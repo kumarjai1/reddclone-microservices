@@ -581,3 +581,6 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
 
 2019-12-04 02:10:26.573  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:15:26.583  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:20:26.585  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:25:26.586  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

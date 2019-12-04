@@ -299,3 +299,6 @@ Using generated security password: d96d5ab2-d8f1-40fc-93ce-8ba796885c73
 2019-12-04 02:09:09.684  WARN 1 --- [http-nio-2122-exec-4] c.e.p.service.PostServiceImpl            : DELETE POST: postId 2 doesn't Exit.
 2019-12-04 02:09:20.880  INFO 1 --- [http-nio-2122-exec-8] .l.DirectReplyToMessageListenerContainer : SimpleConsumer [queue=amq.rabbitmq.reply-to, consumerTag=amq.ctag-dl9NklLfuv4_u-3qM3kY2w identity=4498d5a3] started
 2019-12-04 02:10:21.464  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:15:21.476  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:20:21.483  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:25:21.484  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

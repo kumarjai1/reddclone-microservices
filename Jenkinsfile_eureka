@@ -1,0 +1,57 @@
+pipeline {
+    agent {
+        docker {
+               image 'maven:3.6.2-jdk-8'
+               args ' --privileged -u="root" -v /tmp/.m2:/root/.m2 -v /usr/local/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock'
+           }
+    }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                dir("eureka-server"){
+                    sh 'mvn -B -DskipTests clean package'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                dir("eureka-server"){
+                    sh 'mvn test'
+                }
+            }
+            post {
+                always {
+                    dir("eureka-server"){
+                        junit 'target/surefire-reports/*.xml'
+                    }
+                }
+            }
+        }
+        stage('Coverage') {
+            steps {
+                dir("eureka-server"){
+                    sh 'mvn clean package jacoco:report'
+                }
+            }
+            post {
+                always {
+                    dir("eureka-server"){
+                        publishCoverage adapters: [jacocoAdapter('target/site/jacoco/jacoco.xml')]
+                    }
+                }
+            }
+        }
+        stage('Build Docker'){
+            steps{
+                dir("eureka-servere"){
+                    script{
+                        docker.build("jaik92/eureka:0.0.1-SNAPSHOT")
+                    }
+                }
+            }
+        }
+    }
+}

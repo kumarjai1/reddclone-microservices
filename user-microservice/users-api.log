@@ -833,3 +833,6 @@ Using generated security password: 00c5fc07-b541-4d27-8477-9197147bd76b
 2019-12-04 02:08:48.210 ERROR 1 --- [http-nio-2121-exec-4] c.e.u.service.UserRoleServiceImpl        : Getting a role by id that doesn't exist so throw not found error
 2019-12-04 02:08:50.761  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserRoleServiceImpl        : Returning role that exists with id: 1
 2019-12-04 02:11:23.623  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:16:23.627  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:21:23.630  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 02:26:23.631  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
