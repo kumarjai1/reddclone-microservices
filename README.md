@@ -19,15 +19,27 @@
 
 ## Technologies Used
 * User stories [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2416889)
-* Spring
+* Spring Boot
+* Zuul Eureka
+* Postgres
 * Hibernate
 * Junit
 * Eureka
 * Docker
 * Hystrix
-* RestTemplate
+
+  Part 2
+
+* RabbitMq
+* Swagger to Create API Documentation.
+* Jenkins
+* Kibana for logging 
+* LogStash
+* Elastic Search
 * Draw.io for Microservices Architecture diagram
 * Pivotal Cloud Foundry (hosting)
+
+
 
 
 
@@ -39,6 +51,11 @@ We constructed the skeleton of the project- one main directory with all 5 micros
 
 We built and connected all Apis needed for post and comment CRUD. We used RestTemplate in Post Microservice for it to be able to communicate with Comment Microservice for the two methods where it was needed: Cascade delete all comments that belong to a post,when that post is deleted; Show all comments that belong to a post. Tested all Apis and connected to the front end. 
 
+Part 2
+
+We started with pair programming adding the the implementation of RabbitMq.
+The next thing we did was to set up Jenkins pipelines for all services. We added Jenkins files for each micro-service in the root directory of our project. The pipelines successfully executed all stages of each micro-service: Build, Test, Coverage. 
+The next thing we did was to add Unit Testing to our micro-services. We then added LogStash, Elastic Search and Kibana for logging.  
 ## Microservices Architecture
 
 https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-11-18_at_9.31.30_AM.png
@@ -60,6 +77,17 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
 
 * Integration with front-end
 
+    Part 2
+
+* Integrating RabbitMq and testing it
+
+* Building the Jenkins pipelines
+
+* Finding the right Dependencies 
+
+
+
+
 ## Wins
 
 * Pair programming.
@@ -67,6 +95,11 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
 * Making early design decisions and making them work.
 
 * Figuring out micro-services intercommunication.
+  
+    Part 2
+ 
+* Pair programming
+
  
 
 
@@ -105,15 +138,15 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
     
     * Saturday & Sunday (Nov 23/24, 2019)- Finish the inter-service communication and complete Swagger.
     
-    * Monday (Nov 25, 2019)- Finish Swagger, start Logging 
+    * Monday (Nov 25, 2019)- Finish Swagger, start Error Handling 
     
-    * Tuesday (Nov 26. 2019)- Finish Logging, Monitoring etc
+    * Tuesday (Nov 26. 2019)- Start Jenkins
     
-    * Wednesday (Nov 27, 2019)- Start Jenkins
+    * Wednesday (Nov 27, 2019)- Finish Jenkins
     
     * Thursday- Sunday (Nov 28 to Dec 1, 2019) Start testing.
     
-    * Monday/ Tuesday (Dec 2- Dec 3, 2019) - Deployment and Error Handling 
+    * Monday/ Tuesday (Dec 2- Dec 3, 2019) - Logging and Monitoring 
     
     * Wednesday (Dec 3, 2019) - Presentations
     
