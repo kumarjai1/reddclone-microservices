@@ -377,3 +377,38 @@
 2019-12-04 02:25:28.195  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2019-12-04 02:26:28.194  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2019-12-04 02:27:28.194  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2019-12-04 02:28:28.194  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2019-12-04 02:28:35.737  INFO 1 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance COMMENTS/a839ed9e19bf:comments:2123 with status DOWN (replication=false)
+2019-12-04 02:28:35.769  INFO 1 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS/40bf2c740792:users:2121 with status DOWN (replication=false)
+2019-12-04 02:28:35.855  INFO 1 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance POSTS/6f28106d4bd1:posts:2122 with status DOWN (replication=false)
+2019-12-04 02:28:35.940  INFO 1 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/7e857ee66d38:api-gateway with status DOWN (replication=false)
+2019-12-04 02:28:36.243  INFO 1 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance COMMENTS/a839ed9e19bf:comments:2123 with status DOWN (replication=true)
+2019-12-04 02:28:36.244  INFO 1 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS/40bf2c740792:users:2121 with status DOWN (replication=true)
+2019-12-04 02:28:36.244  INFO 1 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance POSTS/6f28106d4bd1:posts:2122 with status DOWN (replication=true)
+2019-12-04 02:28:36.245  INFO 1 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/7e857ee66d38:api-gateway with status DOWN (replication=true)
+2019-12-04 02:28:38.901  INFO 1 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance USERS/40bf2c740792:users:2121 (replication=false)
+2019-12-04 02:28:39.370  INFO 1 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/7e857ee66d38:api-gateway (replication=false)
+2019-12-04 02:28:39.412  INFO 1 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance COMMENTS/a839ed9e19bf:comments:2123 (replication=false)
+2019-12-04 02:28:39.500  WARN 1 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: USERS/40bf2c740792:users:2121
+2019-12-04 02:28:39.500  INFO 1 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): USERS - 40bf2c740792:users:2121
+2019-12-04 02:28:39.500  WARN 1 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: API-GATEWAY/7e857ee66d38:api-gateway
+2019-12-04 02:28:39.500  INFO 1 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): API-GATEWAY - 7e857ee66d38:api-gateway
+2019-12-04 02:28:39.502  WARN 1 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task USERS/40bf2c740792:users:2121:Cancel@localhost failed with response code 404
+2019-12-04 02:28:39.502  WARN 1 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : USERS/40bf2c740792:users:2121:Cancel@localhost: missing entry.
+2019-12-04 02:28:39.502  WARN 1 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task API-GATEWAY/7e857ee66d38:api-gateway:Cancel@localhost failed with response code 404
+2019-12-04 02:28:39.502  WARN 1 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/7e857ee66d38:api-gateway:Cancel@localhost: missing entry.
+2019-12-04 02:28:39.781  INFO 1 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance POSTS/6f28106d4bd1:posts:2122 (replication=false)
+2019-12-04 02:28:39.923  WARN 1 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: COMMENTS/a839ed9e19bf:comments:2123
+2019-12-04 02:28:39.923  INFO 1 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): COMMENTS - a839ed9e19bf:comments:2123
+2019-12-04 02:28:39.923  WARN 1 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: POSTS/6f28106d4bd1:posts:2122
+2019-12-04 02:28:39.924  INFO 1 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): POSTS - 6f28106d4bd1:posts:2122
+2019-12-04 02:28:39.924  WARN 1 --- [TaskBatchingWorker-target_localhost-13] c.n.eureka.cluster.ReplicationTask       : The replication of task COMMENTS/a839ed9e19bf:comments:2123:Cancel@localhost failed with response code 404
+2019-12-04 02:28:39.925  WARN 1 --- [TaskBatchingWorker-target_localhost-13] c.netflix.eureka.cluster.PeerEurekaNode  : COMMENTS/a839ed9e19bf:comments:2123:Cancel@localhost: missing entry.
+2019-12-04 02:28:39.925  WARN 1 --- [TaskBatchingWorker-target_localhost-13] c.n.eureka.cluster.ReplicationTask       : The replication of task POSTS/6f28106d4bd1:posts:2122:Cancel@localhost failed with response code 404
+2019-12-04 02:28:39.925  WARN 1 --- [TaskBatchingWorker-target_localhost-13] c.netflix.eureka.cluster.PeerEurekaNode  : POSTS/6f28106d4bd1:posts:2122:Cancel@localhost: missing entry.
+2019-12-04 02:28:41.279  INFO 1 --- [Thread-16] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2019-12-04 02:28:41.307  INFO 1 --- [Thread-16] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2019-12-04 02:28:41.318  INFO 1 --- [Thread-16] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2019-12-04 02:28:41.342  INFO 1 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 02:28:41.382  INFO 1 --- [Thread-16] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-04 02:28:41.382  INFO 1 --- [Thread-16] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
