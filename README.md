@@ -205,9 +205,10 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
 ## Backlog
 
 * Delete everything when user is deleted
+* Role based authorities
 * Finish up deployment 
-* Utilize RabbitMQ for interservice communication, rather than RestTemplate 
 * Refactor code
-* Comment on code
-* Test code 
+* Additional exception handling and testing for it
+* Work on the front-end
+* Integration test for rabbitMq
 
