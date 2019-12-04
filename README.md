@@ -152,6 +152,13 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
     
             *-*-*-*-*-*-*
             
+## Jenkins
+
+    Built pipelines to build and test the project, report coverage, and create a Docker Image.
+    
+![alt text](img/UsersPipeline.png)
+
+
 ## Swagger 
 
     We added Swagger to each Microservice to document the APIs used in them. For a setup 
