@@ -158,11 +158,11 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
     file in each microservice. In the Controller we added @ApiOperation for each method to describe their functionality 
     and what it produces. We used @ApiParam to describe what parameters it requires.
 
-![alt text](img/users.png)
+![alt text](img/Users.png)
            
-![alt text](img/post.png)
+![alt text](img/Post.png)
 
-![alt text](img/comments.png)
+![alt text](img/Comments.png)
 
 
 ## ELK stack
@@ -189,9 +189,9 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
     the Model in each microservice. We continued with adding more comments in the rest of the classes with descriptions 
     of their functionality and what parameters they take and what results they return using annotations such as @param, @return).
 
-![alt text](img/javaDocsPost.png)
+![alt text](img/JavaDocsPost.png)
 
-![alt text](img/javaDocsPost2.png)
+![alt text](img/JavaDocsPost2.png)
 
 ## Backlog
 

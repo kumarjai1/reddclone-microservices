@@ -9927,3 +9927,150 @@ java.lang.NoSuchMethodError: com.netflix.servo.monitor.Monitors.isObjectRegister
 2019-12-04 16:27:53.819  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
 2019-12-04 16:27:53.830  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
 2019-12-04 16:27:53.869  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:27:58.859  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:27:58.883  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:27:58.910  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:03.930  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:03.942  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:03.955  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:04.526  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:28:08.973  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:08.988  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:09.013  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:09.540 ERROR 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/ce25aa895247:api-gateway - was unable to refresh its cache! status = com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z
+
+java.lang.NoSuchMethodError: com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.shutdown(RetryableEurekaHttpClient.java:92) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.TransportUtils.shutdown(TransportUtils.java:40) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:70) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_222]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_222]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_222]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_222]
+
+2019-12-04 16:28:14.040  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:14.051  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:14.062  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:19.080  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:19.091  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:19.104  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:24.148  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:24.187  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:24.238  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:29.226  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:29.238  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:29.251  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:34.268  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:34.286  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:34.305  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:39.319  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:39.332  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:39.345  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:44.369  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:44.388  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:44.407  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:49.426  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:49.438  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:49.461  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:54.483  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:54.499  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:54.536  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:59.522  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:59.531  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:28:59.541  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:04.562  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:04.576  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:04.597  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:09.624  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:09.639  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:09.658  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:14.672  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:14.708  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:14.746  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:19.768  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:19.780  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:19.797  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:24.781  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:24.801  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:24.816  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:29.831  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:29.840  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:29.854  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:34.891  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:34.924  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:34.965  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:39.980  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:39.991  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:40.004  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:45.021  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:45.048  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:45.060  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:50.084  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:50.099  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:50.114  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:55.200  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:55.230  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:29:55.272  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:00.286  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:00.299  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:00.313  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:05.329  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:05.348  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:05.371  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:10.388  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:10.396  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:10.413  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:15.426  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:15.437  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:15.450  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:23.849  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:24.521  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:24.599  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:29.589  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:29.621  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:29.697  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:34.747  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:34.766  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:34.809  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:39.828  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:39.842  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:39.858  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:44.874  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:44.886  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:44.927  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:49.943  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:49.957  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:49.991  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:54.969  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:54.985  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:30:55.004  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:00.024  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:00.034  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:00.051  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:05.084  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:05.122  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:05.198  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:10.231  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:10.262  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:10.313  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:15.335  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:15.409  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:15.478  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:20.491  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:20.512  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:20.544  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:25.531  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:25.541  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:25.550  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:30.565  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:30.581  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:30.600  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:35.614  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:35.625  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
+2019-12-04 16:31:35.637  INFO 1 --- [scheduling-1] c.e.a.swagger.ServiceDescriptionUpdater  : Service Definition Context Refreshed at :  2019-12-04
