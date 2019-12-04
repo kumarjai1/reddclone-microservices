@@ -98,7 +98,7 @@ The next thing we did was to add Unit Testing to our micro-services. We then add
   
     Part 2
  
-* Pair programming
+* Figuring out a plan to work with so many moving pieces.
 
  
 
