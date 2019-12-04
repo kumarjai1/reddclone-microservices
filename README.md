@@ -58,7 +58,7 @@ The next thing we did was to set up Jenkins pipelines for all services. We added
 The next thing we did was to add Unit Testing to our micro-services. We then added LogStash, Elastic Search and Kibana for logging.  
 ## Microservices Architecture
 
-https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-11-18_at_9.31.30_AM.png
+![alt text](img/reddclone-architecture.png)
 
 
 ## Challenges
@@ -152,6 +152,47 @@ https://res.cloudinary.com/db77zoxry/image/upload/v1574087625/Screen_Shot_2019-1
     
             *-*-*-*-*-*-*
             
+## Swagger 
+
+    We added Swagger to each Microservice to document the APIs used in them. For a setup there is a SwaggerDocConfig 
+    file in each microservice. In the Controller we added @ApiOperation for each method to describe their functionality 
+    and what it produces. We used @ApiParam to describe what parameters it requires.
+
+![alt text](img/users.png)
+           
+![alt text](img/post.png)
+
+![alt text](img/comments.png)
+
+
+## ELK stack
+
+    We started with starting the services in the terminal as follows:
+    
+    brew services start logstash
+    brew services start elasticsearch
+    brew services start kibana
+    
+    The name of the logging file was added to the application.properties file. We initiated a logger in the ServiceImpl
+    classes and logged.info(msg) or logger.warn(msg) for each method.
+
+
+
+    
+
+![alt text](img/Kibana.png)
+
+## JavaDocs
+
+    We started with running mvn javadoc:javadoc in the terminal. Then opened the index.html in the target folder.
+    For a set up we added the information about the contributors to the project as well as its current version on top of 
+    the Model in each microservice. We continued with adding more comments in the rest of the classes with descriptions 
+    of their functionality and what parameters they take and what results they return using annotations such as @param, @return).
+
+![alt text](img/javaDocsPost.png)
+
+![alt text](img/javaDocsPost2.png)
+
 ## Backlog
 
 * Delete everything when user is deleted

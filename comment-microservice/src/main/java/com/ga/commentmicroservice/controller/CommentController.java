@@ -57,7 +57,7 @@ public class CommentController {
     @DeleteMapping("/{commentId}")
     public Long deleteCommentByUser(
             @RequestHeader("username") @ApiParam(value="Token", required = true) String username,
-            @PathVariable @ApiParam(value = "Id of existing post", required=true) String commentId) {
+            @PathVariable @ApiParam(value = "Id of Existing Post", required=true) String commentId) {
         return commentService.deleteCommentByUser(username, Long.parseLong(commentId));
     }
 

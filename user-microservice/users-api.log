@@ -848,3 +848,138 @@ Using generated security password: 00c5fc07-b541-4d27-8477-9197147bd76b
 2019-12-04 02:28:38.940  INFO 1 --- [Thread-8] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
 2019-12-04 02:28:38.941  INFO 1 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-12-04 02:28:38.982  INFO 1 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 15:00:22.345  INFO 1 --- [main] c.e.u.UserMicroserviceApplication        : The following profiles are active: dev
+2019-12-04 15:00:43.568  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 15:00:47.339  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3604ms. Found 3 repository interfaces.
+2019-12-04 15:00:53.075  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bcb9a80d-e622-3fe3-afe1-2373979cb211
+2019-12-04 15:00:56.444  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$488b1637] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:57.630  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$e138de71] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:57.822  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:58.069  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@78dd8d5d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:58.110  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$60d8123] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:58.179  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:58.467  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$c80b6369] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:00:58.657  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$64a51934] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 15:01:04.202  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2121 (http)
+2019-12-04 15:01:04.687  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-04 15:01:04.705  INFO 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-12-04 15:01:04.818  INFO 1 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-12-04 15:01:05.983  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-04 15:01:06.001  INFO 1 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 43497 ms
+2019-12-04 15:01:12.002  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 15:01:13.155  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 15:01:16.108  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 15:01:17.318  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-04 15:01:17.349  INFO 1 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 15:01:20.957  INFO 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 15:01:25.438  INFO 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-12-04 15:01:27.050  INFO 1 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-12-04 15:01:27.327  INFO 1 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2b0c600
+2019-12-04 15:01:38.947  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-04 15:01:38.951  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_182xa1gitcxqhaq6nn3n2kmo3" of relation "user_roles" does not exist, skipping
+2019-12-04 15:01:39.015  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-04 15:01:39.019  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2019-12-04 15:01:39.098  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-04 15:01:39.103  WARN 1 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_r43af9ap4edm43mmtq01oddj6" of relation "users" does not exist, skipping
+2019-12-04 15:01:39.226  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 15:01:57.913  INFO 1 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 15:02:06.632  WARN 1 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 15:02:23.183  INFO 1 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eb8b01e5-b986-4de1-ab1c-4a5157ea7b28
+
+2019-12-04 15:02:25.823  INFO 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1de9b0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@9fa0d00, org.springframework.security.web.header.HeaderWriterFilter@3601183, org.springframework.security.web.authentication.logout.LogoutFilter@3fc9f731, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@9c6fa6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dcb8fc3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eea4134, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b426e11, org.springframework.security.web.session.SessionManagementFilter@7296fe9b, org.springframework.security.web.access.ExceptionTranslationFilter@4a476241]
+2019-12-04 15:02:27.266  INFO 1 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2ControllerWebMvc.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-04 15:02:28.212  WARN 1 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 15:02:28.215  INFO 1 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 15:02:28.301  WARN 1 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 15:02:28.305  INFO 1 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 15:02:32.996  INFO 1 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 15:02:48.746  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 15:02:49.382  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-04 15:02:50.963  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-04 15:02:50.975  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-04 15:02:53.454  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-04 15:02:53.462  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-04 15:02:56.438  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:02:57.190  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-04 15:02:57.194  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-04 15:02:57.210  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-04 15:02:57.214  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-04 15:02:57.217  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-04 15:02:57.219  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-04 15:02:57.221  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-04 15:02:58.842  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-04 15:02:58.911  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-04 15:02:58.945  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-04 15:02:59.033  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575471779022 with initial instances count: 0
+2019-12-04 15:02:59.136  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS with eureka with status UP
+2019-12-04 15:02:59.158  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575471779158, current=UP, previous=STARTING]
+2019-12-04 15:02:59.232  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-12-04 15:02:59.320  INFO 1 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-04 15:02:59.288  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/afd8e7d1e25b:users:2121: registering service...
+2019-12-04 15:02:59.841  INFO 1 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-04 15:03:00.455  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/afd8e7d1e25b:users:2121 - registration status: 204
+2019-12-04 15:03:01.915  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2121 (http) with context path ''
+2019-12-04 15:03:01.923  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 2121
+2019-12-04 15:03:01.974  INFO 1 --- [main] c.e.u.UserMicroserviceApplication        : Started UserMicroserviceApplication in 173.319 seconds (JVM running for 557.025)
+2019-12-04 15:03:12.947  INFO 1 --- [http-nio-2121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-04 15:03:12.955  INFO 1 --- [http-nio-2121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-04 15:03:13.029  INFO 1 --- [http-nio-2121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 72 ms
+2019-12-04 15:03:28.878  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-04 15:03:28.881  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-04 15:03:28.882  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-04 15:03:28.885  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-04 15:03:28.889  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-04 15:03:28.891  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-12-04 15:03:28.893  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-04 15:03:29.106  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-04 15:04:08.768  INFO 1 --- [http-nio-2121-exec-4] c.e.u.service.UserRoleServiceImpl        : Getting role by rolename: ROLE_USER
+2019-12-04 15:04:08.794  INFO 1 --- [http-nio-2121-exec-4] c.e.u.service.UserRoleServiceImpl        : New role created with the name: ROLE_USER
+2019-12-04 15:04:09.341  INFO 1 --- [http-nio-2121-exec-4] c.e.u.service.UserServiceImpl            : User signed up with an email: user1@gmail.com
+2019-12-04 15:04:26.057  INFO 1 --- [http-nio-2121-exec-10] c.e.u.service.UserServiceImpl            : User logged in with email: user1@gmail.com
+2019-12-04 15:04:53.417  INFO 1 --- [http-nio-2121-exec-10] c.e.u.service.UserRoleServiceImpl        : New role created with the name: ROLE_ADMIN
+2019-12-04 15:06:25.830  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : Creating profile for user
+2019-12-04 15:06:25.834  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : Creating profile for the user found with with username: user1
+2019-12-04 15:06:25.837  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : User doesn't have profile so creating and saving the new user profile.
+2019-12-04 15:06:25.861  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserServiceImpl            : Updating user info with username: user1
+2019-12-04 15:06:25.905  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : User profile creeated and saved
+2019-12-04 15:06:44.142  INFO 1 --- [http-nio-2121-exec-6] c.e.u.service.UserProfileServiceImpl     : Getting userprofile for specific user
+2019-12-04 15:07:00.104  INFO 1 --- [http-nio-2121-exec-5] c.e.u.service.UserRoleServiceImpl        : Getting role by rolename: ROLE_USER
+2019-12-04 15:07:00.525  INFO 1 --- [http-nio-2121-exec-5] c.e.u.service.UserServiceImpl            : User signed up with an email: user2@gmail.com
+2019-12-04 15:07:19.624  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : Getting userprofile for specific user
+2019-12-04 15:07:19.640 ERROR 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : User profile doesn't exist so first create a new profile
+2019-12-04 15:07:19.642  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserServiceImpl            : Updating user info with username: user2
+2019-12-04 15:07:19.665 ERROR 1 --- [http-nio-2121-exec-1] c.e.u.service.UserProfileServiceImpl     : Creating a blank user profile for the user with username: user2
+2019-12-04 15:07:29.471  INFO 1 --- [http-nio-2121-exec-6] c.e.u.service.UserProfileServiceImpl     : Getting userprofile for specific user
+2019-12-04 15:07:56.921  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:09:52.910  INFO 1 --- [http-nio-2121-exec-3] c.e.u.service.UserServiceImpl            : User logged in with email: user1@gmail.com
+2019-12-04 15:10:54.632 ERROR 1 --- [http-nio-2121-exec-6] c.e.u.service.UserRoleServiceImpl        : Getting a role by id that doesn't exist so throw not found error
+2019-12-04 15:11:01.341  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserRoleServiceImpl        : Returning role that exists with id: 1
+2019-12-04 15:11:07.022  INFO 1 --- [http-nio-2121-exec-8] c.e.u.service.UserRoleServiceImpl        : Returning role that exists with id: 2
+2019-12-04 15:11:53.443  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserServiceImpl            : User is logged in and wants to add role
+2019-12-04 15:11:53.469  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserRoleServiceImpl        : Returning role that exists with id: 2
+2019-12-04 15:11:53.476  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserServiceImpl            : Adding the role 'ROLE_ADMIN' to user 'user1'.
+2019-12-04 15:11:53.546  INFO 1 --- [http-nio-2121-exec-7] c.e.u.service.UserServiceImpl            : Updating user info with username: user1
+2019-12-04 15:11:56.792  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserServiceImpl            : User is logged in and wants to add role
+2019-12-04 15:11:56.820  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserRoleServiceImpl        : Returning role that exists with id: 2
+2019-12-04 15:11:56.827  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserServiceImpl            : Adding the role 'ROLE_ADMIN' to user 'user1'.
+2019-12-04 15:11:56.834  INFO 1 --- [http-nio-2121-exec-1] c.e.u.service.UserServiceImpl            : Updating user info with username: user1
+2019-12-04 15:12:56.620  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:17:56.320  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:22:55.966  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:27:55.636  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:32:55.328  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:37:55.002  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:42:54.673  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:47:54.360  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:52:54.029  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 15:57:53.699  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:02:53.466  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:07:53.277  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:12:52.954  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:17:52.623  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:22:52.313  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 16:27:51.986  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
